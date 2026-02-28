@@ -1,0 +1,255 @@
+:root {
+  --bg: #0b1021;
+  --card: #121a33;
+  --card-soft: #182244;
+  --text: #edf1ff;
+  --muted: #b4c0e6;
+  --primary: #7c5cff;
+  --primary-hover: #6647ef;
+  --border: #2a3768;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 20%, #1a2550 0%, var(--bg) 45%);
+  padding: 24px;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  background: linear-gradient(130deg, rgba(124, 92, 255, 0.22), rgba(0, 216, 255, 0.1));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(124, 92, 255, 0.2);
+  border: 1px solid rgba(124, 92, 255, 0.5);
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.app-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.panel:nth-child(1),
+.panel:nth-child(2) {
+  grid-column: span 6;
+}
+
+.chatbot-panel {
+  grid-column: span 12;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-soft);
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.inline-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn.block {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.preview {
+  min-height: 180px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.preview.empty {
+  color: var(--muted);
+}
+
+.meta {
+  color: var(--muted);
+  padding-left: 18px;
+}
+
+.helper {
+  color: var(--muted);
+  margin-top: -2px;
+}
+
+.chat-window {
+  margin-top: 12px;
+  height: 220px;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card-soft);
+  padding: 10px;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.message.user {
+  margin-left: auto;
+  background: rgba(124, 92, 255, 0.28);
+}
+
+.message.bot {
+  background: rgba(14, 164, 208, 0.25);
+}
+
+.chat-form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+@media (max-width: 860px) {
+  .panel:nth-child(1),
+  .panel:nth-child(2),
+  .chatbot-panel {
+    grid-column: span 12;
+  }
+
+  .inline-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.status-info {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hello-user {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.form-link {
+  margin-top: 8px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.home-link {
+  margin-top: 12px;
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.home-link:hover {
+  color: var(--text);
+}
+
+.status-info.error {
+  color: #ff9da0;
+}
+
+.status-info.success {
+  color: #82f7b4;
+}
+
+button:disabled,
+input:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
