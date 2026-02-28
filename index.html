@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creation Animer Studio Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="badge">Studio IA professionnel</p>
+      <h1>Générateur d'images et vidéos + chatbot d'édition</h1>
+      <p class="subtitle">
+        Créez des visuels premium, générez des vidéos marketing et modifiez chaque rendu avec un assistant conversationnel intelligent.
+      </p>
+      <div class="hero-actions" id="auth-actions">
+        <a href="register.html" class="btn">Créer un compte</a>
+        <a href="login.html" class="btn secondary">Connexion</a>
+      </div>
+      <p id="auth-status" class="status-info"></p>
+    </div>
+  </header>
+
+  <main class="app-grid">
+    <section class="panel">
+      <h2>1) Génération rapide</h2>
+      <form id="generator-form">
+        <label for="prompt">Brief créatif</label>
+        <textarea id="prompt" rows="4" placeholder="Ex: Une publicité cinématique pour une montre de luxe dans une rue de Paris la nuit"></textarea>
+
+        <div class="inline-fields">
+          <div>
+            <label for="content-type">Type</label>
+            <select id="content-type">
+              <option value="image">Image HD</option>
+              <option value="video">Vidéo 15 sec</option>
+            </select>
+          </div>
+          <div>
+            <label for="style">Style</label>
+            <select id="style">
+              <option>Photorealiste</option>
+              <option>Cinématique</option>
+              <option>3D Produit</option>
+              <option>Anime premium</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generate-btn" type="submit" class="btn block">Lancer la génération</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>2) Aperçu du résultat</h2>
+      <div id="preview" class="preview empty">
+        Votre rendu apparaitra ici après génération.
+      </div>
+      <ul class="meta" id="metadata"></ul>
+    </section>
+
+    <section class="panel chatbot-panel">
+      <h2>3) Chatbot de modification</h2>
+      <p class="helper">Exemples: “Rends les couleurs plus chaudes”, “Ajoute un logo en haut à droite”, “Transforme en format story”.</p>
+      <div id="chat-window" class="chat-window"></div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Décrivez la modification à appliquer..." required>
+        <button id="chat-send-btn" type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
