@@ -8,8 +8,8 @@ window.BOUTIQUE = {
   nom: "Mercerie Incha Allahou",
   ville: "Lomé, Togo",
   // Numéro au format international, chiffres uniquement (sans + ni espaces)
-  whatsapp: "22892889112",
-  whatsappAffiche: "+228 92 88 91 12",
+  whatsapp: "22891907772",
+  whatsappAffiche: "+228 91 90 77 72",
   // À confirmer / compléter par la boutique
   adresse: "Lomé, Togo — quartier à préciser",
   horaires: [

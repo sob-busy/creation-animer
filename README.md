@@ -2,7 +2,7 @@
 
 Site vitrine de la mercerie **Mercerie Incha Allahou** (Lomé, Togo) : pagnes wax, bazin, kaki,
 fils, boutons, fermetures et outils de couture. Les clients composent une sélection
-et l'envoient directement sur WhatsApp (+228 92 88 91 12).
+et l'envoient directement sur WhatsApp (+228 91 90 77 72).
 
 Site 100 % statique (HTML/CSS/JS, sans framework) : très léger, rapide même en 3G.
 
