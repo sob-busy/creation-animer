@@ -1,5 +1,5 @@
 /* =====================================================================
-   Mercerie Inch'Allah — feuille de style
+   Mercerie Incha Allahou — feuille de style
    Principe d'interaction :
    · CLIQUABLE  → bordure d'encre + ombre portée « tampon » qui s'enfonce
                   au clic, curseur main, anneau de focus en pointillés.
@@ -313,7 +313,7 @@ p { margin: 0; }
 .carte__lien:focus-visible { outline: none; }
 .carte:has(.carte__lien:focus-visible) { outline: 2px dashed var(--ocre); outline-offset: 4px; }
 .carte__bas { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; }
-.prix { font-weight: 700; font-size: 18px; white-space: nowrap; }
+.prix { font-weight: 700; font-size: 16px; color: var(--vert); }
 .prix small { display: block; font-size: 12.5px; font-weight: 500; color: var(--gris); }
 .btn-ajout {
   position: relative; z-index: 2;
@@ -398,7 +398,7 @@ p { margin: 0; }
 .fiche__corps { padding: 36px 32px 32px; display: flex; flex-direction: column; gap: 14px; }
 .fiche__cat { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--terre); }
 .fiche__nom { font-size: clamp(28px, 3.4vw, 38px); padding-right: 44px; }
-.fiche__prix { font-size: 24px; font-weight: 700; }
+.fiche__prix { font-size: 17px; font-weight: 700; color: var(--vert); }
 .fiche__unite { font-size: 15px; font-weight: 500; color: var(--gris); }
 .fiche__desc { color: var(--encre-2); }
 .fiche__details { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -435,8 +435,7 @@ p { margin: 0; }
 .ligne__total { font-weight: 700; font-size: 14.5px; }
 .tiroir__vide { display: grid; justify-items: center; gap: 16px; text-align: center; padding: 60px 0; color: var(--gris); }
 .tiroir__pied { padding: 18px 22px 22px; border-top: 2px solid var(--encre); display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; background: #fffaf1; }
-.total { display: flex; justify-content: space-between; align-items: baseline; }
-.total strong { font-family: var(--f-titre); font-size: 26px; }
+.total-note { font-size: 14px; color: var(--encre-2); }
 .champs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
 .champs label { display: grid; gap: 4px; font-size: 12.5px; font-weight: 600; color: var(--gris); }
 .champs input { width: 100%; min-height: 42px; padding: 0 12px; border: 1.5px solid #bfae90; border-radius: var(--r-s); background: var(--papier); font-size: 15px; color: var(--encre); }
@@ -558,7 +557,7 @@ p { margin: 0; }
   .carte__nom { font-size: 16.5px; }
   .carte__cat { font-size: 10.5px; }
   .carte__voir { display: none; }
-  .prix { font-size: 15px; }
+  .prix { font-size: 13.5px; }
   .prix small { font-size: 11px; }
   .btn-ajout { width: 38px; height: 38px; }
   .recherche { max-width: none; }

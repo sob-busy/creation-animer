@@ -1,6 +1,6 @@
-# Mercerie Inch'Allah — site vitrine
+# Mercerie Incha Allahou — site vitrine
 
-Site vitrine de la mercerie **Mercerie Inch'Allah** (Lomé, Togo) : pagnes wax, bazin, kaki,
+Site vitrine de la mercerie **Mercerie Incha Allahou** (Lomé, Togo) : pagnes wax, bazin, kaki,
 fils, boutons, fermetures et outils de couture. Les clients composent une sélection
 et l'envoient directement sur WhatsApp (+228 92 88 91 12).
 
@@ -20,7 +20,7 @@ Site 100 % statique (HTML/CSS/JS, sans framework) : très léger, rapide même e
 Tout se trouve dans **`assets/js/donnees.js`** :
 
 - numéro WhatsApp, adresse, horaires, moyens de paiement, livraison ;
-- liste des produits : nom, prix (FCFA), unité, description, badge, image.
+- liste des produits : nom, unité, description, badge, image (pas de prix : ils se discutent sur WhatsApp).
 
 ## Mettre vos vraies photos
 
@@ -34,7 +34,7 @@ Les visuels actuels sont des illustrations vectorielles générées par `outils/
 ```
 index.html              page unique
 assets/css/style.css    design
-assets/js/donnees.js    contenu (produits, prix, coordonnées)
+assets/js/donnees.js    contenu (produits, coordonnées)
 assets/js/app.js        boutique, sélection, messagerie WhatsApp
 assets/produits/        visuels des produits
 ```

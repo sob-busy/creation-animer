@@ -1,4 +1,4 @@
-/* Mercerie Inch'Allah — interactions du site (sans dépendance). */
+/* Mercerie Incha Allahou — interactions du site (sans dépendance). */
 (() => {
   "use strict";
 
@@ -10,7 +10,6 @@
   const parId = Object.fromEntries(PRODUITS.map((p) => [p.id, p]));
   const nomCat = Object.fromEntries(CATS.map((c) => [c.id, c.nom]));
 
-  const fcfa = (n) => new Intl.NumberFormat("fr-FR").format(n).replace(/ /g, " ") + " FCFA";
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const lienWa = (texte) => `https://wa.me/${B.whatsapp}${texte ? "?text=" + encodeURIComponent(texte) : ""}`;
   const ouvrirWa = (texte) => window.open(lienWa(texte), "_blank", "noopener");
@@ -73,7 +72,7 @@
           <span class="carte__cat">${esc(nomCat[p.categorie])}</span>
           <h3 class="carte__nom"><a class="carte__lien" href="#produit-${p.id}" data-produit="${p.id}">${esc(p.nom)}</a></h3>
           <div class="carte__bas">
-            <p class="prix">${fcfa(p.prix)}<small>${esc(p.unite)}</small></p>
+            <p class="prix">Prix à discuter<small>${esc(p.unite)}</small></p>
             <button class="btn-ajout" type="button" data-ajout="${p.id}" aria-label="Ajouter ${esc(p.nom)} à ma sélection">
               <svg class="ic"><use href="#i-plus"/></svg>
             </button>
@@ -109,7 +108,7 @@
     $("#qte-moins").disabled = qte <= 1;
     const p = courant;
     $("#fiche-wa").href = lienWa(
-      `Bonjour ${B.nom},\nJe souhaite commander :\n• ${qte} × ${p.nom}, ${p.unite} : ${fcfa(p.prix * qte)}\nEst-ce disponible ? Merci !`
+      `Bonjour ${B.nom},\nJe suis intéressé(e) par :\n• ${qte} × ${p.nom} — ${p.unite}\nQuel est votre prix ? Est-ce disponible ? Merci !`
     );
   }
   function ouvrirFiche(id) {
@@ -120,7 +119,6 @@
     $("#fiche-img").alt = p.nom;
     $("#fiche-cat").textContent = nomCat[p.categorie];
     $("#fiche-nom").textContent = p.nom;
-    $("#fiche-prix").textContent = fcfa(p.prix);
     $("#fiche-unite").textContent = p.unite;
     $("#fiche-desc").textContent = p.description;
     $("#fiche-details").innerHTML = (p.details || []).map((d) => `<li>${esc(d)}</li>`).join("");
@@ -149,7 +147,6 @@
   }
   function sauver() { stock.ecrire("mi-selection", panier); rendrePanier(); }
   const nbArticles = () => Object.values(panier).reduce((a, b) => a + b, 0);
-  const totalPanier = () => Object.entries(panier).reduce((t, [id, n]) => t + parId[id].prix * n, 0);
 
   function rendrePanier() {
     const lignes = Object.entries(panier);
@@ -159,18 +156,16 @@
       const p = parId[id];
       return `<li class="ligne">
         <img src="${esc(p.image)}" alt="" width="64" height="64">
-        <div><p class="ligne__nom">${esc(p.nom)}</p><p class="ligne__prix">${fcfa(p.prix)} · ${esc(p.unite)}</p></div>
+        <div><p class="ligne__nom">${esc(p.nom)}</p><p class="ligne__prix">${esc(p.unite)}</p></div>
         <div class="ligne__droite">
           <div class="stepper stepper--petit" role="group" aria-label="Quantité ${esc(p.nom)}">
             <button class="stepper__b" type="button" data-moins="${id}" aria-label="Diminuer"><svg class="ic"><use href="#i-moins"/></svg></button>
             <output class="stepper__v">${n}</output>
             <button class="stepper__b" type="button" data-plus="${id}" aria-label="Augmenter"><svg class="ic"><use href="#i-plus"/></svg></button>
           </div>
-          <span class="ligne__total">${fcfa(p.prix * n)}</span>
         </div>
       </li>`;
     }).join("");
-    $("#total").textContent = fcfa(totalPanier());
   }
   $("#lignes").addEventListener("click", (e) => {
     const plus = e.target.closest("[data-plus]"), moins = e.target.closest("[data-moins]");
@@ -206,19 +201,18 @@
     const f = new FormData(e.target);
     const lignes = Object.entries(panier).map(([id, n]) => {
       const p = parId[id];
-      return `• ${n} × ${p.nom}, ${p.unite} : ${fcfa(p.prix * n)}`;
+      return `• ${n} × ${p.nom} — ${p.unite}`;
     });
     const nom = (f.get("nom") || "").trim(), quartier = (f.get("quartier") || "").trim();
     const msg = [
       `Bonjour ${B.nom},`,
-      "Je souhaite commander :",
+      "Je souhaite commander les articles suivants :",
       ...lignes,
       "",
-      `Total indicatif : ${fcfa(totalPanier())}`,
       nom ? `Nom : ${nom}` : null,
       quartier ? `Quartier : ${quartier}` : null,
       "",
-      "Merci de me confirmer la disponibilité.",
+      "Pouvez-vous me donner vos prix et me confirmer la disponibilité ? Merci !",
     ].filter((l) => l !== null).join("\n");
     ouvrirWa(msg);
   });
@@ -237,7 +231,7 @@
   // ---------- Messagerie ----------
   const chat = $("#chat"), lanceur = $("#lanceur"), fil = $("#chat-fil"), rapides = $("#chat-rapides");
   const REPONSES = {
-    "Voir les prix": () => `Quelques repères : pagne wax dès ${fcfa(10000)} (6 yards), bazin riche ${fcfa(4500)} le mètre, kaki ${fcfa(1800)} le mètre, bobine de fil ${fcfa(300)}. Tous les prix sont dans la <a href="#boutique" data-fermer-chat>boutique</a>.`,
+    "Les prix": () => `Nos prix se discutent directement avec l'équipe sur WhatsApp : ils dépendent de la qualité, du motif et de la quantité. Ajoutez vos articles à « Ma sélection » et envoyez-la, on vous répond avec les prix.`,
     "Livraison": () => B.livraison,
     "Horaires & adresse": () => `${B.adresse}. ${B.horaires.map(([j, h]) => `${j} : ${h}`).join(" · ")}.`,
     "Paiement": () => B.paiement,
