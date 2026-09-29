@@ -12,7 +12,12 @@
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const lienWa = (texte) => `https://wa.me/${B.whatsapp}${texte ? "?text=" + encodeURIComponent(texte) : ""}`;
-  const ouvrirWa = (texte) => window.open(lienWa(texte), "_blank", "noopener");
+  // Ouvre WhatsApp tout de suite (appli sur téléphone, WhatsApp Web sur ordinateur).
+  const ouvrirWa = (texte) => {
+    const url = lienWa(texte);
+    const w = window.open(url, "_blank");
+    if (w) w.opener = null; else location.href = url;
+  };
 
   // Tous les liens WhatsApp « génériques » de la page
   $$("[data-wa]").forEach((a) => {
@@ -289,8 +294,8 @@
     if (!txt) return;
     bulle(esc(txt), "moi");
     champ.value = "";
-    repondre("Je transmets votre message à l'équipe sur WhatsApp… Si la fenêtre ne s'ouvre pas, touchez « Continuer sur WhatsApp » ci-dessous.");
-    setTimeout(() => ouvrirWa(`Bonjour ${B.nom}, ${txt}`), 900);
+    ouvrirWa(`Bonjour ${B.nom}, ${txt}`);
+    repondre(`Votre message part sur notre WhatsApp (${esc(B.whatsappAffiche)}). Si rien ne s'ouvre, touchez « Continuer sur WhatsApp » ci-dessous.`);
   });
   if (stock.lire("mi-chat-vu", false)) lanceur.classList.add("vu");
   setTimeout(() => $("#lanceur-bulle").classList.add("cache"), 12000);

@@ -380,6 +380,8 @@ p { margin: 0; }
 .pied__nom { font-family: var(--f-titre); font-size: 26px; font-weight: 600; }
 .pied__nom em { color: var(--ocre); }
 .pied__txt { font-size: 14px; opacity: .7; }
+.pied__commande { margin-top: 10px; font-size: 15px; }
+.pied__commande .lien { color: var(--ocre); }
 
 /* ---------- Fiche produit ---------- */
 .fiche {
