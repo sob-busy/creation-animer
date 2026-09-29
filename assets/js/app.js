@@ -12,12 +12,32 @@
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const lienWa = (texte) => `https://wa.me/${B.whatsapp}${texte ? "?text=" + encodeURIComponent(texte) : ""}`;
-  // Ouvre WhatsApp tout de suite (appli sur téléphone, WhatsApp Web sur ordinateur).
-  const ouvrirWa = (texte) => {
-    const url = lienWa(texte);
+  const MOBILE = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  // Ouvre la conversation WhatsApp avec la boutique.
+  // Téléphone : directement dans l'application WhatsApp du client (sans page intermédiaire),
+  //             avec repli sur wa.me si l'application ne s'ouvre pas.
+  // Ordinateur : WhatsApp Web / WhatsApp Desktop via wa.me.
+  function ouvrirUrlWa(url) {
+    if (MOBILE) {
+      const texte = new URL(url).searchParams.get("text");
+      const appli = `whatsapp://send?phone=${B.whatsapp}${texte ? "&text=" + encodeURIComponent(texte) : ""}`;
+      location.href = appli;
+      setTimeout(() => { if (document.visibilityState === "visible") location.href = url; }, 1800);
+      return;
+    }
     const w = window.open(url, "_blank");
     if (w) w.opener = null; else location.href = url;
-  };
+  }
+  const ouvrirWa = (texte) => ouvrirUrlWa(lienWa(texte));
+
+  // Tout lien wa.me de la page (boutons, numéro affiché, messagerie) passe par ouvrirUrlWa.
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="https://wa.me/"]');
+    if (!a) return;
+    e.preventDefault();
+    ouvrirUrlWa(a.href);
+  });
 
   // Tous les liens WhatsApp « génériques » de la page
   $$("[data-wa]").forEach((a) => {
