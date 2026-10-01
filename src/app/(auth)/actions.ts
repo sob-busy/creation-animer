@@ -12,7 +12,7 @@ import {
   signInSchema,
   signUpSchema,
 } from "@/lib/validations/auth";
-import { parseForm, type FormState } from "@/lib/validations/form";
+import { echoValues, parseForm, type FormState } from "@/lib/validations/form";
 
 async function siteUrl() {
   // Prefer the configured URL; never trust the Host header for e-mail links in production.
@@ -30,7 +30,7 @@ export async function signIn(_prev: FormState, formData: FormData): Promise<Form
   const { error } = await supabase.auth.signInWithPassword(parsed.data);
   if (error) {
     // Generic message: do not reveal whether the account exists.
-    return { error: "E-mail ou mot de passe incorrect." };
+    return { error: "E-mail ou mot de passe incorrect.", values: echoValues(Object.fromEntries(formData)) };
   }
   redirect(safeRedirectPath(formData.get("next")));
 }
@@ -49,9 +49,10 @@ export async function signUp(_prev: FormState, formData: FormData): Promise<Form
     },
   });
   if (error && error.code !== "user_already_exists") {
-    if (error.code === "weak_password") return { error: "Mot de passe trop faible ou compromis." };
-    if (error.status === 429) return { error: "Trop de tentatives, réessayez dans quelques minutes." };
-    return { error: "Inscription impossible pour le moment." };
+    const values = echoValues(Object.fromEntries(formData));
+    if (error.code === "weak_password") return { error: "Mot de passe trop faible ou compromis.", values };
+    if (error.status === 429) return { error: "Trop de tentatives, réessayez dans quelques minutes.", values };
+    return { error: "Inscription impossible pour le moment.", values };
   }
   // Same answer whether or not the e-mail already exists (anti-enumeration).
   return { success: "Vérifiez votre boîte mail pour confirmer votre compte." };

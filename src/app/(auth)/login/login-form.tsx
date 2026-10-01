@@ -19,6 +19,7 @@ export function LoginForm({ next, notice }: { next?: string; notice?: string }) 
       <input type="hidden" name="next" value={next ?? "/dashboard"} />
       <FormField
         name="email"
+        defaultValue={state.values?.email}
         type="email"
         label="E-mail"
         autoComplete="email"

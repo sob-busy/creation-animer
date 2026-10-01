@@ -19,6 +19,7 @@ export function SignupForm() {
       <FormAlert type="error" message={state.error} />
       <FormField
         name="fullName"
+        defaultValue={state.values?.fullName}
         label="Nom complet"
         autoComplete="name"
         placeholder="Awa Diallo"
@@ -27,6 +28,7 @@ export function SignupForm() {
       />
       <FormField
         name="email"
+        defaultValue={state.values?.email}
         type="email"
         label="E-mail"
         autoComplete="email"

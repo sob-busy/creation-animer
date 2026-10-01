@@ -19,6 +19,7 @@ export function ForgotForm() {
       <FormAlert type="error" message={state.error} />
       <FormField
         name="email"
+        defaultValue={state.values?.email}
         type="email"
         label="E-mail"
         autoComplete="email"
