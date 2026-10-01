@@ -1,5 +1,14 @@
 import type { NextConfig } from "next";
 
+// Guard: anything prefixed NEXT_PUBLIC_ is shipped to the browser. Refuse to build
+// if a secret-looking variable was exposed by mistake.
+const leaked = Object.keys(process.env).filter(
+  (k) => k.startsWith("NEXT_PUBLIC_") && /SERVICE_ROLE|SECRET|PRIVATE|WEBHOOK|SK_/i.test(k),
+);
+if (leaked.length > 0) {
+  throw new Error(`Secret exposé côté client via NEXT_PUBLIC_ : ${leaked.join(", ")}. Retirez le préfixe.`);
+}
+
 const isDev = process.env.NODE_ENV !== "production";
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const supabaseWs = supabaseUrl.replace(/^http/, "ws");
