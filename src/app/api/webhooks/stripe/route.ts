@@ -43,10 +43,15 @@ export async function POST(request: Request) {
   const supabase = createAdminClient();
 
   // Idempotency: Stripe retries deliveries; skip events already processed.
-  const { data: seen } = await supabase.from("stripe_events").select("id").eq("id", event.id).maybeSingle();
-  if (seen) return NextResponse.json({ received: true, duplicate: true });
-
   try {
+    const { data: seen, error: seenError } = await supabase
+      .from("stripe_events")
+      .select("id")
+      .eq("id", event.id)
+      .maybeSingle();
+    if (seenError) throw seenError;
+    if (seen) return NextResponse.json({ received: true, duplicate: true });
+
     const status = STATUS[event.type];
     if (status) {
       const intent = event.data.object as Stripe.PaymentIntent;
@@ -81,7 +86,9 @@ export async function POST(request: Request) {
     }
 
     // Recorded only after successful processing so a failure lets Stripe retry.
-    await supabase.from("stripe_events").insert({ id: event.id, type: event.type });
+    const { error: recordError } = await supabase.from("stripe_events").insert({ id: event.id, type: event.type });
+    // Processing already succeeded and is idempotent: log, but don't make Stripe retry.
+    if (recordError) console.error("[stripe] could not record event", event.id, recordError.message);
     return NextResponse.json({ received: true });
   } catch (err) {
     console.error("[stripe] webhook processing failed", event.id, err);
