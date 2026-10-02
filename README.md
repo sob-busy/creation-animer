@@ -40,9 +40,12 @@ En local, la confirmation d'e-mail est désactivée : l'inscription connecte dir
 2. Appliquez la migration `supabase/migrations/*.sql` :
    - via la CLI : `supabase link --project-ref <ref>` puis `supabase db push` ;
    - ou en collant le fichier dans **SQL Editor**.
-3. **Authentication → URL Configuration** : `Site URL` = votre URL, et ajoutez
+3. **Authentication → Providers → Email** : longueur minimale 8 et exigence « letters and digits »
+   (même règle que la validation Zod, appliquée aussi par Supabase côté serveur) ; activez la
+   protection contre les mots de passe compromis si votre plan le permet.
+4. **Authentication → URL Configuration** : `Site URL` = votre URL, et ajoutez
    `http://localhost:3000/**` et `https://<votre-domaine>/**` aux *Redirect URLs*.
-4. **Authentication → Email Templates** : pour « Confirm signup » et « Reset password », utilisez
+5. **Authentication → Email Templates** : pour « Confirm signup » et « Reset password », utilisez
    le lien `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type={{ .Type }}&next={{ .RedirectTo }}`
    (ou laissez le modèle par défaut : `/auth/callback` gère aussi le flux PKCE).
 
