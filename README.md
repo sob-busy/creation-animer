@@ -23,7 +23,18 @@ npm run dev                  # http://localhost:3000
 | `npm run build` / `npm start` | build + serveur de production |
 | `npm run lint` / `npm run typecheck` | ESLint / TypeScript strict |
 
-### Base de données Supabase
+### Supabase en local (recommandé pour développer)
+
+Nécessite Docker. La configuration est versionnée dans `supabase/config.toml`.
+
+```bash
+npx supabase start          # applique automatiquement supabase/migrations
+npx supabase status         # affiche l'URL API et les clés locales à copier dans .env.local
+```
+
+En local, la confirmation d'e-mail est désactivée : l'inscription connecte directement.
+
+### Base de données Supabase (production)
 
 1. Créez un projet sur [supabase.com](https://supabase.com) et copiez URL + clés dans `.env.local`.
 2. Appliquez la migration `supabase/migrations/*.sql` :
@@ -44,6 +55,20 @@ Tests RLS (Postgres ≥ 15 local) : `PGHOST=localhost PGUSER=postgres supabase/t
    `payment_intent.succeeded` et `payment_intent.payment_failed` ; copiez le secret `whsec_…`.
 3. En local : `stripe listen --forward-to localhost:3000/api/webhooks/stripe`.
 4. En créant un PaymentIntent côté serveur, renseignez `metadata.studio_id` (et `invoice_id`).
+
+## Modules disponibles
+
+| Module | État |
+| --- | --- |
+| Authentification (inscription, connexion, mot de passe oublié) | ✅ |
+| Clients : fiches, coordonnées, mesures, recherche | ✅ |
+| Factures multi-devises : lignes, TVA, numérotation `F-AAAA-0001`, statuts, impression/PDF | ✅ |
+| Paiement Stripe (webhook → facture payée) | ✅ côté serveur |
+| Modèles IA, essayage virtuel, marketplace | schéma prêt, interface à venir |
+
+Les montants sont stockés en unités mineures (centimes ; XOF/XAF sans décimales) et
+**recalculés en base** à chaque écriture : un client de l'API ne peut pas falsifier un total.
+Une facture émise ne peut plus être modifiée (seulement payée ou annulée).
 
 ## Sécurité — ce qui est en place
 

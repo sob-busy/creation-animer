@@ -40,7 +40,7 @@ export async function signUp(_prev: FormState, formData: FormData): Promise<Form
   if (!parsed.data) return parsed.state;
 
   const supabase = await createClient();
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email: parsed.data.email,
     password: parsed.data.password,
     options: {
@@ -54,6 +54,8 @@ export async function signUp(_prev: FormState, formData: FormData): Promise<Form
     if (error.status === 429) return { error: "Trop de tentatives, réessayez dans quelques minutes.", values };
     return { error: "Inscription impossible pour le moment.", values };
   }
+  // E-mail confirmation disabled (e.g. local dev): the user is already signed in.
+  if (data?.session) redirect("/dashboard");
   // Same answer whether or not the e-mail already exists (anti-enumeration).
   return { success: "Vérifiez votre boîte mail pour confirmer votre compte." };
 }
