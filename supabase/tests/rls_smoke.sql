@@ -60,3 +60,33 @@ select 'member delete blocked (expect 1 left)' t, count(*) from clients;
 update studio_members set role='owner' where user_id='bbbbbbbb-0000-0000-0000-000000000002' and studio_id=(select a from ids);
 select 'role after promote attempt' t, role from studio_members where user_id='bbbbbbbb-0000-0000-0000-000000000002' and studio_id=(select a from ids);
 reset role;
+
+-- ── Invoices: server-side totals, locking, isolation (requires invoice_integrity migration)
+set role authenticated; select set_config('request.jwt.claim.sub','aaaaaaaa-0000-0000-0000-000000000001',false);
+create temp table inv as select public.create_invoice(
+  (select id from clients limit 1), 'xof',
+  '[{"description":"Robe sur mesure","quantity":2,"unit_price_minor":15000},{"description":"Retouche","quantity":1,"unit_price_minor":5000}]'::jsonb,
+  1800) as id;
+select 'invoice totals (expect F-…-0001|35000|6300|41300|XOF)' t, number||'|'||subtotal_minor||'|'||tax_minor||'|'||total_minor||'|'||currency from invoices where id=(select id from inv);
+update invoices set subtotal_minor = 1, tax_minor = 0 where id=(select id from inv);
+select 'tamper attempt recomputed (expect 35000|6300)' t, subtotal_minor||'|'||tax_minor from invoices where id=(select id from inv);
+insert into invoice_items (invoice_id, studio_id, description, unit_price_minor) select id, (select a from ids), 'Ourlet', 2000 from inv;
+select 'draft item add recomputes (expect 37000)' t, subtotal_minor from invoices where id=(select id from inv);
+update invoices set status='sent' where id=(select id from inv);
+select pg_temp.expect_fail($q$insert into invoice_items (invoice_id, studio_id, description, unit_price_minor) select id, (select a from ids), 'Ajout tardif', 1 from inv$q$, 'add item to sent invoice');
+create temp table inv2 as select public.create_invoice((select id from clients limit 1), 'EUR', '[{"description":"x","quantity":1,"unit_price_minor":100}]'::jsonb) as id;
+select 'second number (expect suffix 0002)' t, right(number, 4) from invoices where id = (select id from inv2);
+select pg_temp.expect_fail($q$select public.create_invoice((select id from clients limit 1), 'EUR', '[]'::jsonb)$q$, 'invoice without items');
+delete from invoices where status='draft';
+select 'draft deleted, sent kept (expect 1)' t, count(*) from invoices;
+reset role;
+
+set role authenticated; select set_config('request.jwt.claim.sub','bbbbbbbb-0000-0000-0000-000000000002',false);
+delete from studio_members where studio_id=(select a from ids) and user_id='bbbbbbbb-0000-0000-0000-000000000002';
+select pg_temp.expect_fail($q$select public.create_invoice('00000000-0000-0000-0000-000000000000', 'EUR', '[{"description":"x","quantity":1,"unit_price_minor":1}]'::jsonb)$q$, 'B invoice on unknown/foreign client');
+select 'B sees A invoices after leaving (expect 0)' t, count(*) from invoices;
+reset role;
+
+set role anon;
+select pg_temp.expect_fail($q$select public.create_invoice(null, 'EUR', '[{"description":"x","quantity":1,"unit_price_minor":1}]'::jsonb)$q$, 'anon create_invoice');
+reset role;
