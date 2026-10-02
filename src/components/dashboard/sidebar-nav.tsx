@@ -59,7 +59,7 @@ export function MobileTabBar() {
   return (
     <nav
       aria-label="Navigation principale"
-      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t bg-background/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 print:hidden border-t bg-background/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
     >
       {NAV_ITEMS.slice(0, 5).map(({ href, short, icon: Icon, soon }) => {
         const active = isActive(pathname, href);

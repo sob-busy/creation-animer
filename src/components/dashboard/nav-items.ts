@@ -7,6 +7,6 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/dashboard/designs", label: "Modèles IA", short: "Modèles", icon: Sparkles, soon: true },
   { href: "/dashboard/try-on", label: "Essayage", short: "Essayage", icon: Shirt, soon: true },
   { href: "/dashboard/clients", label: "Clients", short: "Clients", icon: Users },
-  { href: "/dashboard/invoices", label: "Factures", short: "Factures", icon: FileText, soon: true },
+  { href: "/dashboard/invoices", label: "Factures", short: "Factures", icon: FileText },
   { href: "/dashboard/marketplace", label: "Marketplace", short: "Boutique", icon: Store, soon: true },
 ];
