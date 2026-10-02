@@ -7,13 +7,16 @@ import { cn } from "@/lib/utils";
 
 import { NAV_ITEMS } from "./nav-items";
 
+const isActive = (pathname: string, href: string) =>
+  href === "/dashboard" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+
 /** Vertical navigation (desktop). */
 export function SidebarNav() {
   const pathname = usePathname();
   return (
     <nav aria-label="Navigation principale" className="grid gap-1">
       {NAV_ITEMS.map(({ href, label, icon: Icon, soon }) => {
-        const active = pathname === href;
+        const active = isActive(pathname, href);
         if (soon) {
           return (
             <span
@@ -59,7 +62,7 @@ export function MobileTabBar() {
       className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t bg-background/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
     >
       {NAV_ITEMS.slice(0, 5).map(({ href, short, icon: Icon, soon }) => {
-        const active = pathname === href;
+        const active = isActive(pathname, href);
         const content = (
           <>
             <Icon className={cn("size-5", active && "text-brand")} aria-hidden />
