@@ -1,0 +1,8 @@
+{
+  "genre": "conte animé émouvant avec une morale",
+  "duree_cible_secondes": 60,
+  "nombre_scenes": 8,
+  "style_visuel": "3D animation style, Pixar-like, cinematic lighting, vibrant colors, highly detailed, vertical 9:16 composition",
+  "voix": "fr-FR-HenriNeural",
+  "fournisseur_images": "openai"
+}

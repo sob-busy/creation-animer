@@ -1,0 +1,10 @@
+{
+  "genre": "histoire à suspense avec un retournement final",
+  "ton": "intrigant, mystérieux, chute inattendue",
+  "duree_cible_secondes": 75,
+  "nombre_scenes": 10,
+  "style_visuel": "dark cinematic digital painting, moody lighting, fog, high contrast, vertical 9:16 composition",
+  "voix": "fr-FR-RemyMultilingualNeural",
+  "vitesse_voix": "+0%",
+  "fournisseur_images": "openai"
+}
