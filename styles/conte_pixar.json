@@ -1,0 +1,8 @@
+{
+  "genre": "conte animé façon film Pixar, émouvant, avec une morale",
+  "duree_cible_secondes": 60,
+  "nombre_scenes": 8,
+  "voix": "fr-FR-HenriNeural",
+  "vitesse_voix": "+0%",
+  "fournisseur_images": "openai"
+}

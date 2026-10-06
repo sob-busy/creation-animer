@@ -1,6 +1,6 @@
 # Création d'Animer — Agent IA de vidéos d'histoires
 
-Un agent qui crée automatiquement des vidéos TikTok verticales (1080×1920) d'histoires **toujours nouvelles** :
+Un agent qui crée automatiquement des vidéos TikTok verticales (1080×1920) de **contes animés en 3D façon Pixar**, racontés par une **voix d'homme**, avec des histoires **toujours nouvelles** :
 
 1. **Histoire**, écrite par Claude : accroche, scènes, description TikTok, hashtags. Les titres déjà faits sont mémorisés pour ne jamais refaire la même histoire.
 2. **Images**, une par scène, avec des personnages décrits pareil d'une scène à l'autre.
@@ -31,7 +31,7 @@ python -m agent_video
 python -m agent_video --theme "un petit robot qui cherche sa maman"
 
 # 5 vidéos d'un coup, dans un style précis
-python -m agent_video --nombre 5 --style styles/conte_anime.json
+python -m agent_video --nombre 5 --style styles/conte_pixar.json
 ```
 
 Chaque vidéo est rangée dans `sorties/<date>_<titre>/` :
@@ -49,7 +49,7 @@ Copie un fichier de `styles/` et change ce que tu veux. Toutes les options sont 
 
 - `genre`, `ton`, `public`, `duree_cible_secondes`, `nombre_scenes` : le type d'histoire
 - `style_visuel` : le rendu des images (3D Pixar, anime, aquarelle…)
-- `fournisseur_images` : `placeholder` (images de test) ou `openai` (vraies images IA)
-- `voix` : par exemple `fr-FR-HenriNeural`, `fr-FR-DeniseNeural`, `fr-FR-RemyMultilingualNeural`, `fr-FR-VivienneMultilingualNeural`
+- `fournisseur_images` : `auto` (par défaut : vraies images IA si `OPENAI_API_KEY` est défini, sinon images de test), `openai` ou `placeholder`
+- `voix` : voix d'homme `fr-FR-HenriNeural` (par défaut) ou `fr-FR-RemyMultilingualNeural` ; voix de femme `fr-FR-DeniseNeural` ou `fr-FR-VivienneMultilingualNeural`
 - `musique` : chemin vers un mp3 de fond
 - `consignes_supplementaires` : toute règle en plus pour l'IA (par exemple « finir par une question au spectateur »)

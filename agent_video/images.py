@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import os
 import random
 import textwrap
 from pathlib import Path
@@ -17,7 +18,10 @@ def prompt_complet(style: Style, personnages: str, prompt_scene: str) -> str:
 
 
 def generer_image(style: Style, prompt: str, sortie: Path, index: int) -> Path:
-    if style.fournisseur_images == "openai":
+    fournisseur = style.fournisseur_images
+    if fournisseur == "auto":
+        fournisseur = "openai" if os.environ.get("OPENAI_API_KEY") else "placeholder"
+    if fournisseur == "openai":
         return _openai(style, prompt, sortie)
     return _placeholder(style, prompt, sortie, index)
 

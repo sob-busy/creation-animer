@@ -15,25 +15,31 @@ from pathlib import Path
 class Style:
     # --- Histoire ---
     langue: str = "français"
-    genre: str = "conte animé émouvant avec une morale"
+    genre: str = "conte animé façon film Pixar, émouvant, avec une morale"
     public: str = "grand public, TikTok"
     duree_cible_secondes: int = 60
     nombre_scenes: int = 8
-    ton: str = "captivant, émouvant, avec une accroche forte dans la première phrase"
-    consignes_supplementaires: str = ""
+    ton: str = "chaleureux et captivant, voix de conteur, accroche forte dans la première phrase"
+    consignes_supplementaires: str = (
+        "Un héros attachant (enfant, animal ou objet qui prend vie) avec un rêve ou une peur, "
+        "un obstacle, un moment de bravoure ou de tendresse, puis une fin qui touche le cœur. "
+        "Termine par une morale courte et mémorable."
+    )
 
     # --- Visuel ---
     style_visuel: str = (
-        "3D animation style, Pixar-like, cinematic lighting, vibrant colors, "
-        "highly detailed, vertical 9:16 composition"
+        "Pixar-style 3D animated film still, expressive cartoon characters with big eyes, "
+        "soft global illumination, warm cinematic lighting, rich saturated colors, "
+        "subsurface scattering, shallow depth of field, highly detailed, vertical 9:16 composition"
     )
-    fournisseur_images: str = "placeholder"  # "placeholder" | "openai"
+    # "auto" = OpenAI si OPENAI_API_KEY est défini, sinon images de test
+    fournisseur_images: str = "auto"  # "auto" | "openai" | "placeholder"
     modele_images: str = "gpt-image-1"
 
     # --- Voix ---
     fournisseur_voix: str = "edge"  # "edge" (gratuit) | "silence"
-    voix: str = "fr-FR-HenriNeural"
-    vitesse_voix: str = "+5%"
+    voix: str = "fr-FR-HenriNeural"  # voix d'homme ; autre choix : fr-FR-RemyMultilingualNeural
+    vitesse_voix: str = "+0%"
 
     # --- Vidéo ---
     largeur: int = 1080
