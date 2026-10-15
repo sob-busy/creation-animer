@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "tiktok",
+      "confirmed_in": [
+        "creer-des-skills-claude-code"
+      ],
+      "updated_at": "2026-10-15T17:46:13.915Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": [
+        "creer-des-skills-claude-code"
+      ],
+      "updated_at": "2026-10-15T17:46:13.969Z"
+    },
+    "language": {
+      "value": "fr",
+      "confirmed_in": [
+        "creer-des-skills-claude-code"
+      ],
+      "updated_at": "2026-10-15T17:46:14.023Z"
+    },
+    "style_preset.faceless-explainer": {
+      "value": "code-editorial",
+      "confirmed_in": [
+        "creer-des-skills-claude-code"
+      ],
+      "updated_at": "2026-10-15T17:46:24.965Z"
+    }
+  },
+  "sightings": {}
+}

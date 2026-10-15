@@ -1,0 +1,139 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; container-type: size;
+  font-family: "Inter", sans-serif; color: #141413; }
+#root * { box-sizing: border-box; }
+.f02-concept-bg { position: absolute; inset: 0; background-color: #FAF9F5;
+  background-image: linear-gradient(rgba(20,20,19,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,19,.055) 1px, transparent 1px);
+  background-size: 72px 72px; background-position: 36px 36px; }
+.f02-concept-vignette { position: absolute; inset: 0; background: radial-gradient(900px 1100px at 50% 40%, rgba(250,249,245,0) 0%, rgba(239,233,222,.85) 100%); }
+.f02-concept-float { position: absolute; opacity: 0; filter: blur(1.2px); }
+.f02-concept-fcard { background: #EFE9DE; border: 1px solid rgba(20,20,19,.16); border-radius: 10px; padding: 14px 18px 16px;
+  font-family: "JetBrains Mono", monospace; font-size: 22px; color: rgba(20,20,19,.6); box-shadow: 0 1px 3px rgba(20,20,19,.06), 0 4px 16px rgba(20,20,19,.04); }
+.f02-concept-fcard i { display: block; height: 7px; border-radius: 4px; background: rgba(20,20,19,.14); margin-top: 10px; }
+.f02-concept-fglyph { font-family: "JetBrains Mono", monospace; font-size: 64px; color: rgba(20,20,19,.22); }
+.f02-concept-fstar { font-family: "Inter", sans-serif; font-size: 70px; color: rgba(204,120,92,.35); }
+.f02-concept-kicker { position: absolute; left: 0; right: 0; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 28px;
+  letter-spacing: .16em; text-transform: uppercase; color: rgba(20,20,19,.7); }
+.f02-concept-kicker b { color: #CC785C; font-weight: 400; margin-right: 14px; }
+.f02-concept-title { position: absolute; left: 60px; right: 60px; text-align: center; font-family: "EB Garamond", serif; font-weight: 400;
+  letter-spacing: -.02em; line-height: 1.02; color: #141413; }
+.f02-concept-w { display: inline-block; will-change: transform, opacity; }
+.f02-concept-badge { position: absolute; left: 50%; top: 150px; margin-left: -130px; width: 260px; height: 64px; border-radius: 9999px;
+  background: #CC785C; color: #FAF9F5; font-family: "JetBrains Mono", monospace; font-size: 26px; letter-spacing: .18em;
+  display: flex; align-items: center; justify-content: center; }
+.f02-concept-card { position: absolute; background: #EFE9DE; border: 1px solid rgba(20,20,19,.12); border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(20,20,19,.08), 0 4px 16px rgba(20,20,19,.04); }
+.f02-concept-navy { position: absolute; background: #181715; border: 1px solid rgba(250,249,245,.12); border-radius: 12px; color: #FAF9F5;
+  box-shadow: 0 2px 6px rgba(20,20,19,.18), 0 18px 48px rgba(20,20,19,.16); font-family: "JetBrains Mono", monospace; overflow: hidden; }
+.f02-concept-bar { height: 58px; background: #252320; border-bottom: 1px solid rgba(250,249,245,.1); display: flex; align-items: center; padding: 0 22px; gap: 10px; }
+.f02-concept-bar span.d { width: 14px; height: 14px; border-radius: 50%; background: rgba(250,249,245,.22); }
+.f02-concept-bar em { font-style: normal; margin-left: 14px; font-size: 22px; color: rgba(250,249,245,.62); letter-spacing: .04em; }
+.f02-concept-code { font-size: 33px; line-height: 1.62; padding: 26px 34px; white-space: pre; }
+.f02-concept-k { color: #5DB8A6; } .f02-concept-v { color: #FAF9F5; } .f02-concept-s { color: #E8A55A; } .f02-concept-m { color: rgba(250,249,245,.45); }
+.f02-concept-caret { display: inline-block; width: 16px; height: 36px; background: #CC785C; vertical-align: -6px; margin-left: 3px; }
+.f02-concept-mono { font-family: "JetBrains Mono", monospace; }
+
+
+.f02-concept-hero { color: #141413; }
+.f02-concept-hero .f02-concept-sk { color: #CC785C; }
+.f02-concept-skill { position: absolute; left: 610px; top: 980px; width: 380px; transform-origin: 0% 100%; }
+.f02-concept-skill .f02-concept-code { font-size: 26px; padding: 18px 24px; line-height: 1.7; }
+.f02-concept-ok { position: absolute; left: 50%; top: 1390px; margin-left: -250px; width: 500px; height: 92px; border-radius: 9999px;
+  background: #FAF9F5; border: 1px solid rgba(20,20,19,.2); display: flex; align-items: center; justify-content: center; gap: 18px;
+  font-family: "JetBrains Mono", monospace; font-size: 30px; letter-spacing: .06em; color: #141413; }
+
+</style>
+<div id="root" data-composition-id="02-concept" data-width="1080" data-height="1920" data-duration="7.817">
+  <div id="f02-concept-bg" class="f02-concept-bg clip" data-start="0" data-duration="7.817" data-track-index="0"></div>
+  <div id="f02-concept-vignette" class="f02-concept-vignette clip" data-start="0" data-duration="7.817" data-track-index="1"></div>
+  <div id="f02-concept-floaters" class="clip" data-start="0" data-duration="7.817" data-track-index="2" style="position:absolute;inset:0">
+<div id="f02-concept-fl0" class="f02-concept-float" style="left:70px;top:300px"><svg width="150" height="187" viewBox="0 0 150 187"><rect x="1" y="1" width="148" height="185" rx="10" fill="#EFE9DE" stroke="rgba(20,20,19,.32)" stroke-width="2"/><rect x="16" y="22" width="118.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="40" width="94.4" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="58" width="70.8" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="76" width="118.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="157" width="40" height="12" rx="6" fill="rgba(204,120,92,.55)"/></svg></div>
+<div id="f02-concept-fl1" class="f02-concept-float" style="left:900px;top:250px"><svg width="60" height="90" viewBox="0 0 60 90"><path d="M44 6 L16 84" stroke="rgba(20,20,19,.32)" stroke-width="9" stroke-linecap="round"/></svg></div>
+<div id="f02-concept-fl2" class="f02-concept-float" style="left:140px;top:1180px"><svg width="80" height="80" viewBox="-40 -40 80 80"><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(0)"/><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(60)"/><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(120)"/></svg></div>
+<div id="f02-concept-fl3" class="f02-concept-float" style="left:820px;top:1300px"><svg width="110" height="137" viewBox="0 0 110 137"><rect x="1" y="1" width="108" height="135" rx="10" fill="#EFE9DE" stroke="rgba(20,20,19,.32)" stroke-width="2"/><rect x="16" y="22" width="78.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="40" width="62.400000000000006" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="58" width="46.8" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="76" width="78.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/></svg></div>
+<div id="f02-concept-fl4" class="f02-concept-float" style="left:60px;top:1500px"><svg width="110" height="90" viewBox="0 0 110 90"><path d="M34 6 q-14 0 -14 14 v14 q0 10 -12 11 q12 1 12 11 v14 q0 14 14 14 M76 6 q14 0 14 14 v14 q0 10 12 11 q-12 1 -12 11 v14 q0 14 -14 14" fill="none" stroke="rgba(20,20,19,.32)" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="f02-concept-fl5" class="f02-concept-float" style="left:860px;top:640px"><svg width="150" height="112" viewBox="0 0 150 112" style="opacity:0.55;overflow:visible"><path d="M4 15.680000000000001 q0 -11.200000000000001 6.0 -11.200000000000001 h45.0 l9.0 11.200000000000001 h81.0 q6.0 0 6.0 6.72 v82.88 q0 6.72 -6.0 6.72 h-135.0 q-6.0 0 -6.0 -6.72 z" fill="#ECE3D4" stroke="rgba(20,20,19,.22)" stroke-width="2"/><path d="M4 33.6 h142" stroke="rgba(20,20,19,.14)" stroke-width="2"/></svg></div>
+  </div>
+  <div id="f02-concept-stage" class="clip" data-start="0" data-duration="7.817" data-track-index="3" style="position:absolute;inset:0">
+
+<div id="f02-concept-kick" class="f02-concept-kicker" style="top:170px"><b>✱</b>La solution</div>
+<div id="f02-concept-hero" class="f02-concept-title f02-concept-hero" style="top:250px;font-size:230px"><span class="f02-concept-w " data-wi="h0">Un</span> <span class="f02-concept-w " data-wi="h1">skill.</span></div>
+<div id="f02-concept-folder" style="position:absolute;left:150px;top:640px;width:560px;height:430px"><svg id="f02-concept-fsvg" width="560" height="430" viewBox="0 0 560 430" style="opacity:1;overflow:visible"><path d="M4 60.2 q0 -43.0 22.400000000000002 -43.0 h168.0 l33.6 43.0 h302.40000000000003 q22.400000000000002 0 22.400000000000002 25.8 v318.2 q0 25.8 -22.400000000000002 25.8 h-504.0 q-22.400000000000002 0 -22.400000000000002 -25.8 z" fill="#ECE3D4" stroke="rgba(20,20,19,.22)" stroke-width="2"/><path d="M4 129.0 h552" stroke="rgba(20,20,19,.14)" stroke-width="2"/><text x="280.0" y="275.2" text-anchor="middle" font-family="JetBrains Mono" font-size="47" fill="rgba(20,20,19,.72)">mon-skill/</text></svg></div>
+<div id="f02-concept-skill" class="f02-concept-navy f02-concept-skill">
+  <div class="f02-concept-bar"><span class="d"></span><span class="d"></span><span class="d"></span><em>SKILL.md</em></div>
+  <div class="f02-concept-code"><span class="f02-concept-m">---</span>
+<span class="f02-concept-k">name:</span> <span class="f02-concept-v">mon-skill</span>
+<span class="f02-concept-k">description:</span> <span class="f02-concept-s">…</span>
+<span class="f02-concept-m">---</span></div>
+</div>
+<div id="f02-concept-ok" class="f02-concept-ok"><svg width="40" height="40" viewBox="0 0 40 40"><path id="f02-concept-check" d="M8 21 l8 8 l16 -18" fill="none" stroke="#141413" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Claude sait faire</span></div>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="02-concept"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function typeOn(el, text, at, dur) {
+  const o = { n: 0 };
+  el.textContent = "";
+  tl.fromTo(o, { n: 0 }, { n: text.length, duration: dur, ease: "none",
+    onUpdate: () => { el.textContent = text.slice(0, Math.round(o.n)); } }, at);
+}
+function caretBlink(el, from, to) {
+  for (let t = from, k = 0; t < to; t += 0.5, k++) tl.set(el, { opacity: k % 2 ? 1 : 0.15 }, t);
+}
+function wordsIn(sel, at, gap, y) {
+  tl.fromTo(qa(sel), { opacity: 0, y: y || 60, filter: "blur(8px)" },
+    { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power3.out", stagger: gap }, at);
+}
+function popIn(sel, at, opts) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.86, y: 40 }, (opts && opts.from) || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }, (opts && opts.to) || {}), at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 12), immediateRender: false, duration: Math.max(0.3, end - at), ease: "sine.inOut" }, at);
+}
+
+tl.fromTo("#f02-concept-fl0", {opacity: 0}, {opacity: 0.45, duration: 0.9, ease: "power2.out"}, 0.00);
+tl.fromTo("#f02-concept-fl0", {x: 0, y: 0, rotation: 1.5}, {x: 10, y: -22, rotation: -3, duration: 7.817, ease: "sine.inOut"}, 0);
+tl.fromTo("#f02-concept-fl1", {opacity: 0}, {opacity: 0.53, duration: 0.9, ease: "power2.out"}, 0.05);
+tl.fromTo("#f02-concept-fl1", {x: 0, y: 0, rotation: -2.0}, {x: -14, y: -29, rotation: 4, duration: 7.817, ease: "sine.inOut"}, 0);
+tl.fromTo("#f02-concept-fl2", {opacity: 0}, {opacity: 0.61, duration: 0.9, ease: "power2.out"}, 0.10);
+tl.fromTo("#f02-concept-fl2", {x: 0, y: 0, rotation: 2.5}, {x: 18, y: -36, rotation: -5, duration: 7.817, ease: "sine.inOut"}, 0);
+tl.fromTo("#f02-concept-fl3", {opacity: 0}, {opacity: 0.45, duration: 0.9, ease: "power2.out"}, 0.15);
+tl.fromTo("#f02-concept-fl3", {x: 0, y: 0, rotation: -1.5}, {x: -10, y: -43, rotation: 3, duration: 7.817, ease: "sine.inOut"}, 0);
+tl.fromTo("#f02-concept-fl4", {opacity: 0}, {opacity: 0.53, duration: 0.9, ease: "power2.out"}, 0.20);
+tl.fromTo("#f02-concept-fl4", {x: 0, y: 0, rotation: 2.0}, {x: 14, y: -22, rotation: -4, duration: 7.817, ease: "sine.inOut"}, 0);
+tl.fromTo("#f02-concept-fl5", {opacity: 0}, {opacity: 0.61, duration: 0.9, ease: "power2.out"}, 0.25);
+tl.fromTo("#f02-concept-fl5", {x: 0, y: 0, rotation: -2.5}, {x: -18, y: -29, rotation: 5, duration: 7.817, ease: "sine.inOut"}, 0);
+
+tl.fromTo("#f02-concept-kick", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.3);
+const hw = qa("#f02-concept-hero .f02-concept-w");
+hw[1].classList.add("f02-concept-sk");
+tl.fromTo(hw[0], { opacity: 0, y: 70, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, 1.45);
+tl.fromTo(hw[1], { opacity: 0, scale: 1.3, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "expo.out" }, 1.65);
+tl.fromTo("#f02-concept-folder", { opacity: 0, y: 260, rotation: -3 }, { opacity: 1, y: 0, rotation: 0, duration: 0.9, ease: "power3.out" }, 2.5);
+levitate("#f02-concept-folder", 3.4, 7.8, 14);
+tl.fromTo("#f02-concept-skill", { opacity: 0, x: -260, y: 60, scale: 0.4, rotation: 0 }, { opacity: 1, x: 0, y: -250, scale: 1, rotation: -4, duration: 1.0, ease: "power3.out" }, 3.85);
+tl.fromTo("#f02-concept-skill", { y: -250 }, { y: -268, immediateRender: false, duration: 2.9, ease: "sine.inOut" }, 4.9);
+tl.fromTo("#f02-concept-ok", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 5.9);
+const ck = q("#f02-concept-check");
+tl.fromTo(ck, { strokeDasharray: 40, strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 6.5);
+
+tl.set({}, {}, 7.817);
+window.__timelines["02-concept"] = tl;
+})();
+</script>
+</template>

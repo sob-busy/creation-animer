@@ -1,0 +1,137 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; container-type: size;
+  font-family: "Inter", sans-serif; color: #141413; }
+#root * { box-sizing: border-box; }
+.f01-hook-bg { position: absolute; inset: 0; background-color: #FAF9F5;
+  background-image: linear-gradient(rgba(20,20,19,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,19,.055) 1px, transparent 1px);
+  background-size: 72px 72px; background-position: 36px 36px; }
+.f01-hook-vignette { position: absolute; inset: 0; background: radial-gradient(900px 1100px at 50% 40%, rgba(250,249,245,0) 0%, rgba(239,233,222,.85) 100%); }
+.f01-hook-float { position: absolute; opacity: 0; filter: blur(1.2px); }
+.f01-hook-fcard { background: #EFE9DE; border: 1px solid rgba(20,20,19,.16); border-radius: 10px; padding: 14px 18px 16px;
+  font-family: "JetBrains Mono", monospace; font-size: 22px; color: rgba(20,20,19,.6); box-shadow: 0 1px 3px rgba(20,20,19,.06), 0 4px 16px rgba(20,20,19,.04); }
+.f01-hook-fcard i { display: block; height: 7px; border-radius: 4px; background: rgba(20,20,19,.14); margin-top: 10px; }
+.f01-hook-fglyph { font-family: "JetBrains Mono", monospace; font-size: 64px; color: rgba(20,20,19,.22); }
+.f01-hook-fstar { font-family: "Inter", sans-serif; font-size: 70px; color: rgba(204,120,92,.35); }
+.f01-hook-kicker { position: absolute; left: 0; right: 0; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 28px;
+  letter-spacing: .16em; text-transform: uppercase; color: rgba(20,20,19,.7); }
+.f01-hook-kicker b { color: #CC785C; font-weight: 400; margin-right: 14px; }
+.f01-hook-title { position: absolute; left: 60px; right: 60px; text-align: center; font-family: "EB Garamond", serif; font-weight: 400;
+  letter-spacing: -.02em; line-height: 1.02; color: #141413; }
+.f01-hook-w { display: inline-block; will-change: transform, opacity; }
+.f01-hook-badge { position: absolute; left: 50%; top: 150px; margin-left: -130px; width: 260px; height: 64px; border-radius: 9999px;
+  background: #CC785C; color: #FAF9F5; font-family: "JetBrains Mono", monospace; font-size: 26px; letter-spacing: .18em;
+  display: flex; align-items: center; justify-content: center; }
+.f01-hook-card { position: absolute; background: #EFE9DE; border: 1px solid rgba(20,20,19,.12); border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(20,20,19,.08), 0 4px 16px rgba(20,20,19,.04); }
+.f01-hook-navy { position: absolute; background: #181715; border: 1px solid rgba(250,249,245,.12); border-radius: 12px; color: #FAF9F5;
+  box-shadow: 0 2px 6px rgba(20,20,19,.18), 0 18px 48px rgba(20,20,19,.16); font-family: "JetBrains Mono", monospace; overflow: hidden; }
+.f01-hook-bar { height: 58px; background: #252320; border-bottom: 1px solid rgba(250,249,245,.1); display: flex; align-items: center; padding: 0 22px; gap: 10px; }
+.f01-hook-bar span.d { width: 14px; height: 14px; border-radius: 50%; background: rgba(250,249,245,.22); }
+.f01-hook-bar em { font-style: normal; margin-left: 14px; font-size: 22px; color: rgba(250,249,245,.62); letter-spacing: .04em; }
+.f01-hook-code { font-size: 33px; line-height: 1.62; padding: 26px 34px; white-space: pre; }
+.f01-hook-k { color: #5DB8A6; } .f01-hook-v { color: #FAF9F5; } .f01-hook-s { color: #E8A55A; } .f01-hook-m { color: rgba(250,249,245,.45); }
+.f01-hook-caret { display: inline-block; width: 16px; height: 36px; background: #CC785C; vertical-align: -6px; margin-left: 3px; }
+.f01-hook-mono { font-family: "JetBrains Mono", monospace; }
+
+
+.f01-hook-bubble { padding: 30px 36px 34px; border-radius: 28px 28px 28px 8px; }
+.f01-hook-who { font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; color: rgba(20,20,19,.5); margin-bottom: 12px; }
+.f01-hook-btxt { font-size: 40px; line-height: 1.32; color: #141413; }
+.f01-hook-count { position: absolute; right: 90px; top: 1130px; font-family: "EB Garamond", serif; font-size: 150px; letter-spacing: -.03em; color: #141413; }
+.f01-hook-count small { font-family: "JetBrains Mono", monospace; font-size: 30px; letter-spacing: .1em; color: rgba(20,20,19,.55); display: block; text-align: right; margin-top: -8px; }
+.f01-hook-q { color: #CC785C; }
+
+</style>
+<div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920" data-duration="3.381">
+  <div id="f01-hook-bg" class="f01-hook-bg clip" data-start="0" data-duration="3.381" data-track-index="0"></div>
+  <div id="f01-hook-vignette" class="f01-hook-vignette clip" data-start="0" data-duration="3.381" data-track-index="1"></div>
+  <div id="f01-hook-floaters" class="clip" data-start="0" data-duration="3.381" data-track-index="2" style="position:absolute;inset:0">
+<div id="f01-hook-fl0" class="f01-hook-float" style="left:80px;top:220px"><svg width="60" height="90" viewBox="0 0 60 90"><path d="M44 6 L16 84" stroke="rgba(20,20,19,.32)" stroke-width="9" stroke-linecap="round"/></svg></div>
+<div id="f01-hook-fl1" class="f01-hook-float" style="left:830px;top:330px"><svg width="110" height="137" viewBox="0 0 110 137"><rect x="1" y="1" width="108" height="135" rx="10" fill="#EFE9DE" stroke="rgba(20,20,19,.32)" stroke-width="2"/><rect x="16" y="22" width="78.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="40" width="62.400000000000006" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="58" width="46.8" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="76" width="78.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/></svg></div>
+<div id="f01-hook-fl2" class="f01-hook-float" style="left:60px;top:1240px"><svg width="150" height="112" viewBox="0 0 150 112" style="opacity:0.55;overflow:visible"><path d="M4 15.680000000000001 q0 -11.200000000000001 6.0 -11.200000000000001 h45.0 l9.0 11.200000000000001 h81.0 q6.0 0 6.0 6.72 v82.88 q0 6.72 -6.0 6.72 h-135.0 q-6.0 0 -6.0 -6.72 z" fill="#ECE3D4" stroke="rgba(20,20,19,.22)" stroke-width="2"/><path d="M4 33.6 h142" stroke="rgba(20,20,19,.14)" stroke-width="2"/></svg></div>
+<div id="f01-hook-fl3" class="f01-hook-float" style="left:930px;top:1080px"><svg width="80" height="80" viewBox="-40 -40 80 80"><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(0)"/><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(60)"/><rect x="-5" y="-36" width="10" height="72" rx="5" fill="rgba(204,120,92,.45)" transform="rotate(120)"/></svg></div>
+<div id="f01-hook-fl4" class="f01-hook-float" style="left:760px;top:1480px"><svg width="150" height="187" viewBox="0 0 150 187"><rect x="1" y="1" width="148" height="185" rx="10" fill="#EFE9DE" stroke="rgba(20,20,19,.32)" stroke-width="2"/><rect x="16" y="22" width="118.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="40" width="94.4" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="58" width="70.8" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="76" width="118.0" height="7" rx="3.5" fill="rgba(20,20,19,.22)"/><rect x="16" y="157" width="40" height="12" rx="6" fill="rgba(204,120,92,.55)"/></svg></div>
+<div id="f01-hook-fl5" class="f01-hook-float" style="left:120px;top:700px"><svg width="110" height="90" viewBox="0 0 110 90"><path d="M34 6 q-14 0 -14 14 v14 q0 10 -12 11 q12 1 12 11 v14 q0 14 14 14 M76 6 q14 0 14 14 v14 q0 10 12 11 q-12 1 -12 11 v14 q0 14 -14 14" fill="none" stroke="rgba(20,20,19,.32)" stroke-width="7" stroke-linecap="round"/></svg></div>
+  </div>
+  <div id="f01-hook-stage" class="clip" data-start="0" data-duration="3.381" data-track-index="3" style="position:absolute;inset:0">
+
+<div id="f01-hook-kick" class="f01-hook-kicker" style="top:150px"><b>✱</b>Claude Code</div>
+<div id="f01-hook-title" class="f01-hook-title" style="top:225px;font-size:190px">Encore<span class="f01-hook-q"> ?</span></div>
+<div id="f01-hook-b2" class="f01-hook-card f01-hook-bubble" data-layout-allow-overlap data-layout-allow-occlusion style="left:130px;top:870px;width:820px;opacity:0"><div class="f01-hook-who">Toi → Claude</div><div class="f01-hook-btxt">Rappelle-toi : réponds en français, ton direct, pas de jargon…</div></div>
+<div id="f01-hook-b1" class="f01-hook-card f01-hook-bubble" data-layout-allow-overlap data-layout-allow-occlusion style="left:130px;top:700px;width:820px;opacity:0"><div class="f01-hook-who">Toi → Claude</div><div class="f01-hook-btxt">Rappelle-toi : réponds en français, ton direct, pas de jargon…</div></div>
+<div id="f01-hook-b0" class="f01-hook-card f01-hook-bubble" data-layout-allow-overlap data-layout-allow-occlusion style="left:130px;top:530px;width:820px;"><div class="f01-hook-who">Toi → Claude</div><div class="f01-hook-btxt">Rappelle-toi : réponds en français, ton direct, pas de jargon…</div></div>
+<div id="f01-hook-count" class="f01-hook-count"><span id="f01-hook-cnum">×1</span><small>même consigne</small></div>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="01-hook"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function typeOn(el, text, at, dur) {
+  const o = { n: 0 };
+  el.textContent = "";
+  tl.fromTo(o, { n: 0 }, { n: text.length, duration: dur, ease: "none",
+    onUpdate: () => { el.textContent = text.slice(0, Math.round(o.n)); } }, at);
+}
+function caretBlink(el, from, to) {
+  for (let t = from, k = 0; t < to; t += 0.5, k++) tl.set(el, { opacity: k % 2 ? 1 : 0.15 }, t);
+}
+function wordsIn(sel, at, gap, y) {
+  tl.fromTo(qa(sel), { opacity: 0, y: y || 60, filter: "blur(8px)" },
+    { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power3.out", stagger: gap }, at);
+}
+function popIn(sel, at, opts) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.86, y: 40 }, (opts && opts.from) || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }, (opts && opts.to) || {}), at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 12), immediateRender: false, duration: Math.max(0.3, end - at), ease: "sine.inOut" }, at);
+}
+
+tl.fromTo("#f01-hook-fl0", {opacity: 0}, {opacity: 0.45, duration: 0.9, ease: "power2.out"}, 0.00);
+tl.fromTo("#f01-hook-fl0", {x: 0, y: 0, rotation: 1.5}, {x: 10, y: -22, rotation: -3, duration: 3.381, ease: "sine.inOut"}, 0);
+tl.fromTo("#f01-hook-fl1", {opacity: 0}, {opacity: 0.53, duration: 0.9, ease: "power2.out"}, 0.05);
+tl.fromTo("#f01-hook-fl1", {x: 0, y: 0, rotation: -2.0}, {x: -14, y: -29, rotation: 4, duration: 3.381, ease: "sine.inOut"}, 0);
+tl.fromTo("#f01-hook-fl2", {opacity: 0}, {opacity: 0.61, duration: 0.9, ease: "power2.out"}, 0.10);
+tl.fromTo("#f01-hook-fl2", {x: 0, y: 0, rotation: 2.5}, {x: 18, y: -36, rotation: -5, duration: 3.381, ease: "sine.inOut"}, 0);
+tl.fromTo("#f01-hook-fl3", {opacity: 0}, {opacity: 0.45, duration: 0.9, ease: "power2.out"}, 0.15);
+tl.fromTo("#f01-hook-fl3", {x: 0, y: 0, rotation: -1.5}, {x: -10, y: -43, rotation: 3, duration: 3.381, ease: "sine.inOut"}, 0);
+tl.fromTo("#f01-hook-fl4", {opacity: 0}, {opacity: 0.53, duration: 0.9, ease: "power2.out"}, 0.20);
+tl.fromTo("#f01-hook-fl4", {x: 0, y: 0, rotation: 2.0}, {x: 14, y: -22, rotation: -4, duration: 3.381, ease: "sine.inOut"}, 0);
+tl.fromTo("#f01-hook-fl5", {opacity: 0}, {opacity: 0.61, duration: 0.9, ease: "power2.out"}, 0.25);
+tl.fromTo("#f01-hook-fl5", {x: 0, y: 0, rotation: -2.5}, {x: -18, y: -29, rotation: 5, duration: 3.381, ease: "sine.inOut"}, 0);
+
+tl.fromTo("#f01-hook-kick", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.0);
+popIn("#f01-hook-b0", 0.05);
+tl.fromTo("#f01-hook-count", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, 0.5);
+tl.fromTo("#f01-hook-b1", { opacity: 0, y: -120, scale: 0.97 }, { opacity: 0.85, y: 0, scale: 1, duration: 0.6, ease: "power3.out" }, 1.0);
+tl.fromTo("#f01-hook-b2", { opacity: 0, y: -120, scale: 0.94 }, { opacity: 0.7, y: 0, scale: 1, duration: 0.6, ease: "power3.out" }, 1.5);
+tl.set("#f01-hook-b1", { filter: "blur(1px)" }, 1.0);
+tl.set("#f01-hook-b2", { filter: "blur(2px)" }, 1.5);
+const num = q("#f01-hook-cnum");
+tl.call(() => { num.textContent = "×1"; }, null, 0.0);
+[[1.0, "×2"], [1.5, "×3"], [2.2, "×12"], [2.6, "×47"]].forEach(([t, v], i) => {
+  tl.set(num, { textContent: v }, t);
+  tl.fromTo("#f01-hook-cnum", { scale: 1.18 }, { immediateRender: i === 0, scale: 1, duration: 0.3, ease: "power3.out" }, t);
+});
+tl.fromTo("#f01-hook-title", { opacity: 0, scale: 1.25, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 2.15);
+tl.fromTo(["#f01-hook-b0", "#f01-hook-b1", "#f01-hook-b2"], { x: 0 }, { immediateRender: false, keyframes: { x: [0, -10, 9, -6, 4, 0] }, duration: 0.45, ease: "none" }, 2.6);
+levitate("#f01-hook-title", 2.6, 3.38, 6);
+
+tl.set({}, {}, 3.381);
+window.__timelines["01-hook"] = tl;
+})();
+</script>
+</template>

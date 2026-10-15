@@ -1,0 +1,10 @@
+Demande : vidéo qui explique comment créer des skills dans Claude Code, avec voix off, dynamique, motion design professionnel avec des éléments flottants.
+
+Source (doc officielle Claude Code, Skills) :
+- Un skill est un dossier contenant un fichier SKILL.md : des instructions que Claude suit.
+- Emplacements : ~/.claude/skills/<nom-du-skill>/SKILL.md (personnel, tous vos projets) ; .claude/skills/<nom-du-skill>/SKILL.md (projet, à committer pour partager avec l'équipe).
+- SKILL.md : en-tête YAML entre deux lignes ---, avec name (le nom de la commande) et description (ce que fait le skill et quand l'utiliser). Puis les instructions en Markdown.
+- Claude voit toujours les descriptions ; le contenu complet du SKILL.md n'est chargé que quand le skill sert.
+- Invocation : automatique quand la demande correspond à la description, ou manuelle avec /nom-du-skill.
+- Fichiers d'appui dans le même dossier (reference.md, examples.md, scripts/) chargés seulement si besoin. Garder SKILL.md sous 500 lignes.
+- Étapes : mkdir -p ~/.claude/skills/mon-skill ; écrire SKILL.md ; tester en tapant /mon-skill. Les modifications sont prises en compte sans redémarrer.
