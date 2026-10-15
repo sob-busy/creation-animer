@@ -7,9 +7,9 @@ destination: tiktok
 aspect: 1080x1920
 language: fr
 audience: "créateurs et développeurs qui utilisent Claude Code, débutants sur les skills"
-length: 60s
+length: 52s
 angle: how-to
-voice: "fr-gilles-low (Piper, voix d'homme française, locale)"
+voice: "ff_siwis (Kokoro, voix française dynamique)"
 ---
 
 ## Intent

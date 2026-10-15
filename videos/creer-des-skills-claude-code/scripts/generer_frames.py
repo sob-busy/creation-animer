@@ -19,6 +19,21 @@ OUT.mkdir(parents=True, exist_ok=True)
 SB = (PROJ / "STORYBOARD.md").read_text(encoding="utf-8")
 DUR = {int(n): float(d) for n, d in re.findall(r"## Frame (\d+) —.*?- duration: ([\d.]+)s", SB, re.S)}
 
+# Recalage : les instants de la timeline ont été écrits sur une voix de référence
+# (audio_meta_ref.json) ; on les projette sur la voix actuelle mot par mot.
+_REF = Path(__file__).with_name("audio_meta_ancien.json")
+_ref = {v["frame"]: v for v in json.loads(_REF.read_text())["voices"]} if _REF.exists() else {}
+_cur = {v["frame"]: v for v in json.loads((PROJ / "audio_meta.json").read_text())["voices"]}
+
+
+def time_map(n: int) -> list:
+    if n not in _ref:
+        return []
+    a, b = _ref[n]["words"], _cur[n]["words"]
+    pts = [[0.0, 0.0]] + [[x["start"], y["start"]] for x, y in zip(a, b)] + [[_ref[n]["duration_s"], _cur[n]["duration_s"]]]
+    return pts
+
+
 C = dict(ink="#141413", cream="#FAF9F5", tile="#EFE9DE", tiles="#ECE3D4", coral="#CC785C",
          navy="#181715", navys="#1F1E1B", navye="#252320", teal="#5DB8A6", amber="#E8A55A")
 
@@ -184,6 +199,23 @@ const tl = gsap.timeline({{ paused: true }});
 {JS_HELPERS.replace("__F__", f)}
 {fl_js}
 {js}
+// recalage des instants sur la voix actuelle (interpolation linéaire mot à mot)
+const MAP = {json.dumps(time_map(n))};
+if (MAP.length) {{
+  const T = (t) => {{
+    for (let i = 1; i < MAP.length; i++) if (t <= MAP[i][0]) {{
+      const [a0, b0] = MAP[i - 1], [a1, b1] = MAP[i];
+      return a1 === a0 ? b1 : b0 + (t - a0) * (b1 - b0) / (a1 - a0);
+    }}
+    return t - MAP[MAP.length - 1][0] + MAP[MAP.length - 1][1];
+  }};
+  tl.getChildren(false, true, true).forEach((c) => {{
+    const s0 = c.startTime(), e0 = s0 + c.duration();
+    const s1 = T(s0);
+    c.startTime(s1);
+    if (c.duration() > 0 && c.duration() < 3) c.duration(Math.max(0.05, Math.min(c.duration(), T(e0) - s1 + 0.25)));
+  }});
+}}
 tl.set({{}}, {{}}, {d});
 window.__timelines["{f}"] = tl;
 }})();

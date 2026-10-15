@@ -1,6 +1,6 @@
 # SCRIPT — creer-des-skills-claude-code
 
-**Voice:** fr-gilles-low (Piper, voix d'homme française, locale) — à remplacer par fr-FR-HenriNeural (edge-tts) quand le réseau le permet
+**Voice:** ff_siwis (Kokoro, voix française claire et énergique, débit 1.12, traitement compresseur + présence)
 **Voice settings:** vitesse 1.0 · pause de phrase 0.25 s
 **Voice direction:** Énergique, clair, direct, comme un créateur TikTok tech qui partage une astuce.
 

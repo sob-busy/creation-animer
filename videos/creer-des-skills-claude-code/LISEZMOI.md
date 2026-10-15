@@ -1,6 +1,6 @@
 # Vidéo : créer des skills dans Claude Code
 
-Explainer TikTok en motion design (1080×1920, ~67 s), voix off d'homme en français, fait avec HyperFrames.
+Explainer TikTok en motion design (1080×1920, ~51 s), voix off française Kokoro (ff_siwis), dynamique, fait avec HyperFrames.
 
 - `renders/video.mp4` : la vidéo finale
 - `BRIEF.md`, `STORYBOARD.md`, `SCRIPT.md` : le brief, les 9 scènes et le texte de la voix off
@@ -12,7 +12,7 @@ Explainer TikTok en motion design (1080×1920, ~67 s), voix off d'homme en fran�
 Refaire la vidéo :
 
 ```bash
-python3 scripts/voix_off.py --moteur edge --voix fr-FR-HenriNeural   # ou --moteur piper --modele fr-gilles-low.onnx
+python3 scripts/voix_off.py --moteur kokoro --modele kokoro-v1.0.int8.onnx --voix-kokoro voices-v1.0.bin   # ou --moteur edge --voix fr-FR-HenriNeural
 python3 scripts/musique_sfx.py
 node ~/.claude/skills/faceless-explainer/scripts/audio.mjs sync-durations --audio-meta ./audio_meta.json --storyboard ./STORYBOARD.md
 python3 scripts/generer_frames.py .

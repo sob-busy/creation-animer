@@ -7,6 +7,7 @@ une version « phonétique » (skill -> skile, etc.) pour une meilleure prononci
 
     python3 scripts/voix_off.py --moteur piper --modele /chemin/fr-gilles-low.onnx
     python3 scripts/voix_off.py --moteur edge --voix fr-FR-HenriNeural
+    python3 scripts/voix_off.py --moteur kokoro --modele kokoro.onnx --voix-kokoro voices.bin
 """
 
 from __future__ import annotations
@@ -34,6 +35,11 @@ PHONETIQUE = [
 PAUSE_MORCEAU = 0.16
 DEBUT, FIN = 0.1, 0.4  # silence avant la 1re phrase et après la dernière (s)
 SR = 44100
+# Voix « réseaux sociaux » : coupe les graves inutiles, compression pour une voix
+# présente et régulière, petite brillance, puis niveau constant.
+VOIX_FX = ("highpass=f=90,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=80:makeup=3,"
+           "equalizer=f=3200:t=q:w=1.2:g=3,equalizer=f=220:t=q:w=1:g=1.5,"
+           "loudnorm=I=-15:TP=-1.5:LRA=6")
 
 
 def lignes_script(chemin: Path) -> list[tuple[int, str]]:
@@ -65,6 +71,21 @@ def synth_piper(modele: str, texte: str, sortie: Path, vitesse: float = 0.82) ->
                    input=texte.encode(), check=True, capture_output=True)
 
 
+_KOKORO = None
+
+
+def synth_kokoro(modele: str, voix_bin: str, texte: str, sortie: Path, vitesse: float) -> None:
+    """Kokoro (local) : voix française ff_siwis, claire et énergique."""
+    global _KOKORO
+    import soundfile as sf
+    from kokoro_onnx import Kokoro
+
+    if _KOKORO is None:
+        _KOKORO = Kokoro(modele, voix_bin)
+    son, sr = _KOKORO.create(texte, voice="ff_siwis", speed=vitesse, lang="fr-fr")
+    sf.write(str(sortie), son, sr)
+
+
 def synth_edge(voix: str, texte: str, sortie: Path) -> None:
     import edge_tts
 
@@ -91,7 +112,9 @@ def silence(duree: float, sortie: Path) -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--moteur", choices=["piper", "edge"], default="piper")
+    p.add_argument("--moteur", choices=["piper", "edge", "kokoro"], default="kokoro")
+    p.add_argument("--voix-kokoro", default="voices.bin", help="fichier voices-v1.0.bin de Kokoro")
+    p.add_argument("--vitesse", type=float, default=1.12, help="débit Kokoro (1.0 = normal)")
     p.add_argument("--modele", help="modèle Piper .onnx")
     p.add_argument("--voix", default="fr-FR-HenriNeural")
     p.add_argument("--projet", default=".")
@@ -113,8 +136,12 @@ def main() -> None:
             parts = morceaux(texte)
             for i, part in enumerate(parts):
                 brut, net = tmp / f"{frame}_{i}_b.wav", tmp / f"{frame}_{i}.wav"
-                (synth_piper(a.modele, phonetique(part), brut) if a.moteur == "piper"
-                 else synth_edge(a.voix, phonetique(part), brut))
+                if a.moteur == "piper":
+                    synth_piper(a.modele, phonetique(part), brut)
+                elif a.moteur == "kokoro":
+                    synth_kokoro(a.modele, a.voix_kokoro, phonetique(part), brut, a.vitesse)
+                else:
+                    synth_edge(a.voix, phonetique(part), brut)
                 d = normaliser(brut, net)
                 affiches = part.replace("…", "").split()
                 poids = [len(m) + 1 for m in affiches]
@@ -136,7 +163,7 @@ def main() -> None:
             liste.write_text("".join(f"file '{x}'\n" for x in pistes))
             sortie = dossier / f"{frame:02d}.wav"
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
-                            "-i", str(liste), "-af", "loudnorm=I=-16:TP=-1.5:LRA=7",
+                            "-i", str(liste), "-af", VOIX_FX,
                             "-ar", str(SR), str(sortie)], check=True)
             with wave.open(str(sortie)) as w:
                 duree = round(w.getnframes() / w.getframerate(), 3)

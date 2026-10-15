@@ -1,6 +1,6 @@
 ---
 format: 1080x1920
-duration: 67s
+duration: 52s
 message: "Un skill, c'est un dossier avec un SKILL.md : écris tes consignes une fois, Claude Code les applique tout seul."
 arc: how-to-process
 audience: créateurs et développeurs qui utilisent Claude Code, débutants sur les skills
@@ -21,7 +21,7 @@ music: energetic minimal tech underscore, light pulse, modern
 
 - scene: Des bulles de messages identiques s'empilent en flottant ; le mot « encore » se répète puis tout se fige
 - voiceover: "Tu répètes les mêmes consignes à Claude… à chaque fois ?"
-- duration: 3.381s
+- duration: 3.302s
 - transition_in: cut
 - status: animated
 - src: compositions/frames/01-hook.html
@@ -44,7 +44,7 @@ Scene 3 (2.2–3.38s): sur « à chaque fois ? », le titre display-cover « Enc
 
 - scene: Les bulles se compressent en un seul dossier qui flotte au centre ; dedans apparaît la carte SKILL.md ; le mot SKILL claque en grand
 - voiceover: "La solution : un skill. Un dossier, un fichier SKILL.md… et Claude sait faire."
-- duration: 7.817s
+- duration: 5.423s
 - transition_in: zoom-through
 - status: animated
 - src: compositions/frames/02-concept.html
@@ -69,7 +69,7 @@ Scene 5 (5.8–7.8s): sur « et Claude sait faire », une ligne Inter « → Cla
 
 - scene: Badge « 01 » ; un terminal flottant tape la commande mkdir ; deux chemins flottent ensuite : projet et perso
 - voiceover: "Étape un : crée un dossier dans point claude, slash skills. Dans ton projet… ou dans ton dossier perso."
-- duration: 7.338s
+- duration: 6.074s
 - transition_in: push-slide UP
 - status: animated
 - src: compositions/frames/03-dossier.html
@@ -93,7 +93,7 @@ Scene 4 (5.6–7.34s): sur « ou dans ton dossier perso », une seconde carte «
 
 - scene: Badge « 02 » ; même univers d'éditeur ; une carte SKILL.md flotte, l'en-tête se tape ligne à ligne : name, puis description, surlignée
 - voiceover: "Étape deux : le fichier SKILL.md. En haut, deux champs : name, le nom du skill. Et description : ce qu'il fait, et quand l'utiliser."
-- duration: 13.663s
+- duration: 8.631s
 - transition_in: push-slide UP
 - status: animated
 - src: compositions/frames/04-entete.html
@@ -117,7 +117,7 @@ Scene 4 (9.8–13.66s): sur « description », `description: Rédige un post Lin
 
 - scene: Badge « 03 » ; la même carte s'allonge, des lignes d'instructions Markdown se remplissent ; une étiquette « comme un brief à un collègue » flotte à côté
 - voiceover: "Étape trois : dessous, écris tes instructions en Markdown… comme si tu briefais un collègue."
-- duration: 6.683s
+- duration: 5.336s
 - transition_in: push-slide UP
 - status: animated
 - src: compositions/frames/05-instructions.html
@@ -141,7 +141,7 @@ Scene 4 (4.7–6.68s): sur « comme si tu briefais un collègue », une bulle ti
 
 - scene: Plusieurs cartes de skills orbitent en flottant autour d'une bulle de demande ; une seule s'allume et se rapproche, les autres restent en veille
 - voiceover: "Le secret, c'est la description. Claude les lit toutes… et charge ton skill seulement quand ta demande correspond."
-- duration: 6.705s
+- duration: 6.168s
 - transition_in: blur-crossfade
 - status: animated
 - src: compositions/frames/06-description.html
@@ -165,7 +165,7 @@ Scene 4 (5.7–6.7s): sur « ta demande correspond », une ligne de connexion se
 
 - scene: Une barre de saisie flotte ; on tape « / », une liste de skills apparaît, « /mon-skill » se sélectionne et s'exécute
 - voiceover: "Tu peux aussi l'appeler toi-même : tape slash… puis le nom du skill."
-- duration: 6.284s
+- duration: 3.989s
 - transition_in: blur-crossfade
 - status: animated
 - src: compositions/frames/07-slash.html
@@ -188,7 +188,7 @@ Scene 3 (3.5–6.28s): sur « puis le nom du skill », « mon-skill » se tape a
 
 - scene: Le dossier s'ouvre en éventail ; des cartes flottent autour (exemples.md, reference.md, scripts/) et s'alignent en grille
 - voiceover: "Besoin de plus ? Ajoute des fichiers à côté : exemples, références, scripts. Claude les ouvre seulement si besoin."
-- duration: 8.447s
+- duration: 7.04s
 - transition_in: zoom-through
 - status: animated
 - src: compositions/frames/08-fichiers.html
@@ -212,7 +212,7 @@ Scene 4 (5.2–8.45s): sur « Claude les ouvre seulement si besoin », les trois
 
 - scene: Retour au dossier flottant du début, refermé et brillant ; la phrase finale se construit en trois temps ; « À toi de jouer » en accent
 - voiceover: "Un dossier, un fichier… et Claude apprend un nouveau talent. À toi de créer ton premier skill !"
-- duration: 6.493s
+- duration: 5.319s
 - transition_in: blur-crossfade
 - status: animated
 - src: compositions/frames/09-cta.html

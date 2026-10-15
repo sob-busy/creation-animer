@@ -1,0 +1,1051 @@
+{
+  "bgm": {
+    "path": "assets/music/bed.wav",
+    "source": "host",
+    "volume": 0.16,
+    "duration_s": 68.81
+  },
+  "sfx": [
+    {
+      "frame": 2,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 3,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 4,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 5,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 6,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 7,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 8,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 9,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    }
+  ],
+  "voices": [
+    {
+      "frame": 1,
+      "path": "assets/voice/01.wav",
+      "duration_s": 3.381,
+      "words": [
+        {
+          "text": "Tu",
+          "start": 0.1,
+          "end": 0.232,
+          "id": "w0"
+        },
+        {
+          "text": "répètes",
+          "start": 0.232,
+          "end": 0.586,
+          "id": "w1"
+        },
+        {
+          "text": "les",
+          "start": 0.586,
+          "end": 0.762,
+          "id": "w2"
+        },
+        {
+          "text": "mêmes",
+          "start": 0.762,
+          "end": 1.027,
+          "id": "w3"
+        },
+        {
+          "text": "consignes",
+          "start": 1.027,
+          "end": 1.469,
+          "id": "w4"
+        },
+        {
+          "text": "à",
+          "start": 1.469,
+          "end": 1.557,
+          "id": "w5"
+        },
+        {
+          "text": "Claude",
+          "start": 1.557,
+          "end": 1.866,
+          "id": "w6"
+        },
+        {
+          "text": "à",
+          "start": 2.122,
+          "end": 2.229,
+          "id": "w7"
+        },
+        {
+          "text": "chaque",
+          "start": 2.229,
+          "end": 2.605,
+          "id": "w8"
+        },
+        {
+          "text": "fois",
+          "start": 2.605,
+          "end": 2.874,
+          "id": "w9"
+        },
+        {
+          "text": "?",
+          "start": 2.874,
+          "end": 2.981,
+          "id": "w10"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "assets/voice/02.wav",
+      "duration_s": 7.817,
+      "words": [
+        {
+          "text": "La",
+          "start": 0.1,
+          "end": 0.371,
+          "id": "w0"
+        },
+        {
+          "text": "solution",
+          "start": 0.371,
+          "end": 1.182,
+          "id": "w1"
+        },
+        {
+          "text": ":",
+          "start": 1.182,
+          "end": 1.363,
+          "id": "w2"
+        },
+        {
+          "text": "un",
+          "start": 1.523,
+          "end": 1.669,
+          "id": "w3"
+        },
+        {
+          "text": "skill.",
+          "start": 1.669,
+          "end": 2.011,
+          "id": "w4"
+        },
+        {
+          "text": "Un",
+          "start": 2.267,
+          "end": 2.561,
+          "id": "w5"
+        },
+        {
+          "text": "dossier,",
+          "start": 2.561,
+          "end": 3.44,
+          "id": "w6"
+        },
+        {
+          "text": "un",
+          "start": 3.6,
+          "end": 3.889,
+          "id": "w7"
+        },
+        {
+          "text": "fichier",
+          "start": 3.889,
+          "end": 4.658,
+          "id": "w8"
+        },
+        {
+          "text": "SKILL.md",
+          "start": 4.658,
+          "end": 5.524,
+          "id": "w9"
+        },
+        {
+          "text": "et",
+          "start": 5.78,
+          "end": 6.003,
+          "id": "w10"
+        },
+        {
+          "text": "Claude",
+          "start": 6.003,
+          "end": 6.524,
+          "id": "w11"
+        },
+        {
+          "text": "sait",
+          "start": 6.524,
+          "end": 6.896,
+          "id": "w12"
+        },
+        {
+          "text": "faire.",
+          "start": 6.896,
+          "end": 7.417,
+          "id": "w13"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "assets/voice/03.wav",
+      "duration_s": 7.338,
+      "words": [
+        {
+          "text": "Étape",
+          "start": 0.1,
+          "end": 0.693,
+          "id": "w0"
+        },
+        {
+          "text": "un",
+          "start": 0.693,
+          "end": 0.989,
+          "id": "w1"
+        },
+        {
+          "text": ":",
+          "start": 0.989,
+          "end": 1.187,
+          "id": "w2"
+        },
+        {
+          "text": "crée",
+          "start": 1.347,
+          "end": 1.592,
+          "id": "w3"
+        },
+        {
+          "text": "un",
+          "start": 1.592,
+          "end": 1.74,
+          "id": "w4"
+        },
+        {
+          "text": "dossier",
+          "start": 1.74,
+          "end": 2.133,
+          "id": "w5"
+        },
+        {
+          "text": "dans",
+          "start": 2.133,
+          "end": 2.378,
+          "id": "w6"
+        },
+        {
+          "text": "point",
+          "start": 2.378,
+          "end": 2.673,
+          "id": "w7"
+        },
+        {
+          "text": "claude,",
+          "start": 2.673,
+          "end": 3.066,
+          "id": "w8"
+        },
+        {
+          "text": "slash",
+          "start": 3.226,
+          "end": 3.595,
+          "id": "w9"
+        },
+        {
+          "text": "skills.",
+          "start": 3.595,
+          "end": 4.088,
+          "id": "w10"
+        },
+        {
+          "text": "Dans",
+          "start": 4.344,
+          "end": 4.712,
+          "id": "w11"
+        },
+        {
+          "text": "ton",
+          "start": 4.712,
+          "end": 5.006,
+          "id": "w12"
+        },
+        {
+          "text": "projet",
+          "start": 5.006,
+          "end": 5.52,
+          "id": "w13"
+        },
+        {
+          "text": "ou",
+          "start": 5.776,
+          "end": 5.905,
+          "id": "w14"
+        },
+        {
+          "text": "dans",
+          "start": 5.905,
+          "end": 6.12,
+          "id": "w15"
+        },
+        {
+          "text": "ton",
+          "start": 6.12,
+          "end": 6.292,
+          "id": "w16"
+        },
+        {
+          "text": "dossier",
+          "start": 6.292,
+          "end": 6.637,
+          "id": "w17"
+        },
+        {
+          "text": "perso.",
+          "start": 6.637,
+          "end": 6.938,
+          "id": "w18"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "path": "assets/voice/04.wav",
+      "duration_s": 13.663,
+      "words": [
+        {
+          "text": "Étape",
+          "start": 0.1,
+          "end": 0.416,
+          "id": "w0"
+        },
+        {
+          "text": "deux",
+          "start": 0.416,
+          "end": 0.679,
+          "id": "w1"
+        },
+        {
+          "text": ":",
+          "start": 0.679,
+          "end": 0.785,
+          "id": "w2"
+        },
+        {
+          "text": "le",
+          "start": 0.945,
+          "end": 1.213,
+          "id": "w3"
+        },
+        {
+          "text": "fichier",
+          "start": 1.213,
+          "end": 1.929,
+          "id": "w4"
+        },
+        {
+          "text": "SKILL.md.",
+          "start": 1.929,
+          "end": 2.823,
+          "id": "w5"
+        },
+        {
+          "text": "En",
+          "start": 3.079,
+          "end": 3.335,
+          "id": "w6"
+        },
+        {
+          "text": "haut,",
+          "start": 3.335,
+          "end": 3.848,
+          "id": "w7"
+        },
+        {
+          "text": "deux",
+          "start": 4.008,
+          "end": 4.527,
+          "id": "w8"
+        },
+        {
+          "text": "champs",
+          "start": 4.527,
+          "end": 5.253,
+          "id": "w9"
+        },
+        {
+          "text": ":",
+          "start": 5.253,
+          "end": 5.46,
+          "id": "w10"
+        },
+        {
+          "text": "name,",
+          "start": 5.62,
+          "end": 7.192,
+          "id": "w11"
+        },
+        {
+          "text": "le",
+          "start": 7.352,
+          "end": 7.865,
+          "id": "w12"
+        },
+        {
+          "text": "nom",
+          "start": 7.865,
+          "end": 8.548,
+          "id": "w13"
+        },
+        {
+          "text": "du",
+          "start": 8.548,
+          "end": 9.061,
+          "id": "w14"
+        },
+        {
+          "text": "skill.",
+          "start": 9.061,
+          "end": 10.256,
+          "id": "w15"
+        },
+        {
+          "text": "Et",
+          "start": 10.512,
+          "end": 10.646,
+          "id": "w16"
+        },
+        {
+          "text": "description",
+          "start": 10.646,
+          "end": 11.182,
+          "id": "w17"
+        },
+        {
+          "text": ":",
+          "start": 11.182,
+          "end": 11.272,
+          "id": "w18"
+        },
+        {
+          "text": "ce",
+          "start": 11.432,
+          "end": 11.55,
+          "id": "w19"
+        },
+        {
+          "text": "qu'il",
+          "start": 11.55,
+          "end": 11.787,
+          "id": "w20"
+        },
+        {
+          "text": "fait,",
+          "start": 11.787,
+          "end": 12.024,
+          "id": "w21"
+        },
+        {
+          "text": "et",
+          "start": 12.184,
+          "end": 12.338,
+          "id": "w22"
+        },
+        {
+          "text": "quand",
+          "start": 12.338,
+          "end": 12.647,
+          "id": "w23"
+        },
+        {
+          "text": "l'utiliser.",
+          "start": 12.647,
+          "end": 13.263,
+          "id": "w24"
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "path": "assets/voice/05.wav",
+      "duration_s": 6.683,
+      "words": [
+        {
+          "text": "Étape",
+          "start": 0.1,
+          "end": 0.539,
+          "id": "w0"
+        },
+        {
+          "text": "trois",
+          "start": 0.539,
+          "end": 0.979,
+          "id": "w1"
+        },
+        {
+          "text": ":",
+          "start": 0.979,
+          "end": 1.125,
+          "id": "w2"
+        },
+        {
+          "text": "dessous,",
+          "start": 1.285,
+          "end": 2.02,
+          "id": "w3"
+        },
+        {
+          "text": "écris",
+          "start": 2.18,
+          "end": 2.574,
+          "id": "w4"
+        },
+        {
+          "text": "tes",
+          "start": 2.574,
+          "end": 2.837,
+          "id": "w5"
+        },
+        {
+          "text": "instructions",
+          "start": 2.837,
+          "end": 3.691,
+          "id": "w6"
+        },
+        {
+          "text": "en",
+          "start": 3.691,
+          "end": 3.888,
+          "id": "w7"
+        },
+        {
+          "text": "Markdown",
+          "start": 3.888,
+          "end": 4.48,
+          "id": "w8"
+        },
+        {
+          "text": "comme",
+          "start": 4.736,
+          "end": 5.009,
+          "id": "w9"
+        },
+        {
+          "text": "si",
+          "start": 5.009,
+          "end": 5.145,
+          "id": "w10"
+        },
+        {
+          "text": "tu",
+          "start": 5.145,
+          "end": 5.282,
+          "id": "w11"
+        },
+        {
+          "text": "briefais",
+          "start": 5.282,
+          "end": 5.692,
+          "id": "w12"
+        },
+        {
+          "text": "un",
+          "start": 5.692,
+          "end": 5.828,
+          "id": "w13"
+        },
+        {
+          "text": "collègue.",
+          "start": 5.828,
+          "end": 6.283,
+          "id": "w14"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "path": "assets/voice/06.wav",
+      "duration_s": 6.705,
+      "words": [
+        {
+          "text": "Le",
+          "start": 0.1,
+          "end": 0.226,
+          "id": "w0"
+        },
+        {
+          "text": "secret,",
+          "start": 0.226,
+          "end": 0.564,
+          "id": "w1"
+        },
+        {
+          "text": "c'est",
+          "start": 0.724,
+          "end": 0.981,
+          "id": "w2"
+        },
+        {
+          "text": "la",
+          "start": 0.981,
+          "end": 1.11,
+          "id": "w3"
+        },
+        {
+          "text": "description.",
+          "start": 1.11,
+          "end": 1.669,
+          "id": "w4"
+        },
+        {
+          "text": "Claude",
+          "start": 1.925,
+          "end": 2.273,
+          "id": "w5"
+        },
+        {
+          "text": "les",
+          "start": 2.273,
+          "end": 2.472,
+          "id": "w6"
+        },
+        {
+          "text": "lit",
+          "start": 2.472,
+          "end": 2.672,
+          "id": "w7"
+        },
+        {
+          "text": "toutes",
+          "start": 2.672,
+          "end": 3.02,
+          "id": "w8"
+        },
+        {
+          "text": "et",
+          "start": 3.276,
+          "end": 3.43,
+          "id": "w9"
+        },
+        {
+          "text": "charge",
+          "start": 3.43,
+          "end": 3.789,
+          "id": "w10"
+        },
+        {
+          "text": "ton",
+          "start": 3.789,
+          "end": 3.995,
+          "id": "w11"
+        },
+        {
+          "text": "skill",
+          "start": 3.995,
+          "end": 4.303,
+          "id": "w12"
+        },
+        {
+          "text": "seulement",
+          "start": 4.303,
+          "end": 4.816,
+          "id": "w13"
+        },
+        {
+          "text": "quand",
+          "start": 4.816,
+          "end": 5.124,
+          "id": "w14"
+        },
+        {
+          "text": "ta",
+          "start": 5.124,
+          "end": 5.278,
+          "id": "w15"
+        },
+        {
+          "text": "demande",
+          "start": 5.278,
+          "end": 5.689,
+          "id": "w16"
+        },
+        {
+          "text": "correspond.",
+          "start": 5.689,
+          "end": 6.304,
+          "id": "w17"
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "path": "assets/voice/07.wav",
+      "duration_s": 6.284,
+      "words": [
+        {
+          "text": "Tu",
+          "start": 0.1,
+          "end": 0.241,
+          "id": "w0"
+        },
+        {
+          "text": "peux",
+          "start": 0.241,
+          "end": 0.476,
+          "id": "w1"
+        },
+        {
+          "text": "aussi",
+          "start": 0.476,
+          "end": 0.759,
+          "id": "w2"
+        },
+        {
+          "text": "l'appeler",
+          "start": 0.759,
+          "end": 1.229,
+          "id": "w3"
+        },
+        {
+          "text": "toi-même",
+          "start": 1.229,
+          "end": 1.652,
+          "id": "w4"
+        },
+        {
+          "text": ":",
+          "start": 1.652,
+          "end": 1.747,
+          "id": "w5"
+        },
+        {
+          "text": "tape",
+          "start": 1.907,
+          "end": 3.106,
+          "id": "w6"
+        },
+        {
+          "text": "slash",
+          "start": 3.106,
+          "end": 4.546,
+          "id": "w7"
+        },
+        {
+          "text": "puis",
+          "start": 4.802,
+          "end": 5.048,
+          "id": "w8"
+        },
+        {
+          "text": "le",
+          "start": 5.048,
+          "end": 5.196,
+          "id": "w9"
+        },
+        {
+          "text": "nom",
+          "start": 5.196,
+          "end": 5.392,
+          "id": "w10"
+        },
+        {
+          "text": "du",
+          "start": 5.392,
+          "end": 5.54,
+          "id": "w11"
+        },
+        {
+          "text": "skill.",
+          "start": 5.54,
+          "end": 5.884,
+          "id": "w12"
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "path": "assets/voice/08.wav",
+      "duration_s": 8.447,
+      "words": [
+        {
+          "text": "Besoin",
+          "start": 0.1,
+          "end": 0.364,
+          "id": "w0"
+        },
+        {
+          "text": "de",
+          "start": 0.364,
+          "end": 0.478,
+          "id": "w1"
+        },
+        {
+          "text": "plus",
+          "start": 0.478,
+          "end": 0.667,
+          "id": "w2"
+        },
+        {
+          "text": "?",
+          "start": 0.667,
+          "end": 0.742,
+          "id": "w3"
+        },
+        {
+          "text": "Ajoute",
+          "start": 0.998,
+          "end": 1.333,
+          "id": "w4"
+        },
+        {
+          "text": "des",
+          "start": 1.333,
+          "end": 1.525,
+          "id": "w5"
+        },
+        {
+          "text": "fichiers",
+          "start": 1.525,
+          "end": 1.956,
+          "id": "w6"
+        },
+        {
+          "text": "à",
+          "start": 1.956,
+          "end": 2.051,
+          "id": "w7"
+        },
+        {
+          "text": "côté",
+          "start": 2.051,
+          "end": 2.291,
+          "id": "w8"
+        },
+        {
+          "text": ":",
+          "start": 2.291,
+          "end": 2.387,
+          "id": "w9"
+        },
+        {
+          "text": "exemples,",
+          "start": 2.547,
+          "end": 3.662,
+          "id": "w10"
+        },
+        {
+          "text": "références,",
+          "start": 3.822,
+          "end": 4.459,
+          "id": "w11"
+        },
+        {
+          "text": "scripts.",
+          "start": 4.619,
+          "end": 5.939,
+          "id": "w12"
+        },
+        {
+          "text": "Claude",
+          "start": 6.195,
+          "end": 6.536,
+          "id": "w13"
+        },
+        {
+          "text": "les",
+          "start": 6.536,
+          "end": 6.731,
+          "id": "w14"
+        },
+        {
+          "text": "ouvre",
+          "start": 6.731,
+          "end": 7.024,
+          "id": "w15"
+        },
+        {
+          "text": "seulement",
+          "start": 7.024,
+          "end": 7.511,
+          "id": "w16"
+        },
+        {
+          "text": "si",
+          "start": 7.511,
+          "end": 7.657,
+          "id": "w17"
+        },
+        {
+          "text": "besoin.",
+          "start": 7.657,
+          "end": 8.047,
+          "id": "w18"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "path": "assets/voice/09.wav",
+      "duration_s": 6.493,
+      "words": [
+        {
+          "text": "Un",
+          "start": 0.1,
+          "end": 0.392,
+          "id": "w0"
+        },
+        {
+          "text": "dossier,",
+          "start": 0.392,
+          "end": 1.268,
+          "id": "w1"
+        },
+        {
+          "text": "un",
+          "start": 1.428,
+          "end": 1.647,
+          "id": "w2"
+        },
+        {
+          "text": "fichier",
+          "start": 1.647,
+          "end": 2.229,
+          "id": "w3"
+        },
+        {
+          "text": "et",
+          "start": 2.485,
+          "end": 2.619,
+          "id": "w4"
+        },
+        {
+          "text": "Claude",
+          "start": 2.619,
+          "end": 2.931,
+          "id": "w5"
+        },
+        {
+          "text": "apprend",
+          "start": 2.931,
+          "end": 3.287,
+          "id": "w6"
+        },
+        {
+          "text": "un",
+          "start": 3.287,
+          "end": 3.421,
+          "id": "w7"
+        },
+        {
+          "text": "nouveau",
+          "start": 3.421,
+          "end": 3.777,
+          "id": "w8"
+        },
+        {
+          "text": "talent.",
+          "start": 3.777,
+          "end": 4.133,
+          "id": "w9"
+        },
+        {
+          "text": "À",
+          "start": 4.389,
+          "end": 4.487,
+          "id": "w10"
+        },
+        {
+          "text": "toi",
+          "start": 4.487,
+          "end": 4.681,
+          "id": "w11"
+        },
+        {
+          "text": "de",
+          "start": 4.681,
+          "end": 4.827,
+          "id": "w12"
+        },
+        {
+          "text": "créer",
+          "start": 4.827,
+          "end": 5.12,
+          "id": "w13"
+        },
+        {
+          "text": "ton",
+          "start": 5.12,
+          "end": 5.314,
+          "id": "w14"
+        },
+        {
+          "text": "premier",
+          "start": 5.314,
+          "end": 5.704,
+          "id": "w15"
+        },
+        {
+          "text": "skill",
+          "start": 5.704,
+          "end": 5.996,
+          "id": "w16"
+        },
+        {
+          "text": "!",
+          "start": 5.996,
+          "end": 6.093,
+          "id": "w17"
+        }
+      ]
+    }
+  ]
+}
