@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "tiktok",
+      "confirmed_in": [
+        "madame-sibabi-promo"
+      ],
+      "updated_at": "2026-10-16T19:20:29.074Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": [
+        "madame-sibabi-promo"
+      ],
+      "updated_at": "2026-10-16T19:20:29.127Z"
+    },
+    "language": {
+      "value": "fr",
+      "confirmed_in": [
+        "madame-sibabi-promo"
+      ],
+      "updated_at": "2026-10-16T19:20:29.177Z"
+    },
+    "style_preset.product-launch-video": {
+      "value": "daisy-days",
+      "confirmed_in": [
+        "madame-sibabi-promo"
+      ],
+      "updated_at": "2026-10-16T19:21:26.249Z"
+    }
+  },
+  "sightings": {}
+}

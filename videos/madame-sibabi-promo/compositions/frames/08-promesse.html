@@ -1,0 +1,124 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Lilita One"; src: url("assets/fonts/LilitaOne-400.woff2") format("woff2"); }
+@font-face { font-family: "Kaushan Script"; src: url("assets/fonts/KaushanScript-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-800.woff2") format("woff2"); font-weight: 800; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #FFF8EC; }
+#root * { box-sizing: border-box; }
+.f08-promesse-abs { position: absolute; }
+.f08-promesse-bg { position: absolute; inset: 0; }
+.f08-promesse-rays { position: absolute; left: -460px; top: -260px; width: 2000px; height: 2000px; opacity: .55; }
+.f08-promesse-float { position: absolute; }
+/* logo */
+.f08-promesse-logo { position: absolute; width: 900px; height: 380px; }
+.f08-promesse-madame { position: absolute; left: 70px; top: 0; font-family: "Kaushan Script", cursive; font-size: 128px; line-height: 1; color: #FFFFFF;
+  -webkit-text-stroke: 16px #2A160C; paint-order: stroke fill; text-shadow: 0 8px 0 rgba(42,22,12,.35); }
+.f08-promesse-sib-back, .f08-promesse-sib-front { position: absolute; left: 0; top: 118px; font-family: "Lilita One", sans-serif; font-size: 236px; line-height: 1; letter-spacing: .01em; }
+.f08-promesse-sib-back { color: #2A160C; -webkit-text-stroke: 30px #2A160C; text-shadow: 0 16px 0 #5A2F14, 0 22px 30px rgba(0,0,0,.35); }
+.f08-promesse-sib-front { background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.95) 50%, rgba(255,255,255,0) 60%),
+  linear-gradient(180deg, #FFF59A 0%, #FFE03A 38%, #FFC107 62%, #F59E00 100%);
+  background-size: 300% 100%, 100% 100%; background-position: 120% 0, 0 0; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.f08-promesse-crown { position: absolute; left: 640px; top: -40px; width: 190px; height: 150px; }
+/* pastilles */
+.f08-promesse-pill { position: absolute; display: flex; align-items: center; gap: 18px; padding: 18px 30px 18px 18px; border-radius: 9999px;
+  background: #FFFFFF; color: #2A160C; font-weight: 600; font-size: 44px; box-shadow: 0 10px 24px rgba(0,0,0,.22); white-space: nowrap; }
+.f08-promesse-pill svg { flex: 0 0 auto; }
+.f08-promesse-title1 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Kaushan Script", cursive; font-size: 92px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 10px #2A160C; paint-order: stroke fill; }
+.f08-promesse-title2 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; font-size: 200px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 22px #2A160C; paint-order: stroke fill; text-shadow: 0 14px 0 rgba(42,22,12,.45); }
+.f08-promesse-count { position: absolute; left: 60px; top: 120px; padding: 10px 26px; border-radius: 9999px; background: rgba(255,255,255,.92); color: #2A160C;
+  font-family: "Lilita One", sans-serif; font-size: 44px; }
+.f08-promesse-photo { position: absolute; background: #FFFFFF; padding: 14px 14px 58px; border-radius: 22px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.f08-promesse-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.f08-promesse-photo span { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-weight: 600; font-size: 28px; color: #2A160C; }
+.f08-promesse-badge { position: absolute; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  font-family: "Lilita One", sans-serif; line-height: .95; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+
+#f08-promesse-bg { background: radial-gradient(1200px 1400px at 50% 36%, #2E9A48 0%, #0E4A1E 75%); }
+
+.f08-promesse-ph { left: 200px; top: 130px; width: 680px; height: 820px; border-radius: 40px; overflow: hidden; border: 14px solid #FFD21F; box-shadow: 0 30px 60px rgba(0,0,0,.4); }
+.f08-promesse-ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; }
+.f08-promesse-name { left: 250px; width: 580px; top: 880px; height: 110px; border-radius: 9999px; background: #1F7A34; border: 6px solid #FFFFFF;
+  display: flex; align-items: center; justify-content: center; gap: 14px; font-family: "Lilita One"; font-size: 64px; color: #FFD21F; }
+.f08-promesse-card { left: 120px; width: 840px; top: 1040px; padding: 30px 40px; border-radius: 34px; background: #FFF8EC; box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+.f08-promesse-row { display: flex; align-items: center; gap: 22px; padding: 12px 0; font-weight: 800; font-size: 52px; color: #2A160C; }
+.f08-promesse-rib { left: 50px; width: 980px; top: 1430px; height: 120px; border-radius: 22px; background: linear-gradient(180deg, #E8283A, #B30F22);
+  display: flex; align-items: center; justify-content: center; gap: 16px; font-family: "Kaushan Script"; font-size: 58px; color: #FFFFFF; box-shadow: 0 16px 30px rgba(0,0,0,.35); }
+
+</style>
+<div id="root" data-composition-id="08-promesse" data-width="1080" data-height="1920" data-duration="5.815">
+  <div id="f08-promesse-bg" class="f08-promesse-bg clip" data-start="0" data-duration="5.815" data-track-index="0"></div>
+  <div id="f08-promesse-amb" class="clip" data-start="0" data-duration="5.815" data-track-index="1" style="position:absolute;inset:0">
+<svg id="f08-promesse-rays" class="f08-promesse-rays" viewBox="0 0 2000 2000"><defs><radialGradient id="f08-promesse-rg"><stop offset="0" stop-color="#FFE680" stop-opacity=".55"/><stop offset="1" stop-color="#FFE680" stop-opacity="0"/></radialGradient></defs><path d="M1000 1000 L2400 1000 L2386 1195 Z M1000 1000 L2316 1479 L2236 1657 Z M1000 1000 L2072 1900 L1937 2040 Z M1000 1000 L1700 2212 L1524 2298 Z M1000 1000 L1243 2379 L1049 2399 Z M1000 1000 L757 2379 L567 2331 Z M1000 1000 L300 2212 L138 2103 Z M1000 1000 L-72 1900 L-187 1742 Z M1000 1000 L-316 1479 L-369 1291 Z M1000 1000 L-400 1000 L-386 805 Z M1000 1000 L-316 521 L-236 343 Z M1000 1000 L-72 100 L63 -40 Z M1000 1000 L300 -212 L476 -298 Z M1000 1000 L757 -379 L951 -399 Z M1000 1000 L1243 -379 L1433 -331 Z M1000 1000 L1700 -212 L1862 -103 Z M1000 1000 L2072 100 L2187 258 Z M1000 1000 L2316 521 L2369 709 Z" fill="url(#f08-promesse-rg)"/></svg>
+<div id="f08-promesse-fl0" class="f08-promesse-float" style="left:70px;top:320px;filter:blur(5px);opacity:0"><svg width="70" height="70" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#FFD21F"/></svg></div>
+<div id="f08-promesse-fl1" class="f08-promesse-float" style="left:950px;top:600px;filter:blur(5px);opacity:0"><svg width="50" height="50" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#FFFFFF"/></svg></div>
+<div id="f08-promesse-fl2" class="f08-promesse-float" style="left:930px;top:180px;filter:blur(2px);opacity:0"><svg width="110" height="110" viewBox="0 0 100 100"><path d="M10 90 Q10 20 90 10 Q84 84 10 90 Z" fill="#3FA845" stroke="#1F6B2A" stroke-width="3"/><path d="M14 86 Q46 48 84 16" stroke="#1F6B2A" stroke-width="3" fill="none"/></svg></div>
+<div id="f08-promesse-fl3" class="f08-promesse-float" style="left:40px;top:900px;filter:blur(5px);opacity:0"><svg width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#C8DC2B"/><circle cx="50" cy="50" r="41" fill="#FFFBD0"/><path d="M50 50 L84.0 50.0 A34 34 0 0 1 71.1 76.6 Z" fill="#F7F59A"/><path d="M50 50 L71.2 76.6 A34 34 0 0 1 42.4 83.1 Z" fill="#F7F59A"/><path d="M50 50 L42.4 83.1 A34 34 0 0 1 19.3 64.7 Z" fill="#F7F59A"/><path d="M50 50 L19.4 64.8 A34 34 0 0 1 19.4 35.2 Z" fill="#F7F59A"/><path d="M50 50 L19.4 35.2 A34 34 0 0 1 42.5 16.8 Z" fill="#F7F59A"/><path d="M50 50 L42.4 16.9 A34 34 0 0 1 71.3 23.5 Z" fill="#F7F59A"/><path d="M50 50 L71.2 23.4 A34 34 0 0 1 84.0 50.1 Z" fill="#F7F59A"/><circle cx="50" cy="50" r="5" fill="#FFFBD0"/></svg></div>
+  </div>
+  <div id="f08-promesse-stage" class="clip" data-start="0" data-duration="5.815" data-track-index="2" style="position:absolute;inset:0">
+
+<div id="f08-promesse-ph" class="f08-promesse-abs f08-promesse-ph"><img src="assets/portrait-sibabi-2.png" alt=""></div>
+<div id="f08-promesse-name" class="f08-promesse-abs f08-promesse-name"><span style="font-family:'Kaushan Script'">Madame</span> SIBABI</div>
+<div id="f08-promesse-card" class="f08-promesse-abs f08-promesse-card"><div id="f08-promesse-r0" class="f08-promesse-row"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#1F7A34"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fraîcheur</span></div><div id="f08-promesse-r1" class="f08-promesse-row"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#1F7A34"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Goût naturel</span></div><div id="f08-promesse-r2" class="f08-promesse-row"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#D7192F"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Votre satisfaction</span></div></div>
+<div id="f08-promesse-rib" class="f08-promesse-abs f08-promesse-rib">Votre satisfaction, notre priorité <svg width="56" height="56" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#FFFFFF"/></svg></div>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="08-promesse"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function popIn(sel, at, from, to) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.6, y: 40 }, from || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.6)" }, to || {}), at);
+}
+function slideIn(sel, at, dx, dy) {
+  tl.fromTo(q(sel), { opacity: 0, x: dx || 0, y: dy || 0 }, { opacity: 1, x: 0, y: 0, duration: 0.7, ease: "power3.out" }, at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 14), duration: Math.max(0.3, end - at), ease: "sine.inOut", immediateRender: false }, at);
+}
+function shine(sel, at) {
+  tl.fromTo(q(sel), { backgroundPosition: "120% 0, 0 0" }, { backgroundPosition: "-20% 0, 0 0", duration: 1.1, ease: "power2.inOut", immediateRender: false }, at);
+}
+function burst(sel, at) {
+  tl.fromTo(q(sel), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at);
+  tl.to(q(sel), { opacity: 0, scale: 1.35, duration: 0.45, ease: "power2.in" }, at + 0.25);
+}
+function fillGlass(id, at, dur) {
+  tl.fromTo(q("#" + id + "-liq"), { scaleY: 0, svgOrigin: "200 660" }, { scaleY: 1, svgOrigin: "200 660", duration: dur || 1.2, ease: "power2.out" }, at);
+  tl.fromTo(qa("." + id + "-ice"), { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out", stagger: 0.12 }, at + 0.35);
+  tl.fromTo(q("#" + id + "-straw"), { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, at + 0.8);
+  tl.fromTo(qa("." + id + "-bub"), { y: 0, opacity: 0 }, { y: -380, opacity: 0.9, duration: 2.6, ease: "power1.in", stagger: 0.18 }, at + 0.6);
+}
+
+tl.fromTo("#f08-promesse-rays", {rotation: 0, svgOrigin: "1000 1000"}, {rotation: 28, svgOrigin: "1000 1000", duration: 5.815, ease: "none"}, 0);
+tl.fromTo("#f08-promesse-fl0", {opacity: 0, scale: 0.6}, {opacity: 0.71, scale: 1, duration: 0.8, ease: "power3.out"}, 0.00);
+tl.fromTo("#f08-promesse-fl0", {x: 0, y: 0, rotation: 0}, {x: 14, y: -36, rotation: -12, duration: 5.815, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f08-promesse-fl1", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.06);
+tl.fromTo("#f08-promesse-fl1", {x: 0, y: 0, rotation: 0}, {x: -24, y: -49, rotation: 18, duration: 5.815, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f08-promesse-fl2", {opacity: 0, scale: 0.6}, {opacity: 0.75, scale: 1, duration: 0.8, ease: "power3.out"}, 0.12);
+tl.fromTo("#f08-promesse-fl2", {x: 0, y: 0, rotation: 0}, {x: 34, y: -38, rotation: -24, duration: 5.815, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f08-promesse-fl3", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.18);
+tl.fromTo("#f08-promesse-fl3", {x: 0, y: 0, rotation: 0}, {x: -14, y: -49, rotation: 30, duration: 5.815, ease: "sine.inOut", immediateRender: false}, 0);
+
+tl.fromTo("#f08-promesse-ph", { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }, 0.0);
+tl.fromTo("#f08-promesse-name", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.4);
+tl.fromTo("#f08-promesse-card", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.200);
+tl.fromTo("#f08-promesse-r0", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.020);tl.fromTo("#f08-promesse-r1", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.889);tl.fromTo("#f08-promesse-r2", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 2.496);
+tl.fromTo("#f08-promesse-rib", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.6, ease: "expo.out" }, 3.972);
+levitate("#f08-promesse-ph", 1.0, 5.815, 10);
+
+tl.set({}, {}, 5.815);
+window.__timelines["08-promesse"] = tl;
+})();
+</script>
+</template>

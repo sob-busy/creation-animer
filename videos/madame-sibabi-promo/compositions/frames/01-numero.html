@@ -1,0 +1,138 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Lilita One"; src: url("assets/fonts/LilitaOne-400.woff2") format("woff2"); }
+@font-face { font-family: "Kaushan Script"; src: url("assets/fonts/KaushanScript-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-800.woff2") format("woff2"); font-weight: 800; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #FFF8EC; }
+#root * { box-sizing: border-box; }
+.f01-numero-abs { position: absolute; }
+.f01-numero-bg { position: absolute; inset: 0; }
+.f01-numero-rays { position: absolute; left: -460px; top: -260px; width: 2000px; height: 2000px; opacity: .55; }
+.f01-numero-float { position: absolute; }
+/* logo */
+.f01-numero-logo { position: absolute; width: 900px; height: 380px; }
+.f01-numero-madame { position: absolute; left: 70px; top: 0; font-family: "Kaushan Script", cursive; font-size: 128px; line-height: 1; color: #FFFFFF;
+  -webkit-text-stroke: 16px #2A160C; paint-order: stroke fill; text-shadow: 0 8px 0 rgba(42,22,12,.35); }
+.f01-numero-sib-back, .f01-numero-sib-front { position: absolute; left: 0; top: 118px; font-family: "Lilita One", sans-serif; font-size: 236px; line-height: 1; letter-spacing: .01em; }
+.f01-numero-sib-back { color: #2A160C; -webkit-text-stroke: 30px #2A160C; text-shadow: 0 16px 0 #5A2F14, 0 22px 30px rgba(0,0,0,.35); }
+.f01-numero-sib-front { background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.95) 50%, rgba(255,255,255,0) 60%),
+  linear-gradient(180deg, #FFF59A 0%, #FFE03A 38%, #FFC107 62%, #F59E00 100%);
+  background-size: 300% 100%, 100% 100%; background-position: 120% 0, 0 0; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.f01-numero-crown { position: absolute; left: 640px; top: -40px; width: 190px; height: 150px; }
+/* pastilles */
+.f01-numero-pill { position: absolute; display: flex; align-items: center; gap: 18px; padding: 18px 30px 18px 18px; border-radius: 9999px;
+  background: #FFFFFF; color: #2A160C; font-weight: 600; font-size: 44px; box-shadow: 0 10px 24px rgba(0,0,0,.22); white-space: nowrap; }
+.f01-numero-pill svg { flex: 0 0 auto; }
+.f01-numero-title1 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Kaushan Script", cursive; font-size: 92px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 10px #2A160C; paint-order: stroke fill; }
+.f01-numero-title2 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; font-size: 200px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 22px #2A160C; paint-order: stroke fill; text-shadow: 0 14px 0 rgba(42,22,12,.45); }
+.f01-numero-count { position: absolute; left: 60px; top: 120px; padding: 10px 26px; border-radius: 9999px; background: rgba(255,255,255,.92); color: #2A160C;
+  font-family: "Lilita One", sans-serif; font-size: 44px; }
+.f01-numero-photo { position: absolute; background: #FFFFFF; padding: 14px 14px 58px; border-radius: 22px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.f01-numero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.f01-numero-photo span { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-weight: 600; font-size: 28px; color: #2A160C; }
+.f01-numero-badge { position: absolute; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  font-family: "Lilita One", sans-serif; line-height: .95; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+
+#f01-numero-bg { background: radial-gradient(1200px 1400px at 50% 36%, #2E9A48 0%, #0E4A1E 75%); }
+
+.f01-numero-kick { left: 0; right: 0; top: 470px; display: flex; justify-content: center; align-items: center; gap: 16px; font-weight: 800; font-size: 44px; letter-spacing: .12em; color: #FFE680; }
+.f01-numero-num { left: 40px; width: 1000px; top: 600px; height: 300px; border-radius: 60px; background: linear-gradient(180deg, #F0313F, #B30F22);
+  border: 8px solid #FFFFFF; box-shadow: 0 24px 50px rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; gap: 22px; }
+.f01-numero-grp { font-family: "Lilita One", sans-serif; font-size: 156px; color: #FFFFFF; text-shadow: 0 8px 0 rgba(90,8,18,.5); display: inline-block; }
+.f01-numero-ring { width: 150px; height: 150px; border-radius: 50%; background: rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; margin-right: 6px; }
+.f01-numero-chez { left: 0; right: 0; top: 960px; text-align: center; font-family: "Kaushan Script", cursive; font-size: 96px; color: #FFE680; }
+
+</style>
+<div id="root" data-composition-id="01-numero" data-width="1080" data-height="1920" data-duration="6.614">
+  <div id="f01-numero-bg" class="f01-numero-bg clip" data-start="0" data-duration="6.614" data-track-index="0"></div>
+  <div id="f01-numero-amb" class="clip" data-start="0" data-duration="6.614" data-track-index="1" style="position:absolute;inset:0">
+<svg id="f01-numero-rays" class="f01-numero-rays" viewBox="0 0 2000 2000"><defs><radialGradient id="f01-numero-rg"><stop offset="0" stop-color="#FFE680" stop-opacity=".55"/><stop offset="1" stop-color="#FFE680" stop-opacity="0"/></radialGradient></defs><path d="M1000 1000 L2400 1000 L2386 1195 Z M1000 1000 L2316 1479 L2236 1657 Z M1000 1000 L2072 1900 L1937 2040 Z M1000 1000 L1700 2212 L1524 2298 Z M1000 1000 L1243 2379 L1049 2399 Z M1000 1000 L757 2379 L567 2331 Z M1000 1000 L300 2212 L138 2103 Z M1000 1000 L-72 1900 L-187 1742 Z M1000 1000 L-316 1479 L-369 1291 Z M1000 1000 L-400 1000 L-386 805 Z M1000 1000 L-316 521 L-236 343 Z M1000 1000 L-72 100 L63 -40 Z M1000 1000 L300 -212 L476 -298 Z M1000 1000 L757 -379 L951 -399 Z M1000 1000 L1243 -379 L1433 -331 Z M1000 1000 L1700 -212 L1862 -103 Z M1000 1000 L2072 100 L2187 258 Z M1000 1000 L2316 521 L2369 709 Z" fill="url(#f01-numero-rg)"/></svg>
+<div id="f01-numero-fl0" class="f01-numero-float" style="left:60px;top:230px;filter:blur(5px);opacity:0"><svg width="110" height="110" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="f01-numero-fl1" class="f01-numero-float" style="left:860px;top:260px;filter:blur(2px);opacity:0"><svg width="150" height="150" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#C8DC2B"/><circle cx="50" cy="50" r="41" fill="#FFFBD0"/><path d="M50 50 L84.0 50.0 A34 34 0 0 1 71.1 76.6 Z" fill="#F7F59A"/><path d="M50 50 L71.2 76.6 A34 34 0 0 1 42.4 83.1 Z" fill="#F7F59A"/><path d="M50 50 L42.4 83.1 A34 34 0 0 1 19.3 64.7 Z" fill="#F7F59A"/><path d="M50 50 L19.4 64.8 A34 34 0 0 1 19.4 35.2 Z" fill="#F7F59A"/><path d="M50 50 L19.4 35.2 A34 34 0 0 1 42.5 16.8 Z" fill="#F7F59A"/><path d="M50 50 L42.4 16.9 A34 34 0 0 1 71.3 23.5 Z" fill="#F7F59A"/><path d="M50 50 L71.2 23.4 A34 34 0 0 1 84.0 50.1 Z" fill="#F7F59A"/><circle cx="50" cy="50" r="5" fill="#FFFBD0"/></svg></div>
+<div id="f01-numero-fl2" class="f01-numero-float" style="left:900px;top:1000px;filter:blur(5px);opacity:0"><svg width="80" height="80" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="f01-numero-fl3" class="f01-numero-float" style="left:40px;top:1470px;filter:blur(2px);opacity:0"><svg width="140" height="140" viewBox="0 0 100 100"><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(0 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(72 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(144 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(216 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="12" fill="#7A0A22"/><path d="M50 50 L72 22" stroke="#FFD21F" stroke-width="3"/><circle cx="73" cy="20" r="4" fill="#FFD21F"/></svg></div>
+<div id="f01-numero-fl4" class="f01-numero-float" style="left:880px;top:1500px;filter:blur(5px);opacity:0"><svg width="110" height="110" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#C8DC2B"/><circle cx="50" cy="50" r="41" fill="#FFFBD0"/><path d="M50 50 L84.0 50.0 A34 34 0 0 1 71.1 76.6 Z" fill="#F7F59A"/><path d="M50 50 L71.2 76.6 A34 34 0 0 1 42.4 83.1 Z" fill="#F7F59A"/><path d="M50 50 L42.4 83.1 A34 34 0 0 1 19.3 64.7 Z" fill="#F7F59A"/><path d="M50 50 L19.4 64.8 A34 34 0 0 1 19.4 35.2 Z" fill="#F7F59A"/><path d="M50 50 L19.4 35.2 A34 34 0 0 1 42.5 16.8 Z" fill="#F7F59A"/><path d="M50 50 L42.4 16.9 A34 34 0 0 1 71.3 23.5 Z" fill="#F7F59A"/><path d="M50 50 L71.2 23.4 A34 34 0 0 1 84.0 50.1 Z" fill="#F7F59A"/><circle cx="50" cy="50" r="5" fill="#FFFBD0"/></svg></div>
+<div id="f01-numero-fl5" class="f01-numero-float" style="left:80px;top:940px;filter:blur(2px);opacity:0"><svg width="120" height="120" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+  </div>
+  <div id="f01-numero-stage" class="clip" data-start="0" data-duration="6.614" data-track-index="2" style="position:absolute;inset:0">
+
+<div id="f01-numero-kick" class="f01-numero-abs f01-numero-kick"><svg width="54" height="54" viewBox="0 0 100 100"><path d="M30 10 L44 34 L34 44 Q42 62 58 68 L68 58 L90 72 L82 88 Q74 96 60 92 Q22 80 10 40 Q6 26 14 18 Z" fill="#fff"/></svg><span>RETENEZ CE NUMÉRO</span></div>
+<div id="f01-numero-num" class="f01-numero-abs f01-numero-num"><div id="f01-numero-ring" class="f01-numero-ring"><svg width="110" height="110" viewBox="0 0 100 100"><path d="M30 10 L44 34 L34 44 Q42 62 58 68 L68 58 L90 72 L82 88 Q74 96 60 92 Q22 80 10 40 Q6 26 14 18 Z" fill="#fff"/></svg></div><span id="f01-numero-g0" class="f01-numero-grp">93</span><span id="f01-numero-g1" class="f01-numero-grp">17</span><span id="f01-numero-g2" class="f01-numero-grp">05</span><span id="f01-numero-g3" class="f01-numero-grp">34</span></div>
+<svg id="f01-numero-b1" width="1080" height="1920" class="f01-numero-abs" style="left:0;top:0;overflow:visible;opacity:0"><line x1="657" y1="760" x2="800" y2="760" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="641" y1="818" x2="765" y2="890" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="598" y1="861" x2="670" y2="985" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="540" y1="877" x2="540" y2="1020" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="482" y1="861" x2="410" y2="985" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="439" y1="818" x2="315" y2="890" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="423" y1="760" x2="280" y2="760" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="439" y1="702" x2="315" y2="630" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="481" y1="659" x2="410" y2="535" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="540" y1="643" x2="540" y2="500" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="598" y1="659" x2="670" y2="535" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/><line x1="641" y1="702" x2="765" y2="630" stroke="#FFE680" stroke-width="10" stroke-linecap="round"/></svg>
+<div id="f01-numero-flash" class="f01-numero-abs" style="left:0;top:0;width:1080px;height:1920px;background:radial-gradient(600px 600px at 50% 62%, rgba(255,255,255,.95), rgba(255,255,255,0));opacity:0"></div>
+<div id="f01-numero-chez" class="f01-numero-abs f01-numero-chez">chez</div>
+<div id="f01-numero-logo" class="f01-numero-logo" style="left:90px;top:1080px;transform-origin:50% 50%;scale:1.0"><div class="f01-numero-madame">Madame</div><div class="f01-numero-sib-back">SIBABI</div><div id="f01-numero-logo-front" class="f01-numero-sib-front">SIBABI</div><svg class="f01-numero-crown" viewBox="0 0 190 150"><defs><linearGradient id="f01-numero-cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3A0"/><stop offset=".5" stop-color="#FFC81E"/><stop offset="1" stop-color="#D98E00"/></linearGradient></defs><path d="M14 120 L4 34 L52 74 L95 8 L138 74 L186 34 L176 120 Z" fill="url(#f01-numero-cg)" stroke="#2A160C" stroke-width="8" stroke-linejoin="round"/><rect x="14" y="116" width="162" height="26" rx="6" fill="url(#f01-numero-cg)" stroke="#2A160C" stroke-width="8"/><circle cx="95" cy="88" r="12" fill="#D7192F"/><circle cx="50" cy="96" r="8" fill="#2EA3F2"/><circle cx="140" cy="96" r="8" fill="#2EA3F2"/><circle cx="4" cy="34" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/><circle cx="95" cy="8" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/><circle cx="186" cy="34" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/></svg></div>
+<svg id="f01-numero-b2" width="1080" height="1920" class="f01-numero-abs" style="left:0;top:0;overflow:visible;opacity:0"><line x1="702" y1="1250" x2="900" y2="1250" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="680" y1="1331" x2="852" y2="1430" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="621" y1="1390" x2="720" y2="1562" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="540" y1="1412" x2="540" y2="1610" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="459" y1="1390" x2="360" y2="1562" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="400" y1="1331" x2="228" y2="1430" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="378" y1="1250" x2="180" y2="1250" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="400" y1="1169" x2="228" y2="1070" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="459" y1="1110" x2="360" y2="938" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="540" y1="1088" x2="540" y2="890" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="621" y1="1110" x2="720" y2="938" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="680" y1="1169" x2="852" y2="1070" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/></svg>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="01-numero"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function popIn(sel, at, from, to) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.6, y: 40 }, from || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.6)" }, to || {}), at);
+}
+function slideIn(sel, at, dx, dy) {
+  tl.fromTo(q(sel), { opacity: 0, x: dx || 0, y: dy || 0 }, { opacity: 1, x: 0, y: 0, duration: 0.7, ease: "power3.out" }, at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 14), duration: Math.max(0.3, end - at), ease: "sine.inOut", immediateRender: false }, at);
+}
+function shine(sel, at) {
+  tl.fromTo(q(sel), { backgroundPosition: "120% 0, 0 0" }, { backgroundPosition: "-20% 0, 0 0", duration: 1.1, ease: "power2.inOut", immediateRender: false }, at);
+}
+function burst(sel, at) {
+  tl.fromTo(q(sel), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at);
+  tl.to(q(sel), { opacity: 0, scale: 1.35, duration: 0.45, ease: "power2.in" }, at + 0.25);
+}
+function fillGlass(id, at, dur) {
+  tl.fromTo(q("#" + id + "-liq"), { scaleY: 0, svgOrigin: "200 660" }, { scaleY: 1, svgOrigin: "200 660", duration: dur || 1.2, ease: "power2.out" }, at);
+  tl.fromTo(qa("." + id + "-ice"), { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out", stagger: 0.12 }, at + 0.35);
+  tl.fromTo(q("#" + id + "-straw"), { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, at + 0.8);
+  tl.fromTo(qa("." + id + "-bub"), { y: 0, opacity: 0 }, { y: -380, opacity: 0.9, duration: 2.6, ease: "power1.in", stagger: 0.18 }, at + 0.6);
+}
+
+tl.fromTo("#f01-numero-rays", {rotation: 0, svgOrigin: "1000 1000"}, {rotation: 28, svgOrigin: "1000 1000", duration: 6.614, ease: "none"}, 0);
+tl.fromTo("#f01-numero-fl0", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.00);
+tl.fromTo("#f01-numero-fl0", {x: 0, y: 0, rotation: 0}, {x: 14, y: -34, rotation: -12, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f01-numero-fl1", {opacity: 0, scale: 0.6}, {opacity: 0.75, scale: 1, duration: 0.8, ease: "power3.out"}, 0.06);
+tl.fromTo("#f01-numero-fl1", {x: 0, y: 0, rotation: 0}, {x: -24, y: -55, rotation: 18, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f01-numero-fl2", {opacity: 0, scale: 0.6}, {opacity: 0.63, scale: 1, duration: 0.8, ease: "power3.out"}, 0.12);
+tl.fromTo("#f01-numero-fl2", {x: 0, y: 0, rotation: 0}, {x: 34, y: -32, rotation: -24, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f01-numero-fl3", {opacity: 0, scale: 0.6}, {opacity: 0.75, scale: 1, duration: 0.8, ease: "power3.out"}, 0.18);
+tl.fromTo("#f01-numero-fl3", {x: 0, y: 0, rotation: 0}, {x: -14, y: -55, rotation: 30, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f01-numero-fl4", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.24);
+tl.fromTo("#f01-numero-fl4", {x: 0, y: 0, rotation: 0}, {x: 24, y: -34, rotation: -12, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f01-numero-fl5", {opacity: 0, scale: 0.6}, {opacity: 0.79, scale: 1, duration: 0.8, ease: "power3.out"}, 0.30);
+tl.fromTo("#f01-numero-fl5", {x: 0, y: 0, rotation: 0}, {x: -34, y: -58, rotation: 18, duration: 6.614, ease: "sine.inOut", immediateRender: false}, 0);
+
+tl.fromTo("#f01-numero-num", { opacity: 0, scaleX: 0.3 }, { opacity: 1, scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.0);
+tl.fromTo("#f01-numero-ring", { rotation: 0 }, { keyframes: { rotation: [0, -14, 14, -10, 10, -6, 0] }, duration: 0.8, ease: "none" }, 0.25);
+tl.fromTo("#f01-numero-g0", { opacity: 0, y: -420, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "bounce.out" }, 0.20);tl.fromTo("#f01-numero-g1", { opacity: 0, y: -420, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "bounce.out" }, 0.52);tl.fromTo("#f01-numero-g2", { opacity: 0, y: -420, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "bounce.out" }, 0.84);tl.fromTo("#f01-numero-g3", { opacity: 0, y: -420, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "bounce.out" }, 1.16);
+burst("#f01-numero-b1", 1.25);
+tl.fromTo("#f01-numero-kick", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 3.103);
+tl.fromTo("#f01-numero-num", { scale: 1 }, { keyframes: { scale: [1, 1.07, 1] }, duration: 0.5, ease: "power2.out", immediateRender: false }, 3.959);
+tl.fromTo("#f01-numero-g0", { y: 0 }, { y: 12, duration: 2.4, ease: "sine.inOut", immediateRender: false }, 1.60);tl.fromTo("#f01-numero-g1", { y: 0 }, { y: -12, duration: 2.4, ease: "sine.inOut", immediateRender: false }, 1.70);tl.fromTo("#f01-numero-g2", { y: 0 }, { y: 12, duration: 2.4, ease: "sine.inOut", immediateRender: false }, 1.80);tl.fromTo("#f01-numero-g3", { y: 0 }, { y: -12, duration: 2.4, ease: "sine.inOut", immediateRender: false }, 1.90);
+tl.fromTo("#f01-numero-chez", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2)" }, 5.355);
+tl.fromTo("#f01-numero-flash", { opacity: 0 }, { keyframes: { opacity: [0, 1, 0] }, duration: 0.6, ease: "none" }, 5.705);
+popIn("#f01-numero-logo", 5.755, { scale: 0.3, y: 120 }, { ease: "back.out(1.4)", duration: 0.8 });
+burst("#f01-numero-b2", 5.855);
+shine("#f01-numero-logo-front", 6.405);
+levitate("#f01-numero-logo", 6.605, 6.614, 12);
+
+tl.set({}, {}, 6.614);
+window.__timelines["01-numero"] = tl;
+})();
+</script>
+</template>

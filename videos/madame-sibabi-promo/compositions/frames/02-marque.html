@@ -1,0 +1,189 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Lilita One"; src: url("assets/fonts/LilitaOne-400.woff2") format("woff2"); }
+@font-face { font-family: "Kaushan Script"; src: url("assets/fonts/KaushanScript-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-800.woff2") format("woff2"); font-weight: 800; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #FFF8EC; }
+#root * { box-sizing: border-box; }
+.f02-marque-abs { position: absolute; }
+.f02-marque-bg { position: absolute; inset: 0; }
+.f02-marque-rays { position: absolute; left: -460px; top: -260px; width: 2000px; height: 2000px; opacity: .55; }
+.f02-marque-float { position: absolute; }
+/* logo */
+.f02-marque-logo { position: absolute; width: 900px; height: 380px; }
+.f02-marque-madame { position: absolute; left: 70px; top: 0; font-family: "Kaushan Script", cursive; font-size: 128px; line-height: 1; color: #FFFFFF;
+  -webkit-text-stroke: 16px #2A160C; paint-order: stroke fill; text-shadow: 0 8px 0 rgba(42,22,12,.35); }
+.f02-marque-sib-back, .f02-marque-sib-front { position: absolute; left: 0; top: 118px; font-family: "Lilita One", sans-serif; font-size: 236px; line-height: 1; letter-spacing: .01em; }
+.f02-marque-sib-back { color: #2A160C; -webkit-text-stroke: 30px #2A160C; text-shadow: 0 16px 0 #5A2F14, 0 22px 30px rgba(0,0,0,.35); }
+.f02-marque-sib-front { background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.95) 50%, rgba(255,255,255,0) 60%),
+  linear-gradient(180deg, #FFF59A 0%, #FFE03A 38%, #FFC107 62%, #F59E00 100%);
+  background-size: 300% 100%, 100% 100%; background-position: 120% 0, 0 0; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.f02-marque-crown { position: absolute; left: 640px; top: -40px; width: 190px; height: 150px; }
+/* pastilles */
+.f02-marque-pill { position: absolute; display: flex; align-items: center; gap: 18px; padding: 18px 30px 18px 18px; border-radius: 9999px;
+  background: #FFFFFF; color: #2A160C; font-weight: 600; font-size: 44px; box-shadow: 0 10px 24px rgba(0,0,0,.22); white-space: nowrap; }
+.f02-marque-pill svg { flex: 0 0 auto; }
+.f02-marque-title1 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Kaushan Script", cursive; font-size: 92px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 10px #2A160C; paint-order: stroke fill; }
+.f02-marque-title2 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; font-size: 200px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 22px #2A160C; paint-order: stroke fill; text-shadow: 0 14px 0 rgba(42,22,12,.45); }
+.f02-marque-count { position: absolute; left: 60px; top: 120px; padding: 10px 26px; border-radius: 9999px; background: rgba(255,255,255,.92); color: #2A160C;
+  font-family: "Lilita One", sans-serif; font-size: 44px; }
+.f02-marque-photo { position: absolute; background: #FFFFFF; padding: 14px 14px 58px; border-radius: 22px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.f02-marque-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.f02-marque-photo span { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-weight: 600; font-size: 28px; color: #2A160C; }
+.f02-marque-badge { position: absolute; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  font-family: "Lilita One", sans-serif; line-height: .95; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+
+#f02-marque-bg { background: radial-gradient(1200px 1400px at 50% 36%, #FFE680 0%, #F2A900 75%); }
+
+.f02-marque-med { left: 250px; top: 520px; width: 580px; height: 580px; border-radius: 50%; overflow: hidden; border: 14px solid #FFD21F;
+  box-shadow: 0 0 0 10px #1F7A34, 0 30px 60px rgba(0,0,0,.4); background: #fff; }
+.f02-marque-med img { width: 100%; height: 130%; object-fit: cover; object-position: 50% 0%; }
+.f02-marque-rib { left: 170px; width: 740px; top: 1080px; height: 120px; border-radius: 26px; background: linear-gradient(180deg, #8B5A2B, #5E3A1A);
+  border: 6px solid #FFD21F; display: flex; align-items: center; justify-content: center; font-family: "Lilita One", sans-serif; font-size: 76px; color: #FFFFFF;
+  box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+
+</style>
+<div id="root" data-composition-id="02-marque" data-width="1080" data-height="1920" data-duration="6.314">
+  <div id="f02-marque-bg" class="f02-marque-bg clip" data-start="0" data-duration="6.314" data-track-index="0"></div>
+  <div id="f02-marque-amb" class="clip" data-start="0" data-duration="6.314" data-track-index="1" style="position:absolute;inset:0">
+<svg id="f02-marque-rays" class="f02-marque-rays" viewBox="0 0 2000 2000"><defs><radialGradient id="f02-marque-rg"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient></defs><path d="M1000 1000 L2400 1000 L2386 1195 Z M1000 1000 L2316 1479 L2236 1657 Z M1000 1000 L2072 1900 L1937 2040 Z M1000 1000 L1700 2212 L1524 2298 Z M1000 1000 L1243 2379 L1049 2399 Z M1000 1000 L757 2379 L567 2331 Z M1000 1000 L300 2212 L138 2103 Z M1000 1000 L-72 1900 L-187 1742 Z M1000 1000 L-316 1479 L-369 1291 Z M1000 1000 L-400 1000 L-386 805 Z M1000 1000 L-316 521 L-236 343 Z M1000 1000 L-72 100 L63 -40 Z M1000 1000 L300 -212 L476 -298 Z M1000 1000 L757 -379 L951 -399 Z M1000 1000 L1243 -379 L1433 -331 Z M1000 1000 L1700 -212 L1862 -103 Z M1000 1000 L2072 100 L2187 258 Z M1000 1000 L2316 521 L2369 709 Z" fill="url(#f02-marque-rg)"/></svg>
+<div id="f02-marque-fl0" class="f02-marque-float" style="left:900px;top:1420px;filter:blur(5px);opacity:0"><svg width="120" height="120" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#C8DC2B"/><circle cx="50" cy="50" r="41" fill="#FFFBD0"/><path d="M50 50 L84.0 50.0 A34 34 0 0 1 71.1 76.6 Z" fill="#F7F59A"/><path d="M50 50 L71.2 76.6 A34 34 0 0 1 42.4 83.1 Z" fill="#F7F59A"/><path d="M50 50 L42.4 83.1 A34 34 0 0 1 19.3 64.7 Z" fill="#F7F59A"/><path d="M50 50 L19.4 64.8 A34 34 0 0 1 19.4 35.2 Z" fill="#F7F59A"/><path d="M50 50 L19.4 35.2 A34 34 0 0 1 42.5 16.8 Z" fill="#F7F59A"/><path d="M50 50 L42.4 16.9 A34 34 0 0 1 71.3 23.5 Z" fill="#F7F59A"/><path d="M50 50 L71.2 23.4 A34 34 0 0 1 84.0 50.1 Z" fill="#F7F59A"/><circle cx="50" cy="50" r="5" fill="#FFFBD0"/></svg></div>
+<div id="f02-marque-fl1" class="f02-marque-float" style="left:40px;top:1400px;filter:blur(5px);opacity:0"><svg width="120" height="120" viewBox="0 0 100 100"><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(0 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(72 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(144 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(216 50 50)"/><ellipse cx="50" cy="26" rx="20" ry="26" fill="#E3173E" stroke="#A30D2B" stroke-width="2" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="12" fill="#7A0A22"/><path d="M50 50 L72 22" stroke="#FFD21F" stroke-width="3"/><circle cx="73" cy="20" r="4" fill="#FFD21F"/></svg></div>
+<div id="f02-marque-fl2" class="f02-marque-float" style="left:950px;top:980px;filter:blur(5px);opacity:0"><svg width="90" height="90" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="f02-marque-fl3" class="f02-marque-float" style="left:20px;top:980px;filter:blur(5px);opacity:0"><svg width="110" height="110" viewBox="0 0 100 100"><path d="M10 90 Q10 20 90 10 Q84 84 10 90 Z" fill="#3FA845" stroke="#1F6B2A" stroke-width="3"/><path d="M14 86 Q46 48 84 16" stroke="#1F6B2A" stroke-width="3" fill="none"/></svg></div>
+  </div>
+  <div id="f02-marque-stage" class="clip" data-start="0" data-duration="6.314" data-track-index="2" style="position:absolute;inset:0">
+
+<div id="f02-marque-logo" class="f02-marque-logo" style="left:90px;top:120px;transform-origin:50% 50%;scale:0.92"><div class="f02-marque-madame">Madame</div><div class="f02-marque-sib-back">SIBABI</div><div id="f02-marque-logo-front" class="f02-marque-sib-front">SIBABI</div><svg class="f02-marque-crown" viewBox="0 0 190 150"><defs><linearGradient id="f02-marque-cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3A0"/><stop offset=".5" stop-color="#FFC81E"/><stop offset="1" stop-color="#D98E00"/></linearGradient></defs><path d="M14 120 L4 34 L52 74 L95 8 L138 74 L186 34 L176 120 Z" fill="url(#f02-marque-cg)" stroke="#2A160C" stroke-width="8" stroke-linejoin="round"/><rect x="14" y="116" width="162" height="26" rx="6" fill="url(#f02-marque-cg)" stroke="#2A160C" stroke-width="8"/><circle cx="95" cy="88" r="12" fill="#D7192F"/><circle cx="50" cy="96" r="8" fill="#2EA3F2"/><circle cx="140" cy="96" r="8" fill="#2EA3F2"/><circle cx="4" cy="34" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/><circle cx="95" cy="8" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/><circle cx="186" cy="34" r="9" fill="#FFF3A0" stroke="#2A160C" stroke-width="5"/></svg></div>
+<div id="f02-marque-med" class="f02-marque-abs f02-marque-med"><img src="assets/portrait-sibabi-2.png" alt=""></div>
+<div id="f02-marque-rib" class="f02-marque-abs f02-marque-rib">Jus naturels</div>
+<div id="f02-marque-m0" class="f02-marque-abs" style="left:110px;top:1235px"><svg id="f02-marque-mg0" width="150" height="262" viewBox="0 -40 400 720" style="overflow:visible">
+<defs><clipPath id="f02-marque-mg0-clip"><path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z"/></clipPath>
+<linearGradient id="f02-marque-mg0-lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2F7A0"/><stop offset="1" stop-color="#C9DC3A"/></linearGradient></defs>
+<ellipse cx="200" cy="676" rx="190" ry="26" fill="rgba(0,0,0,.25)"/>
+<g clip-path="url(#f02-marque-mg0-clip)">
+  <path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="rgba(255,255,255,.18)"/>
+  <g id="f02-marque-mg0-liq"><rect x="0" y="150" width="400" height="520" fill="url(#f02-marque-mg0-lq)"/>
+  <path d="M0 150 Q100 130 200 150 T400 150 L400 175 L0 175 Z" fill="#fff" fill-opacity=".28"/><rect class="f02-marque-mg0-ice" x="95" y="200" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-14 134 235)"/><rect class="f02-marque-mg0-ice" x="200" y="230" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(12 239 265)"/><rect class="f02-marque-mg0-ice" x="140" y="300" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(26 179 335)"/><circle class="f02-marque-mg0-bub" cx="110" cy="600" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="147" cy="577" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="184" cy="554" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="221" cy="531" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="258" cy="588" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="295" cy="565" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="142" cy="542" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="179" cy="599" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="216" cy="576" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg0-bub" cx="253" cy="553" r="6" fill="#fff" fill-opacity=".55"/></g>
+</g>
+<g id="f02-marque-mg0-straw"><rect x="228" y="-60" width="30" height="640" rx="15" fill="#2FB24A" transform="rotate(9 243 260)"/>
+<rect x="228" y="-60" width="10" height="640" rx="5" fill="#fff" fill-opacity=".45" transform="rotate(9 243 260)"/></g>
+<path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<path d="M70 200 L108 610" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round"/>
+<path d="M26 160 Q200 30 374 160 Z" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<rect x="18" y="148" width="364" height="26" rx="13" fill="rgba(255,255,255,.75)"/>
+</svg></div><div id="f02-marque-m1" class="f02-marque-abs" style="left:335px;top:1235px"><svg id="f02-marque-mg1" width="150" height="262" viewBox="0 -40 400 720" style="overflow:visible">
+<defs><clipPath id="f02-marque-mg1-clip"><path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z"/></clipPath>
+<linearGradient id="f02-marque-mg1-lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2203E"/><stop offset="1" stop-color="#6E0A1E"/></linearGradient></defs>
+<ellipse cx="200" cy="676" rx="190" ry="26" fill="rgba(0,0,0,.25)"/>
+<g clip-path="url(#f02-marque-mg1-clip)">
+  <path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="rgba(255,255,255,.18)"/>
+  <g id="f02-marque-mg1-liq"><rect x="0" y="150" width="400" height="520" fill="url(#f02-marque-mg1-lq)"/>
+  <path d="M0 150 Q100 130 200 150 T400 150 L400 175 L0 175 Z" fill="#fff" fill-opacity=".28"/><rect class="f02-marque-mg1-ice" x="95" y="200" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-14 134 235)"/><rect class="f02-marque-mg1-ice" x="200" y="230" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(12 239 265)"/><rect class="f02-marque-mg1-ice" x="140" y="300" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(26 179 335)"/><circle class="f02-marque-mg1-bub" cx="110" cy="600" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="147" cy="577" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="184" cy="554" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="221" cy="531" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="258" cy="588" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="295" cy="565" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="142" cy="542" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="179" cy="599" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="216" cy="576" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg1-bub" cx="253" cy="553" r="6" fill="#fff" fill-opacity=".55"/></g>
+</g>
+<g id="f02-marque-mg1-straw"><rect x="228" y="-60" width="30" height="640" rx="15" fill="#FF5FA2" transform="rotate(9 243 260)"/>
+<rect x="228" y="-60" width="10" height="640" rx="5" fill="#fff" fill-opacity=".45" transform="rotate(9 243 260)"/></g>
+<path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<path d="M70 200 L108 610" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round"/>
+<path d="M26 160 Q200 30 374 160 Z" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<rect x="18" y="148" width="364" height="26" rx="13" fill="rgba(255,255,255,.75)"/>
+</svg></div><div id="f02-marque-m2" class="f02-marque-abs" style="left:560px;top:1235px"><svg id="f02-marque-mg2" width="150" height="262" viewBox="0 -40 400 720" style="overflow:visible">
+<defs><clipPath id="f02-marque-mg2-clip"><path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z"/></clipPath>
+<linearGradient id="f02-marque-mg2-lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD34A"/><stop offset="1" stop-color="#F29A0C"/></linearGradient></defs>
+<ellipse cx="200" cy="676" rx="190" ry="26" fill="rgba(0,0,0,.25)"/>
+<g clip-path="url(#f02-marque-mg2-clip)">
+  <path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="rgba(255,255,255,.18)"/>
+  <g id="f02-marque-mg2-liq"><rect x="0" y="150" width="400" height="520" fill="url(#f02-marque-mg2-lq)"/>
+  <path d="M0 150 Q100 130 200 150 T400 150 L400 175 L0 175 Z" fill="#fff" fill-opacity=".28"/><rect class="f02-marque-mg2-ice" x="95" y="200" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-14 134 235)"/><rect class="f02-marque-mg2-ice" x="200" y="230" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(12 239 265)"/><rect class="f02-marque-mg2-ice" x="140" y="300" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(26 179 335)"/><circle class="f02-marque-mg2-bub" cx="110" cy="600" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="147" cy="577" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="184" cy="554" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="221" cy="531" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="258" cy="588" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="295" cy="565" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="142" cy="542" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="179" cy="599" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="216" cy="576" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg2-bub" cx="253" cy="553" r="6" fill="#fff" fill-opacity=".55"/></g>
+</g>
+<g id="f02-marque-mg2-straw"><rect x="228" y="-60" width="30" height="640" rx="15" fill="#FFE14D" transform="rotate(9 243 260)"/>
+<rect x="228" y="-60" width="10" height="640" rx="5" fill="#fff" fill-opacity=".45" transform="rotate(9 243 260)"/></g>
+<path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<path d="M70 200 L108 610" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round"/>
+<path d="M26 160 Q200 30 374 160 Z" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<rect x="18" y="148" width="364" height="26" rx="13" fill="rgba(255,255,255,.75)"/>
+</svg></div><div id="f02-marque-m3" class="f02-marque-abs" style="left:785px;top:1235px"><svg id="f02-marque-mg3" width="150" height="262" viewBox="0 -40 400 720" style="overflow:visible">
+<defs><clipPath id="f02-marque-mg3-clip"><path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z"/></clipPath>
+<linearGradient id="f02-marque-mg3-lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98A4B"/><stop offset="1" stop-color="#7A4A1F"/></linearGradient></defs>
+<ellipse cx="200" cy="676" rx="190" ry="26" fill="rgba(0,0,0,.25)"/>
+<g clip-path="url(#f02-marque-mg3-clip)">
+  <path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="rgba(255,255,255,.18)"/>
+  <g id="f02-marque-mg3-liq"><rect x="0" y="150" width="400" height="520" fill="url(#f02-marque-mg3-lq)"/>
+  <path d="M0 150 Q100 130 200 150 T400 150 L400 175 L0 175 Z" fill="#fff" fill-opacity=".28"/><rect class="f02-marque-mg3-ice" x="95" y="200" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-14 134 235)"/><rect class="f02-marque-mg3-ice" x="200" y="230" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(12 239 265)"/><rect class="f02-marque-mg3-ice" x="140" y="300" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(26 179 335)"/><circle class="f02-marque-mg3-bub" cx="110" cy="600" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="147" cy="577" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="184" cy="554" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="221" cy="531" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="258" cy="588" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="295" cy="565" r="6" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="142" cy="542" r="7" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="179" cy="599" r="8" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="216" cy="576" r="5" fill="#fff" fill-opacity=".55"/><circle class="f02-marque-mg3-bub" cx="253" cy="553" r="6" fill="#fff" fill-opacity=".55"/></g>
+</g>
+<g id="f02-marque-mg3-straw"><rect x="228" y="-60" width="30" height="640" rx="15" fill="#FFC93C" transform="rotate(9 243 260)"/>
+<rect x="228" y="-60" width="10" height="640" rx="5" fill="#fff" fill-opacity=".45" transform="rotate(9 243 260)"/></g>
+<path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<path d="M70 200 L108 610" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round"/>
+<path d="M26 160 Q200 30 374 160 Z" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<rect x="18" y="148" width="364" height="26" rx="13" fill="rgba(255,255,255,.75)"/>
+</svg></div>
+<div id="f02-marque-sal" class="f02-marque-badge" style="left:760px;top:560px;width:270px;height:270px;background:#FFD21F;color:#C8102E;border:8px solid #fff;font-size:58px">Salade<br><span style="font-family:'Kaushan Script';font-size:52px">délicieuse</span><svg width="48" height="48" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#D7192F"/></svg></div>
+<div id="f02-marque-gla" class="f02-marque-badge" style="left:40px;top:600px;width:260px;height:260px;background:#D7192F;color:#fff;border:8px solid #fff;font-size:56px">Tout bien<br><span style="color:#FFD21F;font-size:70px">glacé !</span></div>
+<div id="f02-marque-ice" class="f02-marque-abs" style="left:60px;top:520px"><svg width="80" height="80" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="02-marque"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function popIn(sel, at, from, to) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.6, y: 40 }, from || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.6)" }, to || {}), at);
+}
+function slideIn(sel, at, dx, dy) {
+  tl.fromTo(q(sel), { opacity: 0, x: dx || 0, y: dy || 0 }, { opacity: 1, x: 0, y: 0, duration: 0.7, ease: "power3.out" }, at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 14), duration: Math.max(0.3, end - at), ease: "sine.inOut", immediateRender: false }, at);
+}
+function shine(sel, at) {
+  tl.fromTo(q(sel), { backgroundPosition: "120% 0, 0 0" }, { backgroundPosition: "-20% 0, 0 0", duration: 1.1, ease: "power2.inOut", immediateRender: false }, at);
+}
+function burst(sel, at) {
+  tl.fromTo(q(sel), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at);
+  tl.to(q(sel), { opacity: 0, scale: 1.35, duration: 0.45, ease: "power2.in" }, at + 0.25);
+}
+function fillGlass(id, at, dur) {
+  tl.fromTo(q("#" + id + "-liq"), { scaleY: 0, svgOrigin: "200 660" }, { scaleY: 1, svgOrigin: "200 660", duration: dur || 1.2, ease: "power2.out" }, at);
+  tl.fromTo(qa("." + id + "-ice"), { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out", stagger: 0.12 }, at + 0.35);
+  tl.fromTo(q("#" + id + "-straw"), { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, at + 0.8);
+  tl.fromTo(qa("." + id + "-bub"), { y: 0, opacity: 0 }, { y: -380, opacity: 0.9, duration: 2.6, ease: "power1.in", stagger: 0.18 }, at + 0.6);
+}
+
+tl.fromTo("#f02-marque-rays", {rotation: 0, svgOrigin: "1000 1000"}, {rotation: 28, svgOrigin: "1000 1000", duration: 6.314, ease: "none"}, 0);
+tl.fromTo("#f02-marque-fl0", {opacity: 0, scale: 0.6}, {opacity: 0.71, scale: 1, duration: 0.8, ease: "power3.out"}, 0.00);
+tl.fromTo("#f02-marque-fl0", {x: 0, y: 0, rotation: 0}, {x: 14, y: -36, rotation: -12, duration: 6.314, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f02-marque-fl1", {opacity: 0, scale: 0.6}, {opacity: 0.71, scale: 1, duration: 0.8, ease: "power3.out"}, 0.06);
+tl.fromTo("#f02-marque-fl1", {x: 0, y: 0, rotation: 0}, {x: -24, y: -52, rotation: 18, duration: 6.314, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f02-marque-fl2", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.12);
+tl.fromTo("#f02-marque-fl2", {x: 0, y: 0, rotation: 0}, {x: 34, y: -34, rotation: -24, duration: 6.314, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f02-marque-fl3", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.18);
+tl.fromTo("#f02-marque-fl3", {x: 0, y: 0, rotation: 0}, {x: -14, y: -49, rotation: 30, duration: 6.314, ease: "sine.inOut", immediateRender: false}, 0);
+
+popIn("#f02-marque-logo", 0.0, { scale: 0.45 }, { scale: 0.92, ease: "back.out(1.4)" });
+shine("#f02-marque-logo-front", 0.6);
+tl.fromTo("#f02-marque-med", { opacity: 0, scale: 0.4, rotation: -12 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.9, ease: "expo.out" }, 0.447);
+levitate("#f02-marque-med", 1.447, 6.314, 10);
+tl.fromTo("#f02-marque-rib", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.6, ease: "expo.out" }, 1.901);
+tl.fromTo("#f02-marque-m0", { opacity: 0, y: 160 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.8)" }, 2.15);tl.fromTo("#f02-marque-m1", { opacity: 0, y: 160 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.8)" }, 2.27);tl.fromTo("#f02-marque-m2", { opacity: 0, y: 160 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.8)" }, 2.39);tl.fromTo("#f02-marque-m3", { opacity: 0, y: 160 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.8)" }, 2.51);
+fillGlass("f02-marque-mg0", 2.30, 0.9);fillGlass("f02-marque-mg1", 2.42, 0.9);fillGlass("f02-marque-mg2", 2.54, 0.9);fillGlass("f02-marque-mg3", 2.66, 0.9);
+popIn("#f02-marque-sal", 2.962, { scale: 0.2, rotation: 30 }, { rotation: 8 });
+popIn("#f02-marque-gla", 5.365, { scale: 0.2, rotation: -30 }, { rotation: -8 });
+tl.fromTo("#f02-marque-ice", { opacity: 0, y: -200, rotation: 0 }, { opacity: 1, y: 40, rotation: 40, duration: 0.6, ease: "bounce.out" }, 5.465);
+
+tl.set({}, {}, 6.314);
+window.__timelines["02-marque"] = tl;
+})();
+</script>
+</template>

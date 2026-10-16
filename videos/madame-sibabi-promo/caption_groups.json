@@ -1,0 +1,1336 @@
+{
+  "total_duration_s": 55.015,
+  "width": 1080,
+  "height": 1920,
+  "groups": [
+    {
+      "id": "caption-group-0",
+      "frame": 1,
+      "start": 0.1,
+      "end": 2.998,
+      "text": "93 17 05 34",
+      "words": [
+        {
+          "id": "caption-word-0-0",
+          "text": "93",
+          "start": 0.1,
+          "end": 1.148
+        },
+        {
+          "id": "caption-word-0-1",
+          "text": "17",
+          "start": 1.148,
+          "end": 1.62
+        },
+        {
+          "id": "caption-word-0-2",
+          "text": "05",
+          "start": 1.62,
+          "end": 2.144
+        },
+        {
+          "id": "caption-word-0-3",
+          "text": "34",
+          "start": 2.144,
+          "end": 2.878
+        }
+      ]
+    },
+    {
+      "id": "caption-group-1",
+      "frame": 1,
+      "start": 3.183,
+      "end": 3.879,
+      "text": "retenez bien",
+      "words": [
+        {
+          "id": "caption-word-1-0",
+          "text": "retenez",
+          "start": 3.183,
+          "end": 3.611
+        },
+        {
+          "id": "caption-word-1-1",
+          "text": "bien",
+          "start": 3.611,
+          "end": 3.879
+        }
+      ]
+    },
+    {
+      "id": "caption-group-2",
+      "frame": 1,
+      "start": 3.879,
+      "end": 4.534,
+      "text": "ce numéro",
+      "words": [
+        {
+          "id": "caption-word-2-0",
+          "text": "ce",
+          "start": 3.879,
+          "end": 4.039
+        },
+        {
+          "id": "caption-word-2-1",
+          "text": "numéro",
+          "start": 4.039,
+          "end": 4.414
+        }
+      ]
+    },
+    {
+      "id": "caption-group-3",
+      "frame": 1,
+      "start": 4.734,
+      "end": 5.307,
+      "text": "c'est celui",
+      "words": [
+        {
+          "id": "caption-word-3-0",
+          "text": "c'est",
+          "start": 4.734,
+          "end": 5.021
+        },
+        {
+          "id": "caption-word-3-1",
+          "text": "celui",
+          "start": 5.021,
+          "end": 5.307
+        }
+      ]
+    },
+    {
+      "id": "caption-group-4",
+      "frame": 1,
+      "start": 5.307,
+      "end": 6.239,
+      "text": "de Madame Sibabi",
+      "words": [
+        {
+          "id": "caption-word-4-0",
+          "text": "de",
+          "start": 5.307,
+          "end": 5.45
+        },
+        {
+          "id": "caption-word-4-1",
+          "text": "Madame",
+          "start": 5.45,
+          "end": 5.785
+        },
+        {
+          "id": "caption-word-4-2",
+          "text": "Sibabi",
+          "start": 5.785,
+          "end": 6.119
+        }
+      ]
+    },
+    {
+      "id": "caption-group-5",
+      "frame": 2,
+      "start": 6.714,
+      "end": 7.879,
+      "text": "Chez Madame Sibabi,",
+      "words": [
+        {
+          "id": "caption-word-5-0",
+          "text": "Chez",
+          "start": 6.714,
+          "end": 6.975
+        },
+        {
+          "id": "caption-word-5-1",
+          "text": "Madame",
+          "start": 6.975,
+          "end": 7.341
+        },
+        {
+          "id": "caption-word-5-2",
+          "text": "Sibabi,",
+          "start": 7.341,
+          "end": 7.759
+        }
+      ]
+    },
+    {
+      "id": "caption-group-6",
+      "frame": 2,
+      "start": 7.959,
+      "end": 8.383,
+      "text": "on vend",
+      "words": [
+        {
+          "id": "caption-word-6-0",
+          "text": "on",
+          "start": 7.959,
+          "end": 8.118
+        },
+        {
+          "id": "caption-word-6-1",
+          "text": "vend",
+          "start": 8.118,
+          "end": 8.383
+        }
+      ]
+    },
+    {
+      "id": "caption-group-7",
+      "frame": 2,
+      "start": 8.383,
+      "end": 8.807,
+      "text": "des jus",
+      "words": [
+        {
+          "id": "caption-word-7-0",
+          "text": "des",
+          "start": 8.383,
+          "end": 8.595
+        },
+        {
+          "id": "caption-word-7-1",
+          "text": "jus",
+          "start": 8.595,
+          "end": 8.807
+        }
+      ]
+    },
+    {
+      "id": "caption-group-8",
+      "frame": 2,
+      "start": 8.807,
+      "end": 9.444,
+      "text": "naturels et",
+      "words": [
+        {
+          "id": "caption-word-8-0",
+          "text": "naturels",
+          "start": 8.807,
+          "end": 9.285
+        },
+        {
+          "id": "caption-word-8-1",
+          "text": "et",
+          "start": 9.285,
+          "end": 9.444
+        }
+      ]
+    },
+    {
+      "id": "caption-group-9",
+      "frame": 2,
+      "start": 9.444,
+      "end": 10.731,
+      "text": "une salade délicieuse",
+      "words": [
+        {
+          "id": "caption-word-9-0",
+          "text": "une",
+          "start": 9.444,
+          "end": 9.656
+        },
+        {
+          "id": "caption-word-9-1",
+          "text": "salade",
+          "start": 9.656,
+          "end": 10.027
+        },
+        {
+          "id": "caption-word-9-2",
+          "text": "délicieuse",
+          "start": 10.027,
+          "end": 10.611
+        }
+      ]
+    },
+    {
+      "id": "caption-group-10",
+      "frame": 2,
+      "start": 10.931,
+      "end": 11.644,
+      "text": "le tout,",
+      "words": [
+        {
+          "id": "caption-word-10-0",
+          "text": "le",
+          "start": 10.931,
+          "end": 11.128
+        },
+        {
+          "id": "caption-word-10-1",
+          "text": "tout,",
+          "start": 11.128,
+          "end": 11.524
+        }
+      ]
+    },
+    {
+      "id": "caption-group-11",
+      "frame": 2,
+      "start": 11.724,
+      "end": 12.648,
+      "text": "bien glacé.",
+      "words": [
+        {
+          "id": "caption-word-11-0",
+          "text": "bien",
+          "start": 11.724,
+          "end": 12.059
+        },
+        {
+          "id": "caption-word-11-1",
+          "text": "glacé.",
+          "start": 12.059,
+          "end": 12.528
+        }
+      ]
+    },
+    {
+      "id": "caption-group-12",
+      "frame": 3,
+      "start": 13.028,
+      "end": 13.408,
+      "text": "Le jus",
+      "words": [
+        {
+          "id": "caption-word-12-0",
+          "text": "Le",
+          "start": 13.028,
+          "end": 13.191
+        },
+        {
+          "id": "caption-word-12-1",
+          "text": "jus",
+          "start": 13.191,
+          "end": 13.408
+        }
+      ]
+    },
+    {
+      "id": "caption-group-13",
+      "frame": 3,
+      "start": 13.408,
+      "end": 14.072,
+      "text": "de citron",
+      "words": [
+        {
+          "id": "caption-word-13-0",
+          "text": "de",
+          "start": 13.408,
+          "end": 13.572
+        },
+        {
+          "id": "caption-word-13-1",
+          "text": "citron",
+          "start": 13.572,
+          "end": 13.952
+        }
+      ]
+    },
+    {
+      "id": "caption-group-14",
+      "frame": 3,
+      "start": 14.261,
+      "end": 14.828,
+      "text": "frais,",
+      "words": [
+        {
+          "id": "caption-word-14-0",
+          "text": "frais,",
+          "start": 14.261,
+          "end": 14.708
+        }
+      ]
+    },
+    {
+      "id": "caption-group-15",
+      "frame": 3,
+      "start": 14.908,
+      "end": 15.682,
+      "text": "acidulé,",
+      "words": [
+        {
+          "id": "caption-word-15-0",
+          "text": "acidulé,",
+          "start": 14.908,
+          "end": 15.562
+        }
+      ]
+    },
+    {
+      "id": "caption-group-16",
+      "frame": 3,
+      "start": 15.762,
+      "end": 16.206,
+      "text": "plein de",
+      "words": [
+        {
+          "id": "caption-word-16-0",
+          "text": "plein",
+          "start": 15.762,
+          "end": 16.058
+        },
+        {
+          "id": "caption-word-16-1",
+          "text": "de",
+          "start": 16.058,
+          "end": 16.206
+        }
+      ]
+    },
+    {
+      "id": "caption-group-17",
+      "frame": 3,
+      "start": 16.206,
+      "end": 16.919,
+      "text": "vitamine C.",
+      "words": [
+        {
+          "id": "caption-word-17-0",
+          "text": "vitamine",
+          "start": 16.206,
+          "end": 16.651
+        },
+        {
+          "id": "caption-word-17-1",
+          "text": "C.",
+          "start": 16.651,
+          "end": 16.799
+        }
+      ]
+    },
+    {
+      "id": "caption-group-18",
+      "frame": 3,
+      "start": 17.119,
+      "end": 17.695,
+      "text": "Parfait pour",
+      "words": [
+        {
+          "id": "caption-word-18-0",
+          "text": "Parfait",
+          "start": 17.119,
+          "end": 17.473
+        },
+        {
+          "id": "caption-word-18-1",
+          "text": "pour",
+          "start": 17.473,
+          "end": 17.695
+        }
+      ]
+    },
+    {
+      "id": "caption-group-19",
+      "frame": 3,
+      "start": 17.695,
+      "end": 18.435,
+      "text": "se réveiller.",
+      "words": [
+        {
+          "id": "caption-word-19-0",
+          "text": "se",
+          "start": 17.695,
+          "end": 17.828
+        },
+        {
+          "id": "caption-word-19-1",
+          "text": "réveiller.",
+          "start": 17.828,
+          "end": 18.315
+        }
+      ]
+    },
+    {
+      "id": "caption-group-20",
+      "frame": 4,
+      "start": 18.815,
+      "end": 19.226,
+      "text": "Le jus",
+      "words": [
+        {
+          "id": "caption-word-20-0",
+          "text": "Le",
+          "start": 18.815,
+          "end": 18.991
+        },
+        {
+          "id": "caption-word-20-1",
+          "text": "jus",
+          "start": 18.991,
+          "end": 19.226
+        }
+      ]
+    },
+    {
+      "id": "caption-group-21",
+      "frame": 4,
+      "start": 19.226,
+      "end": 19.992,
+      "text": "de bissap,",
+      "words": [
+        {
+          "id": "caption-word-21-0",
+          "text": "de",
+          "start": 19.226,
+          "end": 19.402
+        },
+        {
+          "id": "caption-word-21-1",
+          "text": "bissap,",
+          "start": 19.402,
+          "end": 19.872
+        }
+      ]
+    },
+    {
+      "id": "caption-group-22",
+      "frame": 4,
+      "start": 20.072,
+      "end": 20.509,
+      "text": "fait avec",
+      "words": [
+        {
+          "id": "caption-word-22-0",
+          "text": "fait",
+          "start": 20.072,
+          "end": 20.291
+        },
+        {
+          "id": "caption-word-22-1",
+          "text": "avec",
+          "start": 20.291,
+          "end": 20.509
+        }
+      ]
+    },
+    {
+      "id": "caption-group-23",
+      "frame": 4,
+      "start": 20.509,
+      "end": 21.502,
+      "text": "la fleur d'hibiscus",
+      "words": [
+        {
+          "id": "caption-word-23-0",
+          "text": "la",
+          "start": 20.509,
+          "end": 20.64
+        },
+        {
+          "id": "caption-word-23-1",
+          "text": "fleur",
+          "start": 20.64,
+          "end": 20.902
+        },
+        {
+          "id": "caption-word-23-2",
+          "text": "d'hibiscus",
+          "start": 20.902,
+          "end": 21.382
+        }
+      ]
+    },
+    {
+      "id": "caption-group-24",
+      "frame": 4,
+      "start": 21.67,
+      "end": 22.136,
+      "text": "une belle",
+      "words": [
+        {
+          "id": "caption-word-24-0",
+          "text": "une",
+          "start": 21.67,
+          "end": 21.856
+        },
+        {
+          "id": "caption-word-24-1",
+          "text": "belle",
+          "start": 21.856,
+          "end": 22.136
+        }
+      ]
+    },
+    {
+      "id": "caption-group-25",
+      "frame": 4,
+      "start": 22.136,
+      "end": 22.788,
+      "text": "couleur rubis",
+      "words": [
+        {
+          "id": "caption-word-25-0",
+          "text": "couleur",
+          "start": 22.136,
+          "end": 22.509
+        },
+        {
+          "id": "caption-word-25-1",
+          "text": "rubis",
+          "start": 22.509,
+          "end": 22.788
+        }
+      ]
+    },
+    {
+      "id": "caption-group-26",
+      "frame": 4,
+      "start": 22.788,
+      "end": 23.068,
+      "text": "et un",
+      "words": [
+        {
+          "id": "caption-word-26-0",
+          "text": "et",
+          "start": 22.788,
+          "end": 22.928
+        },
+        {
+          "id": "caption-word-26-1",
+          "text": "un",
+          "start": 22.928,
+          "end": 23.068
+        }
+      ]
+    },
+    {
+      "id": "caption-group-27",
+      "frame": 4,
+      "start": 23.068,
+      "end": 23.534,
+      "text": "goût doux",
+      "words": [
+        {
+          "id": "caption-word-27-0",
+          "text": "goût",
+          "start": 23.068,
+          "end": 23.301
+        },
+        {
+          "id": "caption-word-27-1",
+          "text": "doux",
+          "start": 23.301,
+          "end": 23.534
+        }
+      ]
+    },
+    {
+      "id": "caption-group-28",
+      "frame": 4,
+      "start": 23.534,
+      "end": 24.353,
+      "text": "qui désaltère.",
+      "words": [
+        {
+          "id": "caption-word-28-0",
+          "text": "qui",
+          "start": 23.534,
+          "end": 23.72
+        },
+        {
+          "id": "caption-word-28-1",
+          "text": "désaltère.",
+          "start": 23.72,
+          "end": 24.233
+        }
+      ]
+    },
+    {
+      "id": "caption-group-29",
+      "frame": 5,
+      "start": 24.733,
+      "end": 25.668,
+      "text": "Le jus d'ananas",
+      "words": [
+        {
+          "id": "caption-word-29-0",
+          "text": "Le",
+          "start": 24.733,
+          "end": 24.886
+        },
+        {
+          "id": "caption-word-29-1",
+          "text": "jus",
+          "start": 24.886,
+          "end": 25.089
+        },
+        {
+          "id": "caption-word-29-2",
+          "text": "d'ananas",
+          "start": 25.089,
+          "end": 25.548
+        }
+      ]
+    },
+    {
+      "id": "caption-group-30",
+      "frame": 5,
+      "start": 25.85,
+      "end": 26.478,
+      "text": "doré,",
+      "words": [
+        {
+          "id": "caption-word-30-0",
+          "text": "doré,",
+          "start": 25.85,
+          "end": 26.358
+        }
+      ]
+    },
+    {
+      "id": "caption-group-31",
+      "frame": 5,
+      "start": 26.558,
+      "end": 27.317,
+      "text": "fruité,",
+      "words": [
+        {
+          "id": "caption-word-31-0",
+          "text": "fruité,",
+          "start": 26.558,
+          "end": 27.197
+        }
+      ]
+    },
+    {
+      "id": "caption-group-32",
+      "frame": 5,
+      "start": 27.397,
+      "end": 28.367,
+      "text": "plein de soleil.",
+      "words": [
+        {
+          "id": "caption-word-32-0",
+          "text": "plein",
+          "start": 27.397,
+          "end": 27.697
+        },
+        {
+          "id": "caption-word-32-1",
+          "text": "de",
+          "start": 27.697,
+          "end": 27.847
+        },
+        {
+          "id": "caption-word-32-2",
+          "text": "soleil.",
+          "start": 27.847,
+          "end": 28.247
+        }
+      ]
+    },
+    {
+      "id": "caption-group-33",
+      "frame": 5,
+      "start": 28.567,
+      "end": 28.933,
+      "text": "Un vrai",
+      "words": [
+        {
+          "id": "caption-word-33-0",
+          "text": "Un",
+          "start": 28.567,
+          "end": 28.704
+        },
+        {
+          "id": "caption-word-33-1",
+          "text": "vrai",
+          "start": 28.704,
+          "end": 28.933
+        }
+      ]
+    },
+    {
+      "id": "caption-group-34",
+      "frame": 5,
+      "start": 28.933,
+      "end": 29.391,
+      "text": "plaisir à",
+      "words": [
+        {
+          "id": "caption-word-34-0",
+          "text": "plaisir",
+          "start": 28.933,
+          "end": 29.299
+        },
+        {
+          "id": "caption-word-34-1",
+          "text": "à",
+          "start": 29.299,
+          "end": 29.391
+        }
+      ]
+    },
+    {
+      "id": "caption-group-35",
+      "frame": 5,
+      "start": 29.391,
+      "end": 30.198,
+      "text": "chaque gorgée.",
+      "words": [
+        {
+          "id": "caption-word-35-0",
+          "text": "chaque",
+          "start": 29.391,
+          "end": 29.712
+        },
+        {
+          "id": "caption-word-35-1",
+          "text": "gorgée.",
+          "start": 29.712,
+          "end": 30.078
+        }
+      ]
+    },
+    {
+      "id": "caption-group-36",
+      "frame": 6,
+      "start": 30.578,
+      "end": 30.973,
+      "text": "Le jus",
+      "words": [
+        {
+          "id": "caption-word-36-0",
+          "text": "Le",
+          "start": 30.578,
+          "end": 30.747
+        },
+        {
+          "id": "caption-word-36-1",
+          "text": "jus",
+          "start": 30.747,
+          "end": 30.973
+        }
+      ]
+    },
+    {
+      "id": "caption-group-37",
+      "frame": 6,
+      "start": 30.973,
+      "end": 31.713,
+      "text": "de tamarin",
+      "words": [
+        {
+          "id": "caption-word-37-0",
+          "text": "de",
+          "start": 30.973,
+          "end": 31.142
+        },
+        {
+          "id": "caption-word-37-1",
+          "text": "tamarin",
+          "start": 31.142,
+          "end": 31.593
+        }
+      ]
+    },
+    {
+      "id": "caption-group-38",
+      "frame": 6,
+      "start": 31.906,
+      "end": 33.193,
+      "text": "acidulé et parfumé,",
+      "words": [
+        {
+          "id": "caption-word-38-0",
+          "text": "acidulé",
+          "start": 31.906,
+          "end": 32.373
+        },
+        {
+          "id": "caption-word-38-1",
+          "text": "et",
+          "start": 32.373,
+          "end": 32.548
+        },
+        {
+          "id": "caption-word-38-2",
+          "text": "parfumé,",
+          "start": 32.548,
+          "end": 33.073
+        }
+      ]
+    },
+    {
+      "id": "caption-group-39",
+      "frame": 6,
+      "start": 33.273,
+      "end": 33.611,
+      "text": "le goût",
+      "words": [
+        {
+          "id": "caption-word-39-0",
+          "text": "le",
+          "start": 33.273,
+          "end": 33.4
+        },
+        {
+          "id": "caption-word-39-1",
+          "text": "goût",
+          "start": 33.4,
+          "end": 33.611
+        }
+      ]
+    },
+    {
+      "id": "caption-group-40",
+      "frame": 6,
+      "start": 33.611,
+      "end": 33.948,
+      "text": "de chez",
+      "words": [
+        {
+          "id": "caption-word-40-0",
+          "text": "de",
+          "start": 33.611,
+          "end": 33.737
+        },
+        {
+          "id": "caption-word-40-1",
+          "text": "chez",
+          "start": 33.737,
+          "end": 33.948
+        }
+      ]
+    },
+    {
+      "id": "caption-group-41",
+      "frame": 6,
+      "start": 33.948,
+      "end": 34.321,
+      "text": "nous,",
+      "words": [
+        {
+          "id": "caption-word-41-0",
+          "text": "nous,",
+          "start": 33.948,
+          "end": 34.201
+        }
+      ]
+    },
+    {
+      "id": "caption-group-42",
+      "frame": 6,
+      "start": 34.401,
+      "end": 35.636,
+      "text": "qui rafraîchit vraiment.",
+      "words": [
+        {
+          "id": "caption-word-42-0",
+          "text": "qui",
+          "start": 34.401,
+          "end": 34.58
+        },
+        {
+          "id": "caption-word-42-1",
+          "text": "rafraîchit",
+          "start": 34.58,
+          "end": 35.07
+        },
+        {
+          "id": "caption-word-42-2",
+          "text": "vraiment.",
+          "start": 35.07,
+          "end": 35.516
+        }
+      ]
+    },
+    {
+      "id": "caption-group-43",
+      "frame": 7,
+      "start": 36.016,
+      "end": 37.13,
+      "text": "Et pour accompagner,",
+      "words": [
+        {
+          "id": "caption-word-43-0",
+          "text": "Et",
+          "start": 36.016,
+          "end": 36.158
+        },
+        {
+          "id": "caption-word-43-1",
+          "text": "pour",
+          "start": 36.158,
+          "end": 36.395
+        },
+        {
+          "id": "caption-word-43-2",
+          "text": "accompagner,",
+          "start": 36.395,
+          "end": 37.01
+        }
+      ]
+    },
+    {
+      "id": "caption-group-44",
+      "frame": 7,
+      "start": 37.21,
+      "end": 38.486,
+      "text": "la salade délicieuse",
+      "words": [
+        {
+          "id": "caption-word-44-0",
+          "text": "la",
+          "start": 37.21,
+          "end": 37.375
+        },
+        {
+          "id": "caption-word-44-1",
+          "text": "salade",
+          "start": 37.375,
+          "end": 37.761
+        },
+        {
+          "id": "caption-word-44-2",
+          "text": "délicieuse",
+          "start": 37.761,
+          "end": 38.366
+        }
+      ]
+    },
+    {
+      "id": "caption-group-45",
+      "frame": 7,
+      "start": 38.676,
+      "end": 39.375,
+      "text": "fraîche,",
+      "words": [
+        {
+          "id": "caption-word-45-0",
+          "text": "fraîche,",
+          "start": 38.676,
+          "end": 39.255
+        }
+      ]
+    },
+    {
+      "id": "caption-group-46",
+      "frame": 7,
+      "start": 39.455,
+      "end": 40.608,
+      "text": "croquante et colorée.",
+      "words": [
+        {
+          "id": "caption-word-46-0",
+          "text": "croquante",
+          "start": 39.455,
+          "end": 39.925
+        },
+        {
+          "id": "caption-word-46-1",
+          "text": "et",
+          "start": 39.925,
+          "end": 40.066
+        },
+        {
+          "id": "caption-word-46-2",
+          "text": "colorée.",
+          "start": 40.066,
+          "end": 40.488
+        }
+      ]
+    },
+    {
+      "id": "caption-group-47",
+      "frame": 8,
+      "start": 40.988,
+      "end": 41.777,
+      "text": "Fraîcheur,",
+      "words": [
+        {
+          "id": "caption-word-47-0",
+          "text": "Fraîcheur,",
+          "start": 40.988,
+          "end": 41.657
+        }
+      ]
+    },
+    {
+      "id": "caption-group-48",
+      "frame": 8,
+      "start": 41.857,
+      "end": 42.892,
+      "text": "goût naturel,",
+      "words": [
+        {
+          "id": "caption-word-48-0",
+          "text": "goût",
+          "start": 41.857,
+          "end": 42.183
+        },
+        {
+          "id": "caption-word-48-1",
+          "text": "naturel,",
+          "start": 42.183,
+          "end": 42.772
+        }
+      ]
+    },
+    {
+      "id": "caption-group-49",
+      "frame": 8,
+      "start": 42.972,
+      "end": 44.296,
+      "text": "et votre satisfaction",
+      "words": [
+        {
+          "id": "caption-word-49-0",
+          "text": "et",
+          "start": 42.972,
+          "end": 43.136
+        },
+        {
+          "id": "caption-word-49-1",
+          "text": "votre",
+          "start": 43.136,
+          "end": 43.464
+        },
+        {
+          "id": "caption-word-49-2",
+          "text": "satisfaction",
+          "start": 43.464,
+          "end": 44.176
+        }
+      ]
+    },
+    {
+      "id": "caption-group-50",
+      "frame": 8,
+      "start": 44.486,
+      "end": 44.94,
+      "text": "c'est la",
+      "words": [
+        {
+          "id": "caption-word-50-0",
+          "text": "c'est",
+          "start": 44.486,
+          "end": 44.789
+        },
+        {
+          "id": "caption-word-50-1",
+          "text": "la",
+          "start": 44.789,
+          "end": 44.94
+        }
+      ]
+    },
+    {
+      "id": "caption-group-51",
+      "frame": 8,
+      "start": 44.94,
+      "end": 45.546,
+      "text": "priorité de",
+      "words": [
+        {
+          "id": "caption-word-51-0",
+          "text": "priorité",
+          "start": 44.94,
+          "end": 45.394
+        },
+        {
+          "id": "caption-word-51-1",
+          "text": "de",
+          "start": 45.394,
+          "end": 45.546
+        }
+      ]
+    },
+    {
+      "id": "caption-group-52",
+      "frame": 8,
+      "start": 45.546,
+      "end": 46.423,
+      "text": "Madame Sibabi.",
+      "words": [
+        {
+          "id": "caption-word-52-0",
+          "text": "Madame",
+          "start": 45.546,
+          "end": 45.899
+        },
+        {
+          "id": "caption-word-52-1",
+          "text": "Sibabi.",
+          "start": 45.899,
+          "end": 46.303
+        }
+      ]
+    },
+    {
+      "id": "caption-group-53",
+      "frame": 9,
+      "start": 46.803,
+      "end": 47.223,
+      "text": "Venez au",
+      "words": [
+        {
+          "id": "caption-word-53-0",
+          "text": "Venez",
+          "start": 46.803,
+          "end": 47.083
+        },
+        {
+          "id": "caption-word-53-1",
+          "text": "au",
+          "start": 47.083,
+          "end": 47.223
+        }
+      ]
+    },
+    {
+      "id": "caption-group-54",
+      "frame": 9,
+      "start": 47.223,
+      "end": 48.276,
+      "text": "quartier Tchitchao,",
+      "words": [
+        {
+          "id": "caption-word-54-0",
+          "text": "quartier",
+          "start": 47.223,
+          "end": 47.643
+        },
+        {
+          "id": "caption-word-54-1",
+          "text": "Tchitchao,",
+          "start": 47.643,
+          "end": 48.156
+        }
+      ]
+    },
+    {
+      "id": "caption-group-55",
+      "frame": 9,
+      "start": 48.356,
+      "end": 48.924,
+      "text": "ou appelez",
+      "words": [
+        {
+          "id": "caption-word-55-0",
+          "text": "ou",
+          "start": 48.356,
+          "end": 48.511
+        },
+        {
+          "id": "caption-word-55-1",
+          "text": "appelez",
+          "start": 48.511,
+          "end": 48.924
+        }
+      ]
+    },
+    {
+      "id": "caption-group-56",
+      "frame": 9,
+      "start": 48.924,
+      "end": 51.094,
+      "text": "le 93 17 05",
+      "words": [
+        {
+          "id": "caption-word-56-0",
+          "text": "le",
+          "start": 48.924,
+          "end": 49.079
+        },
+        {
+          "id": "caption-word-56-1",
+          "text": "93",
+          "start": 49.079,
+          "end": 50.112
+        },
+        {
+          "id": "caption-word-56-2",
+          "text": "17",
+          "start": 50.112,
+          "end": 50.577
+        },
+        {
+          "id": "caption-word-56-3",
+          "text": "05",
+          "start": 50.577,
+          "end": 51.094
+        }
+      ]
+    },
+    {
+      "id": "caption-group-57",
+      "frame": 9,
+      "start": 51.094,
+      "end": 51.937,
+      "text": "34.",
+      "words": [
+        {
+          "id": "caption-word-57-0",
+          "text": "34.",
+          "start": 51.094,
+          "end": 51.817
+        }
+      ]
+    },
+    {
+      "id": "caption-group-58",
+      "frame": 9,
+      "start": 52.137,
+      "end": 52.971,
+      "text": "Venez goûter",
+      "words": [
+        {
+          "id": "caption-word-58-0",
+          "text": "Venez",
+          "start": 52.137,
+          "end": 52.467
+        },
+        {
+          "id": "caption-word-58-1",
+          "text": "goûter",
+          "start": 52.467,
+          "end": 52.851
+        }
+      ]
+    },
+    {
+      "id": "caption-group-59",
+      "frame": 9,
+      "start": 53.161,
+      "end": 53.661,
+      "text": "vous serez",
+      "words": [
+        {
+          "id": "caption-word-59-0",
+          "text": "vous",
+          "start": 53.161,
+          "end": 53.388
+        },
+        {
+          "id": "caption-word-59-1",
+          "text": "serez",
+          "start": 53.388,
+          "end": 53.661
+        }
+      ]
+    },
+    {
+      "id": "caption-group-60",
+      "frame": 9,
+      "start": 53.661,
+      "end": 54.644,
+      "text": "toujours satisfait",
+      "words": [
+        {
+          "id": "caption-word-60-0",
+          "text": "toujours",
+          "start": 53.661,
+          "end": 54.07
+        },
+        {
+          "id": "caption-word-60-1",
+          "text": "satisfait",
+          "start": 54.07,
+          "end": 54.524
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,987 @@
+{
+  "bgm": {
+    "path": "assets/music/bed.wav",
+    "source": "host",
+    "volume": 0.2,
+    "duration_s": 57.02
+  },
+  "sfx": [
+    {
+      "frame": 2,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 3,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 4,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 5,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 6,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 7,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 8,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 9,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.3,
+      "source": "host"
+    },
+    {
+      "frame": 1,
+      "file": "assets/sfx/etincelle.wav",
+      "offset_s": 5.74,
+      "duration_s": 0.9,
+      "volume": 0.35,
+      "source": "host"
+    }
+  ],
+  "voices": [
+    {
+      "frame": 1,
+      "path": "assets/voice/01.wav",
+      "duration_s": 6.614,
+      "words": [
+        {
+          "text": "93",
+          "start": 0.1,
+          "end": 1.148,
+          "id": "w0"
+        },
+        {
+          "text": "17",
+          "start": 1.148,
+          "end": 1.62,
+          "id": "w1"
+        },
+        {
+          "text": "05",
+          "start": 1.62,
+          "end": 2.144,
+          "id": "w2"
+        },
+        {
+          "text": "34",
+          "start": 2.144,
+          "end": 2.878,
+          "id": "w3"
+        },
+        {
+          "text": ":",
+          "start": 2.878,
+          "end": 2.983,
+          "id": "w4"
+        },
+        {
+          "text": "retenez",
+          "start": 3.183,
+          "end": 3.611,
+          "id": "w5"
+        },
+        {
+          "text": "bien",
+          "start": 3.611,
+          "end": 3.879,
+          "id": "w6"
+        },
+        {
+          "text": "ce",
+          "start": 3.879,
+          "end": 4.039,
+          "id": "w7"
+        },
+        {
+          "text": "numéro",
+          "start": 4.039,
+          "end": 4.414,
+          "id": "w8"
+        },
+        {
+          "text": "c'est",
+          "start": 4.734,
+          "end": 5.021,
+          "id": "w9"
+        },
+        {
+          "text": "celui",
+          "start": 5.021,
+          "end": 5.307,
+          "id": "w10"
+        },
+        {
+          "text": "de",
+          "start": 5.307,
+          "end": 5.45,
+          "id": "w11"
+        },
+        {
+          "text": "Madame",
+          "start": 5.45,
+          "end": 5.785,
+          "id": "w12"
+        },
+        {
+          "text": "Sibabi",
+          "start": 5.785,
+          "end": 6.119,
+          "id": "w13"
+        },
+        {
+          "text": "!",
+          "start": 6.119,
+          "end": 6.214,
+          "id": "w14"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "assets/voice/02.wav",
+      "duration_s": 6.314,
+      "words": [
+        {
+          "text": "Chez",
+          "start": 0.1,
+          "end": 0.361,
+          "id": "w0"
+        },
+        {
+          "text": "Madame",
+          "start": 0.361,
+          "end": 0.727,
+          "id": "w1"
+        },
+        {
+          "text": "Sibabi,",
+          "start": 0.727,
+          "end": 1.145,
+          "id": "w2"
+        },
+        {
+          "text": "on",
+          "start": 1.345,
+          "end": 1.504,
+          "id": "w3"
+        },
+        {
+          "text": "vend",
+          "start": 1.504,
+          "end": 1.769,
+          "id": "w4"
+        },
+        {
+          "text": "des",
+          "start": 1.769,
+          "end": 1.981,
+          "id": "w5"
+        },
+        {
+          "text": "jus",
+          "start": 1.981,
+          "end": 2.193,
+          "id": "w6"
+        },
+        {
+          "text": "naturels",
+          "start": 2.193,
+          "end": 2.671,
+          "id": "w7"
+        },
+        {
+          "text": "et",
+          "start": 2.671,
+          "end": 2.83,
+          "id": "w8"
+        },
+        {
+          "text": "une",
+          "start": 2.83,
+          "end": 3.042,
+          "id": "w9"
+        },
+        {
+          "text": "salade",
+          "start": 3.042,
+          "end": 3.413,
+          "id": "w10"
+        },
+        {
+          "text": "délicieuse",
+          "start": 3.413,
+          "end": 3.997,
+          "id": "w11"
+        },
+        {
+          "text": "le",
+          "start": 4.317,
+          "end": 4.514,
+          "id": "w12"
+        },
+        {
+          "text": "tout,",
+          "start": 4.514,
+          "end": 4.91,
+          "id": "w13"
+        },
+        {
+          "text": "bien",
+          "start": 5.11,
+          "end": 5.445,
+          "id": "w14"
+        },
+        {
+          "text": "glacé.",
+          "start": 5.445,
+          "end": 5.914,
+          "id": "w15"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "assets/voice/03.wav",
+      "duration_s": 5.787,
+      "words": [
+        {
+          "text": "Le",
+          "start": 0.1,
+          "end": 0.263,
+          "id": "w0"
+        },
+        {
+          "text": "jus",
+          "start": 0.263,
+          "end": 0.48,
+          "id": "w1"
+        },
+        {
+          "text": "de",
+          "start": 0.48,
+          "end": 0.644,
+          "id": "w2"
+        },
+        {
+          "text": "citron",
+          "start": 0.644,
+          "end": 1.024,
+          "id": "w3"
+        },
+        {
+          "text": ":",
+          "start": 1.024,
+          "end": 1.133,
+          "id": "w4"
+        },
+        {
+          "text": "frais,",
+          "start": 1.333,
+          "end": 1.78,
+          "id": "w5"
+        },
+        {
+          "text": "acidulé,",
+          "start": 1.98,
+          "end": 2.634,
+          "id": "w6"
+        },
+        {
+          "text": "plein",
+          "start": 2.834,
+          "end": 3.13,
+          "id": "w7"
+        },
+        {
+          "text": "de",
+          "start": 3.13,
+          "end": 3.278,
+          "id": "w8"
+        },
+        {
+          "text": "vitamine",
+          "start": 3.278,
+          "end": 3.723,
+          "id": "w9"
+        },
+        {
+          "text": "C.",
+          "start": 3.723,
+          "end": 3.871,
+          "id": "w10"
+        },
+        {
+          "text": "Parfait",
+          "start": 4.191,
+          "end": 4.545,
+          "id": "w11"
+        },
+        {
+          "text": "pour",
+          "start": 4.545,
+          "end": 4.767,
+          "id": "w12"
+        },
+        {
+          "text": "se",
+          "start": 4.767,
+          "end": 4.9,
+          "id": "w13"
+        },
+        {
+          "text": "réveiller.",
+          "start": 4.9,
+          "end": 5.387,
+          "id": "w14"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "path": "assets/voice/04.wav",
+      "duration_s": 5.918,
+      "words": [
+        {
+          "text": "Le",
+          "start": 0.1,
+          "end": 0.276,
+          "id": "w0"
+        },
+        {
+          "text": "jus",
+          "start": 0.276,
+          "end": 0.511,
+          "id": "w1"
+        },
+        {
+          "text": "de",
+          "start": 0.511,
+          "end": 0.687,
+          "id": "w2"
+        },
+        {
+          "text": "bissap,",
+          "start": 0.687,
+          "end": 1.157,
+          "id": "w3"
+        },
+        {
+          "text": "fait",
+          "start": 1.357,
+          "end": 1.576,
+          "id": "w4"
+        },
+        {
+          "text": "avec",
+          "start": 1.576,
+          "end": 1.794,
+          "id": "w5"
+        },
+        {
+          "text": "la",
+          "start": 1.794,
+          "end": 1.925,
+          "id": "w6"
+        },
+        {
+          "text": "fleur",
+          "start": 1.925,
+          "end": 2.187,
+          "id": "w7"
+        },
+        {
+          "text": "d'hibiscus",
+          "start": 2.187,
+          "end": 2.667,
+          "id": "w8"
+        },
+        {
+          "text": ":",
+          "start": 2.667,
+          "end": 2.755,
+          "id": "w9"
+        },
+        {
+          "text": "une",
+          "start": 2.955,
+          "end": 3.141,
+          "id": "w10"
+        },
+        {
+          "text": "belle",
+          "start": 3.141,
+          "end": 3.421,
+          "id": "w11"
+        },
+        {
+          "text": "couleur",
+          "start": 3.421,
+          "end": 3.794,
+          "id": "w12"
+        },
+        {
+          "text": "rubis",
+          "start": 3.794,
+          "end": 4.073,
+          "id": "w13"
+        },
+        {
+          "text": "et",
+          "start": 4.073,
+          "end": 4.213,
+          "id": "w14"
+        },
+        {
+          "text": "un",
+          "start": 4.213,
+          "end": 4.353,
+          "id": "w15"
+        },
+        {
+          "text": "goût",
+          "start": 4.353,
+          "end": 4.586,
+          "id": "w16"
+        },
+        {
+          "text": "doux",
+          "start": 4.586,
+          "end": 4.819,
+          "id": "w17"
+        },
+        {
+          "text": "qui",
+          "start": 4.819,
+          "end": 5.005,
+          "id": "w18"
+        },
+        {
+          "text": "désaltère.",
+          "start": 5.005,
+          "end": 5.518,
+          "id": "w19"
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "path": "assets/voice/05.wav",
+      "duration_s": 5.845,
+      "words": [
+        {
+          "text": "Le",
+          "start": 0.1,
+          "end": 0.253,
+          "id": "w0"
+        },
+        {
+          "text": "jus",
+          "start": 0.253,
+          "end": 0.456,
+          "id": "w1"
+        },
+        {
+          "text": "d'ananas",
+          "start": 0.456,
+          "end": 0.915,
+          "id": "w2"
+        },
+        {
+          "text": ":",
+          "start": 0.915,
+          "end": 1.017,
+          "id": "w3"
+        },
+        {
+          "text": "doré,",
+          "start": 1.217,
+          "end": 1.725,
+          "id": "w4"
+        },
+        {
+          "text": "fruité,",
+          "start": 1.925,
+          "end": 2.564,
+          "id": "w5"
+        },
+        {
+          "text": "plein",
+          "start": 2.764,
+          "end": 3.064,
+          "id": "w6"
+        },
+        {
+          "text": "de",
+          "start": 3.064,
+          "end": 3.214,
+          "id": "w7"
+        },
+        {
+          "text": "soleil.",
+          "start": 3.214,
+          "end": 3.614,
+          "id": "w8"
+        },
+        {
+          "text": "Un",
+          "start": 3.934,
+          "end": 4.071,
+          "id": "w9"
+        },
+        {
+          "text": "vrai",
+          "start": 4.071,
+          "end": 4.3,
+          "id": "w10"
+        },
+        {
+          "text": "plaisir",
+          "start": 4.3,
+          "end": 4.666,
+          "id": "w11"
+        },
+        {
+          "text": "à",
+          "start": 4.666,
+          "end": 4.758,
+          "id": "w12"
+        },
+        {
+          "text": "chaque",
+          "start": 4.758,
+          "end": 5.079,
+          "id": "w13"
+        },
+        {
+          "text": "gorgée.",
+          "start": 5.079,
+          "end": 5.445,
+          "id": "w14"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "path": "assets/voice/06.wav",
+      "duration_s": 5.438,
+      "words": [
+        {
+          "text": "Le",
+          "start": 0.1,
+          "end": 0.269,
+          "id": "w0"
+        },
+        {
+          "text": "jus",
+          "start": 0.269,
+          "end": 0.495,
+          "id": "w1"
+        },
+        {
+          "text": "de",
+          "start": 0.495,
+          "end": 0.664,
+          "id": "w2"
+        },
+        {
+          "text": "tamarin",
+          "start": 0.664,
+          "end": 1.115,
+          "id": "w3"
+        },
+        {
+          "text": ":",
+          "start": 1.115,
+          "end": 1.228,
+          "id": "w4"
+        },
+        {
+          "text": "acidulé",
+          "start": 1.428,
+          "end": 1.895,
+          "id": "w5"
+        },
+        {
+          "text": "et",
+          "start": 1.895,
+          "end": 2.07,
+          "id": "w6"
+        },
+        {
+          "text": "parfumé,",
+          "start": 2.07,
+          "end": 2.595,
+          "id": "w7"
+        },
+        {
+          "text": "le",
+          "start": 2.795,
+          "end": 2.922,
+          "id": "w8"
+        },
+        {
+          "text": "goût",
+          "start": 2.922,
+          "end": 3.133,
+          "id": "w9"
+        },
+        {
+          "text": "de",
+          "start": 3.133,
+          "end": 3.259,
+          "id": "w10"
+        },
+        {
+          "text": "chez",
+          "start": 3.259,
+          "end": 3.47,
+          "id": "w11"
+        },
+        {
+          "text": "nous,",
+          "start": 3.47,
+          "end": 3.723,
+          "id": "w12"
+        },
+        {
+          "text": "qui",
+          "start": 3.923,
+          "end": 4.102,
+          "id": "w13"
+        },
+        {
+          "text": "rafraîchit",
+          "start": 4.102,
+          "end": 4.592,
+          "id": "w14"
+        },
+        {
+          "text": "vraiment.",
+          "start": 4.592,
+          "end": 5.038,
+          "id": "w15"
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "path": "assets/voice/07.wav",
+      "duration_s": 4.972,
+      "words": [
+        {
+          "text": "Et",
+          "start": 0.1,
+          "end": 0.242,
+          "id": "w0"
+        },
+        {
+          "text": "pour",
+          "start": 0.242,
+          "end": 0.479,
+          "id": "w1"
+        },
+        {
+          "text": "accompagner,",
+          "start": 0.479,
+          "end": 1.094,
+          "id": "w2"
+        },
+        {
+          "text": "la",
+          "start": 1.294,
+          "end": 1.459,
+          "id": "w3"
+        },
+        {
+          "text": "salade",
+          "start": 1.459,
+          "end": 1.845,
+          "id": "w4"
+        },
+        {
+          "text": "délicieuse",
+          "start": 1.845,
+          "end": 2.45,
+          "id": "w5"
+        },
+        {
+          "text": ":",
+          "start": 2.45,
+          "end": 2.56,
+          "id": "w6"
+        },
+        {
+          "text": "fraîche,",
+          "start": 2.76,
+          "end": 3.339,
+          "id": "w7"
+        },
+        {
+          "text": "croquante",
+          "start": 3.539,
+          "end": 4.009,
+          "id": "w8"
+        },
+        {
+          "text": "et",
+          "start": 4.009,
+          "end": 4.15,
+          "id": "w9"
+        },
+        {
+          "text": "colorée.",
+          "start": 4.15,
+          "end": 4.572,
+          "id": "w10"
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "path": "assets/voice/08.wav",
+      "duration_s": 5.815,
+      "words": [
+        {
+          "text": "Fraîcheur,",
+          "start": 0.1,
+          "end": 0.769,
+          "id": "w0"
+        },
+        {
+          "text": "goût",
+          "start": 0.969,
+          "end": 1.295,
+          "id": "w1"
+        },
+        {
+          "text": "naturel,",
+          "start": 1.295,
+          "end": 1.884,
+          "id": "w2"
+        },
+        {
+          "text": "et",
+          "start": 2.084,
+          "end": 2.248,
+          "id": "w3"
+        },
+        {
+          "text": "votre",
+          "start": 2.248,
+          "end": 2.576,
+          "id": "w4"
+        },
+        {
+          "text": "satisfaction",
+          "start": 2.576,
+          "end": 3.288,
+          "id": "w5"
+        },
+        {
+          "text": ":",
+          "start": 3.288,
+          "end": 3.398,
+          "id": "w6"
+        },
+        {
+          "text": "c'est",
+          "start": 3.598,
+          "end": 3.901,
+          "id": "w7"
+        },
+        {
+          "text": "la",
+          "start": 3.901,
+          "end": 4.052,
+          "id": "w8"
+        },
+        {
+          "text": "priorité",
+          "start": 4.052,
+          "end": 4.506,
+          "id": "w9"
+        },
+        {
+          "text": "de",
+          "start": 4.506,
+          "end": 4.658,
+          "id": "w10"
+        },
+        {
+          "text": "Madame",
+          "start": 4.658,
+          "end": 5.011,
+          "id": "w11"
+        },
+        {
+          "text": "Sibabi.",
+          "start": 5.011,
+          "end": 5.415,
+          "id": "w12"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "path": "assets/voice/09.wav",
+      "duration_s": 8.312,
+      "words": [
+        {
+          "text": "Venez",
+          "start": 0.1,
+          "end": 0.38,
+          "id": "w0"
+        },
+        {
+          "text": "au",
+          "start": 0.38,
+          "end": 0.52,
+          "id": "w1"
+        },
+        {
+          "text": "quartier",
+          "start": 0.52,
+          "end": 0.94,
+          "id": "w2"
+        },
+        {
+          "text": "Tchitchao,",
+          "start": 0.94,
+          "end": 1.453,
+          "id": "w3"
+        },
+        {
+          "text": "ou",
+          "start": 1.653,
+          "end": 1.808,
+          "id": "w4"
+        },
+        {
+          "text": "appelez",
+          "start": 1.808,
+          "end": 2.221,
+          "id": "w5"
+        },
+        {
+          "text": "le",
+          "start": 2.221,
+          "end": 2.376,
+          "id": "w6"
+        },
+        {
+          "text": "93",
+          "start": 2.376,
+          "end": 3.409,
+          "id": "w7"
+        },
+        {
+          "text": "17",
+          "start": 3.409,
+          "end": 3.874,
+          "id": "w8"
+        },
+        {
+          "text": "05",
+          "start": 3.874,
+          "end": 4.391,
+          "id": "w9"
+        },
+        {
+          "text": "34.",
+          "start": 4.391,
+          "end": 5.114,
+          "id": "w10"
+        },
+        {
+          "text": "Venez",
+          "start": 5.434,
+          "end": 5.764,
+          "id": "w11"
+        },
+        {
+          "text": "goûter",
+          "start": 5.764,
+          "end": 6.148,
+          "id": "w12"
+        },
+        {
+          "text": ":",
+          "start": 6.148,
+          "end": 6.258,
+          "id": "w13"
+        },
+        {
+          "text": "vous",
+          "start": 6.458,
+          "end": 6.685,
+          "id": "w14"
+        },
+        {
+          "text": "serez",
+          "start": 6.685,
+          "end": 6.958,
+          "id": "w15"
+        },
+        {
+          "text": "toujours",
+          "start": 6.958,
+          "end": 7.367,
+          "id": "w16"
+        },
+        {
+          "text": "satisfait",
+          "start": 7.367,
+          "end": 7.821,
+          "id": "w17"
+        },
+        {
+          "text": "!",
+          "start": 7.821,
+          "end": 7.912,
+          "id": "w18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Lilita One"; src: url("assets/fonts/LilitaOne-400.woff2") format("woff2"); }
+@font-face { font-family: "Kaushan Script"; src: url("assets/fonts/KaushanScript-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-800.woff2") format("woff2"); font-weight: 800; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #FFF8EC; }
+#root * { box-sizing: border-box; }
+.f06-tamarin-abs { position: absolute; }
+.f06-tamarin-bg { position: absolute; inset: 0; }
+.f06-tamarin-rays { position: absolute; left: -460px; top: -260px; width: 2000px; height: 2000px; opacity: .55; }
+.f06-tamarin-float { position: absolute; }
+/* logo */
+.f06-tamarin-logo { position: absolute; width: 900px; height: 380px; }
+.f06-tamarin-madame { position: absolute; left: 70px; top: 0; font-family: "Kaushan Script", cursive; font-size: 128px; line-height: 1; color: #FFFFFF;
+  -webkit-text-stroke: 16px #2A160C; paint-order: stroke fill; text-shadow: 0 8px 0 rgba(42,22,12,.35); }
+.f06-tamarin-sib-back, .f06-tamarin-sib-front { position: absolute; left: 0; top: 118px; font-family: "Lilita One", sans-serif; font-size: 236px; line-height: 1; letter-spacing: .01em; }
+.f06-tamarin-sib-back { color: #2A160C; -webkit-text-stroke: 30px #2A160C; text-shadow: 0 16px 0 #5A2F14, 0 22px 30px rgba(0,0,0,.35); }
+.f06-tamarin-sib-front { background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.95) 50%, rgba(255,255,255,0) 60%),
+  linear-gradient(180deg, #FFF59A 0%, #FFE03A 38%, #FFC107 62%, #F59E00 100%);
+  background-size: 300% 100%, 100% 100%; background-position: 120% 0, 0 0; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.f06-tamarin-crown { position: absolute; left: 640px; top: -40px; width: 190px; height: 150px; }
+/* pastilles */
+.f06-tamarin-pill { position: absolute; display: flex; align-items: center; gap: 18px; padding: 18px 30px 18px 18px; border-radius: 9999px;
+  background: #FFFFFF; color: #2A160C; font-weight: 600; font-size: 44px; box-shadow: 0 10px 24px rgba(0,0,0,.22); white-space: nowrap; }
+.f06-tamarin-pill svg { flex: 0 0 auto; }
+.f06-tamarin-title1 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Kaushan Script", cursive; font-size: 92px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 10px #2A160C; paint-order: stroke fill; }
+.f06-tamarin-title2 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; font-size: 200px; line-height: 1;
+  color: #FFFFFF; -webkit-text-stroke: 22px #2A160C; paint-order: stroke fill; text-shadow: 0 14px 0 rgba(42,22,12,.45); }
+.f06-tamarin-count { position: absolute; left: 60px; top: 120px; padding: 10px 26px; border-radius: 9999px; background: rgba(255,255,255,.92); color: #2A160C;
+  font-family: "Lilita One", sans-serif; font-size: 44px; }
+.f06-tamarin-photo { position: absolute; background: #FFFFFF; padding: 14px 14px 58px; border-radius: 22px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.f06-tamarin-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.f06-tamarin-photo span { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-weight: 600; font-size: 28px; color: #2A160C; }
+.f06-tamarin-badge { position: absolute; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  font-family: "Lilita One", sans-serif; line-height: .95; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+
+#f06-tamarin-bg { background: radial-gradient(1200px 1400px at 50% 36%, #D49A5C 0%, #4A2610 75%); }
+
+</style>
+<div id="root" data-composition-id="06-tamarin" data-width="1080" data-height="1920" data-duration="5.438">
+  <div id="f06-tamarin-bg" class="f06-tamarin-bg clip" data-start="0" data-duration="5.438" data-track-index="0"></div>
+  <div id="f06-tamarin-amb" class="clip" data-start="0" data-duration="5.438" data-track-index="1" style="position:absolute;inset:0">
+<svg id="f06-tamarin-rays" class="f06-tamarin-rays" viewBox="0 0 2000 2000"><defs><radialGradient id="f06-tamarin-rg"><stop offset="0" stop-color="#FFE680" stop-opacity=".55"/><stop offset="1" stop-color="#FFE680" stop-opacity="0"/></radialGradient></defs><path d="M1000 1000 L2400 1000 L2386 1195 Z M1000 1000 L2316 1479 L2236 1657 Z M1000 1000 L2072 1900 L1937 2040 Z M1000 1000 L1700 2212 L1524 2298 Z M1000 1000 L1243 2379 L1049 2399 Z M1000 1000 L757 2379 L567 2331 Z M1000 1000 L300 2212 L138 2103 Z M1000 1000 L-72 1900 L-187 1742 Z M1000 1000 L-316 1479 L-369 1291 Z M1000 1000 L-400 1000 L-386 805 Z M1000 1000 L-316 521 L-236 343 Z M1000 1000 L-72 100 L63 -40 Z M1000 1000 L300 -212 L476 -298 Z M1000 1000 L757 -379 L951 -399 Z M1000 1000 L1243 -379 L1433 -331 Z M1000 1000 L1700 -212 L1862 -103 Z M1000 1000 L2072 100 L2187 258 Z M1000 1000 L2316 521 L2369 709 Z" fill="url(#f06-tamarin-rg)"/></svg>
+<div id="f06-tamarin-fl0" class="f06-tamarin-float" style="left:20px;top:280px;filter:blur(2px);opacity:0"><svg width="220" height="99" viewBox="0 0 100 45"><path d="M6 24 Q10 8 24 14 Q34 4 46 14 Q58 4 70 14 Q84 6 94 22 Q90 38 76 32 Q64 42 52 32 Q40 42 28 32 Q14 40 6 24 Z" fill="#9A6A3C" stroke="#5E3A1A" stroke-width="3"/><path d="M20 22 Q50 16 84 22" stroke="#C9965E" stroke-width="3" fill="none"/></svg></div>
+<div id="f06-tamarin-fl1" class="f06-tamarin-float" style="left:860px;top:1200px;filter:blur(5px);opacity:0"><svg width="160" height="72" viewBox="0 0 100 45"><path d="M6 24 Q10 8 24 14 Q34 4 46 14 Q58 4 70 14 Q84 6 94 22 Q90 38 76 32 Q64 42 52 32 Q40 42 28 32 Q14 40 6 24 Z" fill="#9A6A3C" stroke="#5E3A1A" stroke-width="3"/><path d="M20 22 Q50 16 84 22" stroke="#C9965E" stroke-width="3" fill="none"/></svg></div>
+<div id="f06-tamarin-fl2" class="f06-tamarin-float" style="left:880px;top:300px;filter:blur(2px);opacity:0"><svg width="110" height="110" viewBox="0 0 100 100"><path d="M10 90 Q10 20 90 10 Q84 84 10 90 Z" fill="#3FA845" stroke="#1F6B2A" stroke-width="3"/><path d="M14 86 Q46 48 84 16" stroke="#1F6B2A" stroke-width="3" fill="none"/></svg></div>
+<div id="f06-tamarin-fl3" class="f06-tamarin-float" style="left:60px;top:1420px;filter:blur(5px);opacity:0"><svg width="90" height="90" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="18" fill="#E8F7FF" fill-opacity=".75" stroke="#fff" stroke-width="4"/><path d="M24 30 L44 24" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="f06-tamarin-fl4" class="f06-tamarin-float" style="left:480px;top:1510px;filter:blur(5px);opacity:0"><svg width="130" height="58" viewBox="0 0 100 45"><path d="M6 24 Q10 8 24 14 Q34 4 46 14 Q58 4 70 14 Q84 6 94 22 Q90 38 76 32 Q64 42 52 32 Q40 42 28 32 Q14 40 6 24 Z" fill="#9A6A3C" stroke="#5E3A1A" stroke-width="3"/><path d="M20 22 Q50 16 84 22" stroke="#C9965E" stroke-width="3" fill="none"/></svg></div>
+  </div>
+  <div id="f06-tamarin-stage" class="clip" data-start="0" data-duration="5.438" data-track-index="2" style="position:absolute;inset:0">
+
+<div id="f06-tamarin-count" class="f06-tamarin-count">4/4</div>
+<div id="f06-tamarin-t1" class="f06-tamarin-title1" style="top:150px">Jus de</div>
+<div id="f06-tamarin-t2" class="f06-tamarin-title2" style="top:240px">TAMARIN</div>
+<div id="f06-tamarin-gl" class="f06-tamarin-abs" style="left:70px;top:520px"><svg id="f06-tamarin-g" width="470" height="822" viewBox="0 -40 400 720" style="overflow:visible">
+<defs><clipPath id="f06-tamarin-g-clip"><path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z"/></clipPath>
+<linearGradient id="f06-tamarin-g-lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8995A"/><stop offset="1" stop-color="#7A4419"/></linearGradient></defs>
+<ellipse cx="200" cy="676" rx="190" ry="26" fill="rgba(0,0,0,.25)"/>
+<g clip-path="url(#f06-tamarin-g-clip)">
+  <path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="rgba(255,255,255,.18)"/>
+  <g id="f06-tamarin-g-liq"><rect x="0" y="150" width="400" height="520" fill="url(#f06-tamarin-g-lq)"/>
+  <path d="M0 150 Q100 130 200 150 T400 150 L400 175 L0 175 Z" fill="#fff" fill-opacity=".28"/><rect class="f06-tamarin-g-ice" x="95" y="200" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-14 134 235)"/><rect class="f06-tamarin-g-ice" x="200" y="230" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(12 239 265)"/><rect class="f06-tamarin-g-ice" x="140" y="300" width="78" height="70" rx="16" fill="#fff" fill-opacity=".38" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(26 179 335)"/><circle class="f06-tamarin-g-bub" cx="110" cy="600" r="5" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="147" cy="577" r="6" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="184" cy="554" r="7" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="221" cy="531" r="8" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="258" cy="588" r="5" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="295" cy="565" r="6" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="142" cy="542" r="7" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="179" cy="599" r="8" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="216" cy="576" r="5" fill="#fff" fill-opacity=".55"/><circle class="f06-tamarin-g-bub" cx="253" cy="553" r="6" fill="#fff" fill-opacity=".55"/></g>
+</g>
+<g id="f06-tamarin-g-straw"><rect x="228" y="-60" width="30" height="640" rx="15" fill="#FFC93C" transform="rotate(9 243 260)"/>
+<rect x="228" y="-60" width="10" height="640" rx="5" fill="#fff" fill-opacity=".45" transform="rotate(9 243 260)"/></g>
+<path d="M40 160 L360 160 L312 640 Q304 660 280 660 L120 660 Q96 660 88 640 Z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<path d="M70 200 L108 610" stroke="#fff" stroke-opacity=".55" stroke-width="16" stroke-linecap="round"/>
+<path d="M26 160 Q200 30 374 160 Z" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
+<rect x="18" y="148" width="364" height="26" rx="13" fill="rgba(255,255,255,.75)"/>
+</svg></div>
+<svg id="f06-tamarin-b" width="1080" height="1920" class="f06-tamarin-abs" style="left:0;top:0;overflow:visible;opacity:0"><line x1="440" y1="900" x2="605" y2="900" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="422" y1="968" x2="565" y2="1050" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="372" y1="1017" x2="455" y2="1160" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="305" y1="1035" x2="305" y2="1200" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="238" y1="1017" x2="155" y2="1160" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="188" y1="968" x2="45" y2="1050" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="170" y1="900" x2="5" y2="900" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="188" y1="832" x2="45" y2="750" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="237" y1="783" x2="155" y2="640" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="305" y1="765" x2="305" y2="600" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="372" y1="783" x2="455" y2="640" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/><line x1="422" y1="832" x2="565" y2="750" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/></svg>
+<div id="f06-tamarin-p0" class="f06-tamarin-pill" style="left:560px;top:640px"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#1F7A34"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Acidulé</span></div><div id="f06-tamarin-p1" class="f06-tamarin-pill" style="left:560px;top:790px"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#1F7A34"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Parfumé</span></div><div id="f06-tamarin-p2" class="f06-tamarin-pill" style="left:560px;top:940px"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#1F7A34"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Goût de chez nous</span></div>
+<div id="f06-tamarin-photo" class="f06-tamarin-photo" style="left:600px;top:1130px;width:420px;height:400px"><img src="assets/photo-tamarin.png" alt=""><span>Photo réelle</span></div>
+
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="06-tamarin"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function popIn(sel, at, from, to) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.6, y: 40 }, from || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.6)" }, to || {}), at);
+}
+function slideIn(sel, at, dx, dy) {
+  tl.fromTo(q(sel), { opacity: 0, x: dx || 0, y: dy || 0 }, { opacity: 1, x: 0, y: 0, duration: 0.7, ease: "power3.out" }, at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 14), duration: Math.max(0.3, end - at), ease: "sine.inOut", immediateRender: false }, at);
+}
+function shine(sel, at) {
+  tl.fromTo(q(sel), { backgroundPosition: "120% 0, 0 0" }, { backgroundPosition: "-20% 0, 0 0", duration: 1.1, ease: "power2.inOut", immediateRender: false }, at);
+}
+function burst(sel, at) {
+  tl.fromTo(q(sel), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at);
+  tl.to(q(sel), { opacity: 0, scale: 1.35, duration: 0.45, ease: "power2.in" }, at + 0.25);
+}
+function fillGlass(id, at, dur) {
+  tl.fromTo(q("#" + id + "-liq"), { scaleY: 0, svgOrigin: "200 660" }, { scaleY: 1, svgOrigin: "200 660", duration: dur || 1.2, ease: "power2.out" }, at);
+  tl.fromTo(qa("." + id + "-ice"), { y: -260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out", stagger: 0.12 }, at + 0.35);
+  tl.fromTo(q("#" + id + "-straw"), { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, at + 0.8);
+  tl.fromTo(qa("." + id + "-bub"), { y: 0, opacity: 0 }, { y: -380, opacity: 0.9, duration: 2.6, ease: "power1.in", stagger: 0.18 }, at + 0.6);
+}
+
+tl.fromTo("#f06-tamarin-rays", {rotation: 0, svgOrigin: "1000 1000"}, {rotation: 28, svgOrigin: "1000 1000", duration: 5.438, ease: "none"}, 0);
+tl.fromTo("#f06-tamarin-fl0", {opacity: 0, scale: 0.6}, {opacity: 0.79, scale: 1, duration: 0.8, ease: "power3.out"}, 0.00);
+tl.fromTo("#f06-tamarin-fl0", {x: 0, y: 0, rotation: 0}, {x: 14, y: -41, rotation: -12, duration: 5.438, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f06-tamarin-fl1", {opacity: 0, scale: 0.6}, {opacity: 0.71, scale: 1, duration: 0.8, ease: "power3.out"}, 0.06);
+tl.fromTo("#f06-tamarin-fl1", {x: 0, y: 0, rotation: 0}, {x: -24, y: -52, rotation: 18, duration: 5.438, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f06-tamarin-fl2", {opacity: 0, scale: 0.6}, {opacity: 0.75, scale: 1, duration: 0.8, ease: "power3.out"}, 0.12);
+tl.fromTo("#f06-tamarin-fl2", {x: 0, y: 0, rotation: 0}, {x: 34, y: -38, rotation: -24, duration: 5.438, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f06-tamarin-fl3", {opacity: 0, scale: 0.6}, {opacity: 0.67, scale: 1, duration: 0.8, ease: "power3.out"}, 0.18);
+tl.fromTo("#f06-tamarin-fl3", {x: 0, y: 0, rotation: 0}, {x: -14, y: -49, rotation: 30, duration: 5.438, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f06-tamarin-fl4", {opacity: 0, scale: 0.6}, {opacity: 0.63, scale: 1, duration: 0.8, ease: "power3.out"}, 0.24);
+tl.fromTo("#f06-tamarin-fl4", {x: 0, y: 0, rotation: 0}, {x: 24, y: -32, rotation: -12, duration: 5.438, ease: "sine.inOut", immediateRender: false}, 0);
+
+tl.fromTo("#f06-tamarin-count", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.0);
+tl.fromTo("#f06-tamarin-t1", { opacity: 0, x: -200 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, 0.05);
+tl.fromTo("#f06-tamarin-t2", { opacity: 0, scale: 1.6, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 0.584);
+tl.fromTo("#f06-tamarin-gl", { opacity: 0, y: 300 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.1);
+fillGlass("f06-tamarin-g", 0.45, 1.3);
+burst("#f06-tamarin-b", 1.5);
+levitate("#f06-tamarin-gl", 1.8, 5.438, 16);
+popIn("#f06-tamarin-p0", 1.348, { x: 120, scale: 0.7 }, { x: 0 });popIn("#f06-tamarin-p1", 1.990, { x: 120, scale: 0.7 }, { x: 0 });popIn("#f06-tamarin-p2", 3.179, { x: 120, scale: 0.7 }, { x: 0 });
+
+tl.fromTo("#f06-tamarin-photo", { opacity: 0, rotation: 18, scale: 0.6, y: 120 }, { opacity: 1, rotation: 5, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.4)" }, 4.022);
+
+tl.set({}, {}, 5.438);
+window.__timelines["06-tamarin"] = tl;
+})();
+</script>
+</template>
