@@ -1,0 +1,121 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Lilita One"; src: url("assets/fonts/LilitaOne-400.woff2") format("woff2"); }
+@font-face { font-family: "Kaushan Script"; src: url("assets/fonts/KaushanScript-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-800.woff2") format("woff2"); font-weight: 800; }
+#root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #4A1530; }
+#root * { box-sizing: border-box; }
+.f03-grenouilleres-abs { position: absolute; }
+.f03-grenouilleres-bg { position: absolute; inset: 0; }
+.f03-grenouilleres-rays { position: absolute; left: -460px; top: -300px; width: 2000px; height: 2000px; opacity: .5; }
+.f03-grenouilleres-float { position: absolute; }
+/* logo Taye */
+.f03-grenouilleres-lw { position: absolute; width: 900px; height: 740px; transform-origin: 50% 50%; }
+.f03-grenouilleres-logo { position: absolute; inset: 0; }
+.f03-grenouilleres-txt { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; line-height: 1; }
+.f03-grenouilleres-taye-b { top: 30px; font-size: 270px; color: #fff; -webkit-text-stroke: 30px #fff; text-shadow: 0 16px 0 #F7B6D2, 0 24px 34px rgba(184,15,94,.35); }
+.f03-grenouilleres-taye-f { top: 30px; font-size: 270px; background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 60%),
+  linear-gradient(180deg, #FF6FB1 0%, #E2197A 55%, #B80F5E 100%); background-size: 300% 100%, 100% 100%; background-position: 120% 0, 0 0;
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+.f03-grenouilleres-vente { position: absolute; left: 150px; top: 318px; width: 600px; height: 112px; border-radius: 60px; background: linear-gradient(180deg, #FFE27A, #FFC928);
+  transform: rotate(-3deg); display: flex; align-items: center; justify-content: center; font-family: "Kaushan Script", cursive; font-size: 82px; color: #4A1530;
+  box-shadow: 0 10px 20px rgba(184,15,94,.2); }
+.f03-grenouilleres-trou { top: 440px; font-size: 158px; color: #E2197A; -webkit-text-stroke: 22px #fff; paint-order: stroke fill; text-shadow: 0 12px 0 #F7B6D2; }
+.f03-grenouilleres-bebe { top: 590px; font-size: 158px; color: #E2197A; -webkit-text-stroke: 22px #fff; paint-order: stroke fill; text-shadow: 0 12px 0 #F7B6D2; }
+/* pastilles et cartes */
+.f03-grenouilleres-pill { position: absolute; display: flex; align-items: center; gap: 16px; padding: 16px 30px 16px 16px; border-radius: 9999px;
+  background: #FFFFFF; color: #4A1530; font-weight: 600; font-size: 42px; box-shadow: 0 10px 24px rgba(184,15,94,.22); white-space: nowrap; }
+.f03-grenouilleres-count { position: absolute; left: 60px; top: 110px; padding: 8px 24px; border-radius: 9999px; background: #FFFFFF; color: #E2197A;
+  font-family: "Lilita One", sans-serif; font-size: 42px; box-shadow: 0 6px 14px rgba(184,15,94,.2); }
+.f03-grenouilleres-t1 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Kaushan Script", cursive; font-size: 80px; line-height: 1; color: #4A1530; }
+.f03-grenouilleres-t2 { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lilita One", sans-serif; line-height: 1; color: #E2197A;
+  -webkit-text-stroke: 20px #fff; paint-order: stroke fill; text-shadow: 0 12px 0 rgba(184,15,94,.35); }
+.f03-grenouilleres-card { position: absolute; background: #FFFFFF; padding: 14px; border-radius: 34px; box-shadow: 0 24px 50px rgba(184,15,94,.28); }
+.f03-grenouilleres-card img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 24px; }
+.f03-grenouilleres-round { position: absolute; border-radius: 50%; overflow: hidden; border: 12px solid #FFFFFF; box-shadow: 0 0 0 8px #FFD54A, 0 20px 40px rgba(184,15,94,.3); background: #fff; }
+.f03-grenouilleres-round img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.18); }
+.f03-grenouilleres-halo { position: absolute; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,255,.95), rgba(255,255,255,0)); }
+
+#f03-grenouilleres-bg { background: radial-gradient(1200px 1400px at 50% 38%, #EAF5FF 0%, #9CCDF5 78%); }
+
+</style>
+<div id="root" data-composition-id="03-grenouilleres" data-width="1080" data-height="1920" data-duration="4.8">
+  <div id="f03-grenouilleres-bg" class="f03-grenouilleres-bg clip" data-start="0" data-duration="4.8" data-track-index="0"></div>
+  <div id="f03-grenouilleres-amb" class="clip" data-start="0" data-duration="4.8" data-track-index="1" style="position:absolute;inset:0">
+<svg id="f03-grenouilleres-rays" class="f03-grenouilleres-rays" viewBox="0 0 2000 2000"><defs><radialGradient id="f03-grenouilleres-rg"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient></defs><path d="M1000 1000 L2400 1000 L2389 1175 Z M1000 1000 L2331 1433 L2267 1596 Z M1000 1000 L2133 1823 L2021 1958 Z M1000 1000 L1823 2133 L1674 2227 Z M1000 1000 L1433 2331 L1262 2375 Z M1000 1000 L1000 2400 L825 2389 Z M1000 1000 L567 2331 L404 2267 Z M1000 1000 L177 2133 L42 2021 Z M1000 1000 L-133 1823 L-227 1674 Z M1000 1000 L-331 1433 L-375 1262 Z M1000 1000 L-400 1000 L-389 825 Z M1000 1000 L-331 567 L-267 404 Z M1000 1000 L-133 177 L-21 42 Z M1000 1000 L177 -133 L326 -227 Z M1000 1000 L567 -331 L738 -375 Z M1000 1000 L1000 -400 L1175 -389 Z M1000 1000 L1433 -331 L1596 -267 Z M1000 1000 L1823 -133 L1958 -21 Z M1000 1000 L2133 177 L2227 326 Z M1000 1000 L2331 567 L2375 738 Z" fill="url(#f03-grenouilleres-rg)"/></svg>
+<div id="f03-grenouilleres-fl0" class="f03-grenouilleres-float" style="left:70px;top:230px;filter:blur(2px);opacity:0"><svg width="80" height="80" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#E2197A"/></svg></div>
+<div id="f03-grenouilleres-fl1" class="f03-grenouilleres-float" style="left:930px;top:210px;filter:blur(2px);opacity:0"><svg width="70" height="70" viewBox="0 0 100 100"><path d="M50 0 Q56 44 100 50 Q56 56 50 100 Q44 56 0 50 Q44 44 50 0 Z" fill="#FFD54A"/></svg></div>
+<div id="f03-grenouilleres-fl2" class="f03-grenouilleres-float" style="left:880px;top:1180px;filter:blur(4px);opacity:0"><svg width="130" height="130" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.9)" stroke-width="3"/><path d="M24 38 Q30 22 46 18" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+<div id="f03-grenouilleres-fl3" class="f03-grenouilleres-float" style="left:60px;top:1150px;filter:blur(4px);opacity:0"><svg width="54" height="54" viewBox="0 0 100 100"><path d="M50 88 L14 52 Q0 36 12 22 Q28 6 50 28 Q72 6 88 22 Q100 36 86 52 Z" fill="#FFFFFF"/></svg></div>
+<div id="f03-grenouilleres-fl4" class="f03-grenouilleres-float" style="left:500px;top:1530px;filter:blur(4px);opacity:0"><svg width="50" height="50" viewBox="0 0 100 100"><path d="M50 0 Q56 44 100 50 Q56 56 50 100 Q44 56 0 50 Q44 44 50 0 Z" fill="#FFFFFF"/></svg></div>
+<div id="f03-grenouilleres-fl5" class="f03-grenouilleres-float" style="left:40px;top:1480px;filter:blur(4px);opacity:0"><svg width="90" height="90" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.9)" stroke-width="3"/><path d="M24 38 Q30 22 46 18" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+  </div>
+  <div id="f03-grenouilleres-stage" class="clip" data-start="0" data-duration="4.8" data-track-index="2" style="position:absolute;inset:0">
+<div id="f03-grenouilleres-count" class="f03-grenouilleres-count">1/5</div><div id="f03-grenouilleres-t1" class="f03-grenouilleres-t1" style="top:150px">Les</div><div id="f03-grenouilleres-t2" class="f03-grenouilleres-t2" style="top:230px;font-size:137px">GRENOUILLÈRES</div>
+<div id="f03-grenouilleres-halo" class="f03-grenouilleres-halo" style="left:40px;top:430px;width:800px;height:900px"></div>
+<div id="f03-grenouilleres-c1" class="f03-grenouilleres-card" style="left:100px;top:440px;width:620px;height:710px"><img src="assets/grenouillere-bleue.png" alt=""></div>
+<div id="f03-grenouilleres-c2" class="f03-grenouilleres-round" style="left:700px;top:880px;width:330px;height:330px"><img src="assets/vignette-grenouillere-jaune.png" alt=""></div>
+<svg id="f03-grenouilleres-b" width="1080" height="1920" class="f03-grenouilleres-abs" style="left:0;top:0;overflow:visible;opacity:0"><g transform="translate(790 790) scale(0.5)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(752 955) scale(0.75)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(647 1087) scale(1.0)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(495 1160) scale(0.5)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(325 1160) scale(0.75)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(173 1087) scale(1.0)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(68 955) scale(0.5)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(30 790) scale(0.75)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(68 625) scale(1.0)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(173 493) scale(0.5)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(325 420) scale(0.75)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(495 420) scale(1.0)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g><g transform="translate(647 493) scale(0.5)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFD54A"/></g><g transform="translate(752 625) scale(0.75)"><path d="M0 -26 Q4 -4 26 0 Q4 4 0 26 Q-4 4 -26 0 Q-4 -4 0 -26 Z" fill="#FFFFFF"/></g></svg>
+<div id="f03-grenouilleres-p0" class="f03-grenouilleres-pill" style="left:100px;top:1260px"><svg width="54" height="54" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#E2197A"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Toutes douces</span></div>
+<div id="f03-grenouilleres-p1" class="f03-grenouilleres-pill" style="left:330px;top:1390px"><svg width="54" height="54" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#5AA9E6"/><path d="M15 29 L24 38 L41 19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Motifs ourson</span></div>
+  </div>
+</div>
+<script>
+(function () {
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+const R = document.querySelector('[data-composition-id="03-grenouilleres"]');
+const q = (s) => R.querySelector(s);
+const qa = (s) => Array.from(R.querySelectorAll(s));
+function popIn(sel, at, from, to) {
+  tl.fromTo(q(sel), Object.assign({ opacity: 0, scale: 0.6, y: 40 }, from || {}),
+    Object.assign({ opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.5)" }, to || {}), at);
+}
+function slideIn(sel, at, dx, dy, rot) {
+  tl.fromTo(q(sel), { opacity: 0, x: dx || 0, y: dy || 0, rotation: (rot || 0) + 10 }, { opacity: 1, x: 0, y: 0, rotation: rot || 0, duration: 0.8, ease: "power3.out" }, at);
+}
+function levitate(sel, at, end, amp) {
+  tl.fromTo(q(sel), { y: 0 }, { y: -(amp || 14), duration: Math.max(0.3, end - at), ease: "sine.inOut", immediateRender: false }, at);
+}
+function shine(sel, at) {
+  tl.fromTo(q(sel), { backgroundPosition: "120% 0, 0 0" }, { backgroundPosition: "-20% 0, 0 0", duration: 1.1, ease: "power2.inOut", immediateRender: false }, at);
+}
+function burst(sel, at) {
+  tl.fromTo(q(sel), { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, at);
+  tl.to(q(sel), { opacity: 0, scale: 1.3, duration: 0.5, ease: "power2.in" }, at + 0.3);
+}
+
+tl.fromTo("#f03-grenouilleres-rays", {rotation: 0, svgOrigin: "1000 1000"}, {rotation: 24, svgOrigin: "1000 1000", duration: 4.800, ease: "none"}, 0);
+tl.fromTo("#f03-grenouilleres-fl0", {opacity: 0, scale: 0.5}, {opacity: 0.84, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.00);
+tl.fromTo("#f03-grenouilleres-fl0", {x: 0, y: 0, rotation: 0}, {x: 16, y: -52, rotation: -10, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f03-grenouilleres-fl1", {opacity: 0, scale: 0.5}, {opacity: 0.88, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.05);
+tl.fromTo("#f03-grenouilleres-fl1", {x: 0, y: 0, rotation: 0}, {x: -26, y: -78, rotation: 16, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f03-grenouilleres-fl2", {opacity: 0, scale: 0.5}, {opacity: 0.76, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.10);
+tl.fromTo("#f03-grenouilleres-fl2", {x: 0, y: 0, rotation: 0}, {x: 36, y: -46, rotation: -22, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f03-grenouilleres-fl3", {opacity: 0, scale: 0.5}, {opacity: 0.72, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.15);
+tl.fromTo("#f03-grenouilleres-fl3", {x: 0, y: 0, rotation: 0}, {x: -16, y: -62, rotation: 28, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f03-grenouilleres-fl4", {opacity: 0, scale: 0.5}, {opacity: 0.72, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.20);
+tl.fromTo("#f03-grenouilleres-fl4", {x: 0, y: 0, rotation: 0}, {x: 26, y: -43, rotation: -10, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+tl.fromTo("#f03-grenouilleres-fl5", {opacity: 0, scale: 0.5}, {opacity: 0.68, scale: 1, duration: 0.8, ease: "back.out(1.6)"}, 0.25);
+tl.fromTo("#f03-grenouilleres-fl5", {x: 0, y: 0, rotation: 0}, {x: -36, y: -58, rotation: 16, duration: 4.800, ease: "sine.inOut", immediateRender: false}, 0);
+
+tl.fromTo("#f03-grenouilleres-count", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.0);
+tl.fromTo("#f03-grenouilleres-t1", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.05);
+tl.fromTo("#f03-grenouilleres-t2", { opacity: 0, scale: 1.5, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 0.184);
+
+slideIn("#f03-grenouilleres-c1", 0.15, -300, 80, -3);
+burst("#f03-grenouilleres-b", 0.7);
+levitate("#f03-grenouilleres-c1", 1.0, 4.8, 14);
+popIn("#f03-grenouilleres-p0", 1.047, { x: -100 }, { x: 0 });
+popIn("#f03-grenouilleres-c2", 2.47, { scale: 0.2, rotation: -30 }, { rotation: 0 });
+popIn("#f03-grenouilleres-p1", 2.667, { x: 100 }, { x: 0 });
+
+tl.set({}, {}, 4.8);
+window.__timelines["03-grenouilleres"] = tl;
+})();
+</script>
+</template>

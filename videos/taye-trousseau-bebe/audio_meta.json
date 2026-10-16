@@ -1,0 +1,873 @@
+{
+  "bgm": {
+    "path": "assets/music/bed.wav",
+    "source": "host",
+    "volume": 0.2,
+    "duration_s": 53.92
+  },
+  "sfx": [
+    {
+      "frame": 2,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 3,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 4,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 5,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 6,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 7,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 8,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 9,
+      "file": "assets/sfx/whoosh.wav",
+      "offset_s": 0,
+      "duration_s": 0.45,
+      "volume": 0.22,
+      "source": "host"
+    },
+    {
+      "frame": 1,
+      "file": "assets/sfx/etincelle.wav",
+      "offset_s": 4.95,
+      "duration_s": 0.9,
+      "volume": 0.35,
+      "source": "host"
+    }
+  ],
+  "voices": [
+    {
+      "frame": 1,
+      "path": "assets/voice/01.wav",
+      "duration_s": 5.788,
+      "words": [
+        {
+          "text": "Vous",
+          "start": 0.1,
+          "end": 0.358,
+          "id": "w0"
+        },
+        {
+          "text": "attendez",
+          "start": 0.358,
+          "end": 0.822,
+          "id": "w1"
+        },
+        {
+          "text": "un",
+          "start": 0.822,
+          "end": 0.977,
+          "id": "w2"
+        },
+        {
+          "text": "bébé,",
+          "start": 0.977,
+          "end": 1.287,
+          "id": "w3"
+        },
+        {
+          "text": "ou",
+          "start": 1.487,
+          "end": 1.625,
+          "id": "w4"
+        },
+        {
+          "text": "vous",
+          "start": 1.625,
+          "end": 1.855,
+          "id": "w5"
+        },
+        {
+          "text": "cherchez",
+          "start": 1.855,
+          "end": 2.27,
+          "id": "w6"
+        },
+        {
+          "text": "le",
+          "start": 2.27,
+          "end": 2.408,
+          "id": "w7"
+        },
+        {
+          "text": "plus",
+          "start": 2.408,
+          "end": 2.639,
+          "id": "w8"
+        },
+        {
+          "text": "beau",
+          "start": 2.639,
+          "end": 2.869,
+          "id": "w9"
+        },
+        {
+          "text": "pour",
+          "start": 2.869,
+          "end": 3.099,
+          "id": "w10"
+        },
+        {
+          "text": "votre",
+          "start": 3.099,
+          "end": 3.376,
+          "id": "w11"
+        },
+        {
+          "text": "petit",
+          "start": 3.376,
+          "end": 3.652,
+          "id": "w12"
+        },
+        {
+          "text": "trésor",
+          "start": 3.652,
+          "end": 3.974,
+          "id": "w13"
+        },
+        {
+          "text": "?",
+          "start": 3.974,
+          "end": 4.066,
+          "id": "w14"
+        },
+        {
+          "text": "Venez",
+          "start": 4.386,
+          "end": 4.72,
+          "id": "w15"
+        },
+        {
+          "text": "chez",
+          "start": 4.72,
+          "end": 4.999,
+          "id": "w16"
+        },
+        {
+          "text": "Taye",
+          "start": 4.999,
+          "end": 5.277,
+          "id": "w17"
+        },
+        {
+          "text": "!",
+          "start": 5.277,
+          "end": 5.388,
+          "id": "w18"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "assets/voice/02.wav",
+      "duration_s": 8.214,
+      "words": [
+        {
+          "text": "Taye,",
+          "start": 0.1,
+          "end": 0.591,
+          "id": "w0"
+        },
+        {
+          "text": "c'est",
+          "start": 0.791,
+          "end": 1.06,
+          "id": "w1"
+        },
+        {
+          "text": "la",
+          "start": 1.06,
+          "end": 1.195,
+          "id": "w2"
+        },
+        {
+          "text": "vente",
+          "start": 1.195,
+          "end": 1.464,
+          "id": "w3"
+        },
+        {
+          "text": "de",
+          "start": 1.464,
+          "end": 1.599,
+          "id": "w4"
+        },
+        {
+          "text": "trousseau",
+          "start": 1.599,
+          "end": 2.047,
+          "id": "w5"
+        },
+        {
+          "text": "bébé",
+          "start": 2.047,
+          "end": 2.272,
+          "id": "w6"
+        },
+        {
+          "text": ":",
+          "start": 2.272,
+          "end": 2.361,
+          "id": "w7"
+        },
+        {
+          "text": "tout",
+          "start": 2.561,
+          "end": 2.767,
+          "id": "w8"
+        },
+        {
+          "text": "pour",
+          "start": 2.767,
+          "end": 2.973,
+          "id": "w9"
+        },
+        {
+          "text": "habiller",
+          "start": 2.973,
+          "end": 3.343,
+          "id": "w10"
+        },
+        {
+          "text": "votre",
+          "start": 3.343,
+          "end": 3.59,
+          "id": "w11"
+        },
+        {
+          "text": "enfant,",
+          "start": 3.59,
+          "end": 3.919,
+          "id": "w12"
+        },
+        {
+          "text": "de",
+          "start": 4.119,
+          "end": 4.262,
+          "id": "w13"
+        },
+        {
+          "text": "zéro",
+          "start": 4.262,
+          "end": 4.501,
+          "id": "w14"
+        },
+        {
+          "text": "à",
+          "start": 4.501,
+          "end": 4.596,
+          "id": "w15"
+        },
+        {
+          "text": "vingt-quatre",
+          "start": 4.596,
+          "end": 5.217,
+          "id": "w16"
+        },
+        {
+          "text": "mois.",
+          "start": 5.217,
+          "end": 5.503,
+          "id": "w17"
+        },
+        {
+          "text": "Le",
+          "start": 5.823,
+          "end": 5.976,
+          "id": "w18"
+        },
+        {
+          "text": "bonheur",
+          "start": 5.976,
+          "end": 6.385,
+          "id": "w19"
+        },
+        {
+          "text": "de",
+          "start": 6.385,
+          "end": 6.538,
+          "id": "w20"
+        },
+        {
+          "text": "votre",
+          "start": 6.538,
+          "end": 6.844,
+          "id": "w21"
+        },
+        {
+          "text": "bébé",
+          "start": 6.844,
+          "end": 7.099,
+          "id": "w22"
+        },
+        {
+          "text": "commence",
+          "start": 7.099,
+          "end": 7.559,
+          "id": "w23"
+        },
+        {
+          "text": "ici.",
+          "start": 7.559,
+          "end": 7.814,
+          "id": "w24"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "assets/voice/03.wav",
+      "duration_s": 4.8,
+      "words": [
+        {
+          "text": "Des",
+          "start": 0.1,
+          "end": 0.264,
+          "id": "w0"
+        },
+        {
+          "text": "grenouillères",
+          "start": 0.264,
+          "end": 0.84,
+          "id": "w1"
+        },
+        {
+          "text": "toutes",
+          "start": 0.84,
+          "end": 1.127,
+          "id": "w2"
+        },
+        {
+          "text": "douces,",
+          "start": 1.127,
+          "end": 1.456,
+          "id": "w3"
+        },
+        {
+          "text": "avec",
+          "start": 1.656,
+          "end": 1.916,
+          "id": "w4"
+        },
+        {
+          "text": "de",
+          "start": 1.916,
+          "end": 2.072,
+          "id": "w5"
+        },
+        {
+          "text": "jolis",
+          "start": 2.072,
+          "end": 2.384,
+          "id": "w6"
+        },
+        {
+          "text": "motifs",
+          "start": 2.384,
+          "end": 2.747,
+          "id": "w7"
+        },
+        {
+          "text": "ourson.",
+          "start": 2.747,
+          "end": 3.163,
+          "id": "w8"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "path": "assets/voice/04.wav",
+      "duration_s": 4.8,
+      "words": [
+        {
+          "text": "Des",
+          "start": 0.1,
+          "end": 0.285,
+          "id": "w0"
+        },
+        {
+          "text": "bodies",
+          "start": 0.285,
+          "end": 0.609,
+          "id": "w1"
+        },
+        {
+          "text": "et",
+          "start": 0.609,
+          "end": 0.748,
+          "id": "w2"
+        },
+        {
+          "text": "des",
+          "start": 0.748,
+          "end": 0.933,
+          "id": "w3"
+        },
+        {
+          "text": "ensembles",
+          "start": 0.933,
+          "end": 1.396,
+          "id": "w4"
+        },
+        {
+          "text": "colorés,",
+          "start": 1.396,
+          "end": 1.813,
+          "id": "w5"
+        },
+        {
+          "text": "pour",
+          "start": 2.013,
+          "end": 2.212,
+          "id": "w6"
+        },
+        {
+          "text": "chaque",
+          "start": 2.212,
+          "end": 2.492,
+          "id": "w7"
+        },
+        {
+          "text": "jour",
+          "start": 2.492,
+          "end": 2.692,
+          "id": "w8"
+        },
+        {
+          "text": "et",
+          "start": 2.692,
+          "end": 2.812,
+          "id": "w9"
+        },
+        {
+          "text": "chaque",
+          "start": 2.812,
+          "end": 3.092,
+          "id": "w10"
+        },
+        {
+          "text": "occasion.",
+          "start": 3.092,
+          "end": 3.492,
+          "id": "w11"
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "path": "assets/voice/05.wav",
+      "duration_s": 4.8,
+      "words": [
+        {
+          "text": "Des",
+          "start": 0.1,
+          "end": 0.277,
+          "id": "w0"
+        },
+        {
+          "text": "petits",
+          "start": 0.277,
+          "end": 0.586,
+          "id": "w1"
+        },
+        {
+          "text": "chaussons",
+          "start": 0.586,
+          "end": 1.028,
+          "id": "w2"
+        },
+        {
+          "text": "lapin",
+          "start": 1.028,
+          "end": 1.293,
+          "id": "w3"
+        },
+        {
+          "text": "et",
+          "start": 1.293,
+          "end": 1.425,
+          "id": "w4"
+        },
+        {
+          "text": "ourson,",
+          "start": 1.425,
+          "end": 1.778,
+          "id": "w5"
+        },
+        {
+          "text": "pour",
+          "start": 1.978,
+          "end": 2.184,
+          "id": "w6"
+        },
+        {
+          "text": "garder",
+          "start": 2.184,
+          "end": 2.473,
+          "id": "w7"
+        },
+        {
+          "text": "ses",
+          "start": 2.473,
+          "end": 2.638,
+          "id": "w8"
+        },
+        {
+          "text": "petits",
+          "start": 2.638,
+          "end": 2.926,
+          "id": "w9"
+        },
+        {
+          "text": "pieds",
+          "start": 2.926,
+          "end": 3.174,
+          "id": "w10"
+        },
+        {
+          "text": "au",
+          "start": 3.174,
+          "end": 3.297,
+          "id": "w11"
+        },
+        {
+          "text": "chaud.",
+          "start": 3.297,
+          "end": 3.586,
+          "id": "w12"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "path": "assets/voice/06.wav",
+      "duration_s": 4.8,
+      "words": [
+        {
+          "text": "Des",
+          "start": 0.1,
+          "end": 0.301,
+          "id": "w0"
+        },
+        {
+          "text": "bonnets",
+          "start": 0.301,
+          "end": 0.702,
+          "id": "w1"
+        },
+        {
+          "text": "adorables,",
+          "start": 0.702,
+          "end": 1.253,
+          "id": "w2"
+        },
+        {
+          "text": "avec",
+          "start": 1.453,
+          "end": 1.688,
+          "id": "w3"
+        },
+        {
+          "text": "leurs",
+          "start": 1.688,
+          "end": 1.969,
+          "id": "w4"
+        },
+        {
+          "text": "petites",
+          "start": 1.969,
+          "end": 2.345,
+          "id": "w5"
+        },
+        {
+          "text": "oreilles.",
+          "start": 2.345,
+          "end": 2.814,
+          "id": "w6"
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "path": "assets/voice/07.wav",
+      "duration_s": 4.8,
+      "words": [
+        {
+          "text": "Et",
+          "start": 0.1,
+          "end": 0.244,
+          "id": "w0"
+        },
+        {
+          "text": "aussi",
+          "start": 0.244,
+          "end": 0.532,
+          "id": "w1"
+        },
+        {
+          "text": "des",
+          "start": 0.532,
+          "end": 0.723,
+          "id": "w2"
+        },
+        {
+          "text": "serviettes,",
+          "start": 0.723,
+          "end": 1.299,
+          "id": "w3"
+        },
+        {
+          "text": "des",
+          "start": 1.499,
+          "end": 1.68,
+          "id": "w4"
+        },
+        {
+          "text": "bavoirs",
+          "start": 1.68,
+          "end": 2.042,
+          "id": "w5"
+        },
+        {
+          "text": "et",
+          "start": 2.042,
+          "end": 2.178,
+          "id": "w6"
+        },
+        {
+          "text": "plein",
+          "start": 2.178,
+          "end": 2.45,
+          "id": "w7"
+        },
+        {
+          "text": "d'accessoires.",
+          "start": 2.45,
+          "end": 3.13,
+          "id": "w8"
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "path": "assets/voice/08.wav",
+      "duration_s": 5.3,
+      "words": [
+        {
+          "text": "Chez",
+          "start": 0.1,
+          "end": 0.422,
+          "id": "w0"
+        },
+        {
+          "text": "Taye,",
+          "start": 0.422,
+          "end": 0.808,
+          "id": "w1"
+        },
+        {
+          "text": "c'est",
+          "start": 1.008,
+          "end": 1.31,
+          "id": "w2"
+        },
+        {
+          "text": "la",
+          "start": 1.31,
+          "end": 1.46,
+          "id": "w3"
+        },
+        {
+          "text": "qualité,",
+          "start": 1.46,
+          "end": 1.913,
+          "id": "w4"
+        },
+        {
+          "text": "le",
+          "start": 2.113,
+          "end": 2.322,
+          "id": "w5"
+        },
+        {
+          "text": "confort,",
+          "start": 2.322,
+          "end": 2.949,
+          "id": "w6"
+        },
+        {
+          "text": "et",
+          "start": 3.149,
+          "end": 3.299,
+          "id": "w7"
+        },
+        {
+          "text": "des",
+          "start": 3.299,
+          "end": 3.499,
+          "id": "w8"
+        },
+        {
+          "text": "prix",
+          "start": 3.499,
+          "end": 3.749,
+          "id": "w9"
+        },
+        {
+          "text": "abordables.",
+          "start": 3.749,
+          "end": 4.348,
+          "id": "w10"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "path": "assets/voice/09.wav",
+      "duration_s": 8.62,
+      "words": [
+        {
+          "text": "Contactez",
+          "start": 0.1,
+          "end": 0.657,
+          "id": "w0"
+        },
+        {
+          "text": "Taye",
+          "start": 0.657,
+          "end": 0.935,
+          "id": "w1"
+        },
+        {
+          "text": "sur",
+          "start": 0.935,
+          "end": 1.158,
+          "id": "w2"
+        },
+        {
+          "text": "WhatsApp,",
+          "start": 1.158,
+          "end": 1.715,
+          "id": "w3"
+        },
+        {
+          "text": "au",
+          "start": 1.915,
+          "end": 2.075,
+          "id": "w4"
+        },
+        {
+          "text": "+228",
+          "start": 2.075,
+          "end": 3.464,
+          "id": "w5"
+        },
+        {
+          "text": "93",
+          "start": 3.464,
+          "end": 4.532,
+          "id": "w6"
+        },
+        {
+          "text": "17",
+          "start": 4.532,
+          "end": 5.013,
+          "id": "w7"
+        },
+        {
+          "text": "05",
+          "start": 5.013,
+          "end": 5.547,
+          "id": "w8"
+        },
+        {
+          "text": "34.",
+          "start": 5.547,
+          "end": 6.295,
+          "id": "w9"
+        },
+        {
+          "text": "Habillez",
+          "start": 6.615,
+          "end": 7.053,
+          "id": "w10"
+        },
+        {
+          "text": "votre",
+          "start": 7.053,
+          "end": 7.345,
+          "id": "w11"
+        },
+        {
+          "text": "bébé",
+          "start": 7.345,
+          "end": 7.588,
+          "id": "w12"
+        },
+        {
+          "text": "avec",
+          "start": 7.588,
+          "end": 7.831,
+          "id": "w13"
+        },
+        {
+          "text": "amour",
+          "start": 7.831,
+          "end": 8.123,
+          "id": "w14"
+        },
+        {
+          "text": "!",
+          "start": 8.123,
+          "end": 8.22,
+          "id": "w15"
+        }
+      ]
+    }
+  ]
+}

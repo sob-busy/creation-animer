@@ -1,0 +1,710 @@
+{
+  "version": 1,
+  "historyId": "056d3706-4b0e-4153-be9f-b8934582acf0",
+  "currentRevision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "BRIEF.md": {
+      "hash": "7ae1dbf8fb0b02f344a27a154232577d75399a3a5f4a3c81071abb645cf8c003",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7a/7ae1dbf8fb0b02f344a27a154232577d75399a3a5f4a3c81071abb645cf8c003"
+    },
+    "CLAUDE.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "SCRIPT.md": {
+      "hash": "072001c25ce4600f9f5cff96cb3c84296730862e355a9122a0938010a457dde3",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/07/072001c25ce4600f9f5cff96cb3c84296730862e355a9122a0938010a457dde3"
+    },
+    "STORYBOARD.md": {
+      "hash": "45470ef762eab0de09934bf254e99e576b352ad59900651b4a0c55d2346f347b",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/45/45470ef762eab0de09934bf254e99e576b352ad59900651b4a0c55d2346f347b"
+    },
+    "assets/bavoir.png": {
+      "hash": "c485dfe0d757e86e1686e6c4c59c9d8f158dc97c35ca2fd6aa4593d55dbef467",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c4/c485dfe0d757e86e1686e6c4c59c9d8f158dc97c35ca2fd6aa4593d55dbef467"
+    },
+    "assets/bonnet.png": {
+      "hash": "415750536820d5f02dacd1da991bf13b41575bd4ffc31360b81b398c3d13b3e4",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/41/415750536820d5f02dacd1da991bf13b41575bd4ffc31360b81b398c3d13b3e4"
+    },
+    "assets/chaussons.png": {
+      "hash": "3ca8f6607d579ae11c33e4078fd8dfb3be8391c8929d57d5d87b1af494c9d99f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/3c/3ca8f6607d579ae11c33e4078fd8dfb3be8391c8929d57d5d87b1af494c9d99f"
+    },
+    "assets/fonts/KaushanScript-400.woff2": {
+      "hash": "addcc80ddcc170ff8c97140ab37ac380ac4e6d0b8fd14e5d107b4cb87ffd778f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ad/addcc80ddcc170ff8c97140ab37ac380ac4e6d0b8fd14e5d107b4cb87ffd778f"
+    },
+    "assets/fonts/LilitaOne-400.woff2": {
+      "hash": "d2575d4fa3632580aafcbcdf6978b3b57e144b90cf5bd9c2c98194f28b869704",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/d2/d2575d4fa3632580aafcbcdf6978b3b57e144b90cf5bd9c2c98194f28b869704"
+    },
+    "assets/fonts/Poppins-400.woff2": {
+      "hash": "7d93459d86585bfcdbb7e0376056226adb25821ee54b96236fe2123e9560929f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7d/7d93459d86585bfcdbb7e0376056226adb25821ee54b96236fe2123e9560929f"
+    },
+    "assets/fonts/Poppins-600.woff2": {
+      "hash": "f4e80d9dfd374d02989b87a27b5ed4cb78fbb177c27f1478e9a8b0afb7513149",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/f4/f4e80d9dfd374d02989b87a27b5ed4cb78fbb177c27f1478e9a8b0afb7513149"
+    },
+    "assets/fonts/Poppins-800.woff2": {
+      "hash": "60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/60/60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2"
+    },
+    "assets/ourson.png": {
+      "hash": "dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/dd/dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1"
+    },
+    "assets/pile-bodies.png": {
+      "hash": "877c31b76cd59ddcb7a6bd191957ff309a5338490a3c45a393bca659118fa834",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/87/877c31b76cd59ddcb7a6bd191957ff309a5338490a3c45a393bca659118fa834"
+    },
+    "assets/robe-rose.png": {
+      "hash": "fd31fd8e7a3bf910115c559db5355f4b65c4ee33cea42926cc92037a2c0c072a",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/fd/fd31fd8e7a3bf910115c559db5355f4b65c4ee33cea42926cc92037a2c0c072a"
+    },
+    "assets/sfx/etincelle.wav": {
+      "hash": "a6052396279903d8a13b71c29d16c1b4bcf5b2033a22b1494a893bb463cdeeda",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/a6/a6052396279903d8a13b71c29d16c1b4bcf5b2033a22b1494a893bb463cdeeda"
+    },
+    "assets/sfx/pop.wav": {
+      "hash": "e06bd251ab1512f5d08e2a0e65b0ba17c445fc597c96ef9721af1b657361bef3",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/e0/e06bd251ab1512f5d08e2a0e65b0ba17c445fc597c96ef9721af1b657361bef3"
+    },
+    "assets/sfx/tick.wav": {
+      "hash": "5676964f3573d80feee171b66c6ca068b6101176da741f6b9892033777346317",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/56/5676964f3573d80feee171b66c6ca068b6101176da741f6b9892033777346317"
+    },
+    "assets/sfx/whoosh.wav": {
+      "hash": "4617106b53925312cc35bf22315e307353cdde5fc77052015b916b465d831f49",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/46/4617106b53925312cc35bf22315e307353cdde5fc77052015b916b465d831f49"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c1/c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    "assets/vignette-chaussons.png": {
+      "hash": "1bd10dd7978ad109bdc33129668609d5313064784d534db7d9ae56d05471c95d",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1b/1bd10dd7978ad109bdc33129668609d5313064784d534db7d9ae56d05471c95d"
+    },
+    "assets/vignette-ensembles.png": {
+      "hash": "cc709c21eb97da474b379d3eea3dc5d46119c8318097af594433c4f4470939a9",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/cc/cc709c21eb97da474b379d3eea3dc5d46119c8318097af594433c4f4470939a9"
+    },
+    "assets/vignette-grenouillere-jaune.png": {
+      "hash": "c3865d5edaad9dcc16905f13c06e4c58850cf7ba133ab445b9f1323be21159d3",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c3/c3865d5edaad9dcc16905f13c06e4c58850cf7ba133ab445b9f1323be21159d3"
+    },
+    "assets/vignette-serviettes.png": {
+      "hash": "7ddcb1ca3c2979649cbef1287220cffc74de61d1aeb8a102437d6a5ff2be96e0",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7d/7ddcb1ca3c2979649cbef1287220cffc74de61d1aeb8a102437d6a5ff2be96e0"
+    },
+    "assets/voice/01.wav": {
+      "hash": "9d0b5c446e913a10723e1106c114b23dccd9c755d44c61165cc178057743ab25",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/9d/9d0b5c446e913a10723e1106c114b23dccd9c755d44c61165cc178057743ab25"
+    },
+    "assets/voice/02.wav": {
+      "hash": "36e33728e170e4070f9cf953654735e692e27bea06aa7d7b39f1307de13c6535",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/36/36e33728e170e4070f9cf953654735e692e27bea06aa7d7b39f1307de13c6535"
+    },
+    "assets/voice/03.wav": {
+      "hash": "7e3117a29801fa5bd20485da61589ab20a9c2c6ab2a23161a30edebf1400cf54",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7e/7e3117a29801fa5bd20485da61589ab20a9c2c6ab2a23161a30edebf1400cf54"
+    },
+    "assets/voice/04.wav": {
+      "hash": "aefdfcbf47f0333e9ba3845a684d56e82f6b3c46aaf44935ab7135c9c05f539f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ae/aefdfcbf47f0333e9ba3845a684d56e82f6b3c46aaf44935ab7135c9c05f539f"
+    },
+    "assets/voice/05.wav": {
+      "hash": "43862a9b5fb68c2bb0a2381e5e782ddb549b4be2a6d8a564e39f29af8be310fc",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/43/43862a9b5fb68c2bb0a2381e5e782ddb549b4be2a6d8a564e39f29af8be310fc"
+    },
+    "assets/voice/06.wav": {
+      "hash": "f174825803aeefa90fbbb318df27717f08da4017435ae81851098929ee1785f2",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/f1/f174825803aeefa90fbbb318df27717f08da4017435ae81851098929ee1785f2"
+    },
+    "assets/voice/07.wav": {
+      "hash": "0eb75545b8caa1637a76f550838517d1ab7430a46eb41af4fbe1c764791537aa",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/0e/0eb75545b8caa1637a76f550838517d1ab7430a46eb41af4fbe1c764791537aa"
+    },
+    "assets/voice/08.wav": {
+      "hash": "95b8f3a0ced50cb526d4634627f748fb5d3e3fc64bd88321074fe578958fa8c2",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/95/95b8f3a0ced50cb526d4634627f748fb5d3e3fc64bd88321074fe578958fa8c2"
+    },
+    "assets/voice/09.wav": {
+      "hash": "467a4b0c997f4b61a8bdb31d5132c3d91e5c7db4553e1aaf4736a8ab917876e4",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/46/467a4b0c997f4b61a8bdb31d5132c3d91e5c7db4553e1aaf4736a8ab917876e4"
+    },
+    "audio_meta.json": {
+      "hash": "13d6c8825af1a88fa4549001b20ab1150b1c67e76b94a082f4bc855922ecdeff",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/13/13d6c8825af1a88fa4549001b20ab1150b1c67e76b94a082f4bc855922ecdeff"
+    },
+    "caption-overrides.json": {
+      "hash": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/37/37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "caption_groups.json": {
+      "hash": "e69f0da619cc5619605fff4eeb84a01f812303f709a8bb2d2add68c4abd49bf5",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/e6/e69f0da619cc5619605fff4eeb84a01f812303f709a8bb2d2add68c4abd49bf5"
+    },
+    "capture/assets/bavoir.png": {
+      "hash": "c485dfe0d757e86e1686e6c4c59c9d8f158dc97c35ca2fd6aa4593d55dbef467",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c4/c485dfe0d757e86e1686e6c4c59c9d8f158dc97c35ca2fd6aa4593d55dbef467"
+    },
+    "capture/assets/bonnet.png": {
+      "hash": "415750536820d5f02dacd1da991bf13b41575bd4ffc31360b81b398c3d13b3e4",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/41/415750536820d5f02dacd1da991bf13b41575bd4ffc31360b81b398c3d13b3e4"
+    },
+    "capture/assets/chaussons.png": {
+      "hash": "3ca8f6607d579ae11c33e4078fd8dfb3be8391c8929d57d5d87b1af494c9d99f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/3c/3ca8f6607d579ae11c33e4078fd8dfb3be8391c8929d57d5d87b1af494c9d99f"
+    },
+    "capture/assets/ourson.png": {
+      "hash": "dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/dd/dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1"
+    },
+    "capture/assets/pile-bodies.png": {
+      "hash": "877c31b76cd59ddcb7a6bd191957ff309a5338490a3c45a393bca659118fa834",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/87/877c31b76cd59ddcb7a6bd191957ff309a5338490a3c45a393bca659118fa834"
+    },
+    "capture/assets/robe-rose.png": {
+      "hash": "fd31fd8e7a3bf910115c559db5355f4b65c4ee33cea42926cc92037a2c0c072a",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/fd/fd31fd8e7a3bf910115c559db5355f4b65c4ee33cea42926cc92037a2c0c072a"
+    },
+    "capture/assets/vignette-chaussons.png": {
+      "hash": "1bd10dd7978ad109bdc33129668609d5313064784d534db7d9ae56d05471c95d",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1b/1bd10dd7978ad109bdc33129668609d5313064784d534db7d9ae56d05471c95d"
+    },
+    "capture/assets/vignette-ensembles.png": {
+      "hash": "cc709c21eb97da474b379d3eea3dc5d46119c8318097af594433c4f4470939a9",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/cc/cc709c21eb97da474b379d3eea3dc5d46119c8318097af594433c4f4470939a9"
+    },
+    "capture/assets/vignette-grenouillere-jaune.png": {
+      "hash": "c3865d5edaad9dcc16905f13c06e4c58850cf7ba133ab445b9f1323be21159d3",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c3/c3865d5edaad9dcc16905f13c06e4c58850cf7ba133ab445b9f1323be21159d3"
+    },
+    "capture/assets/vignette-serviettes.png": {
+      "hash": "7ddcb1ca3c2979649cbef1287220cffc74de61d1aeb8a102437d6a5ff2be96e0",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7d/7ddcb1ca3c2979649cbef1287220cffc74de61d1aeb8a102437d6a5ff2be96e0"
+    },
+    "capture/extracted/asset-descriptions.md": {
+      "hash": "9bb2022a984283631f7d2378cefb22dda26383730f9ac5f03440f3e96c6cfe8a",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/9b/9bb2022a984283631f7d2378cefb22dda26383730f9ac5f03440f3e96c6cfe8a"
+    },
+    "capture/extracted/tokens.json": {
+      "hash": "5925b19935ec25639311de97bda8cf9f8fb7cf02bc80e7f87923d14fd9f594a9",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/59/5925b19935ec25639311de97bda8cf9f8fb7cf02bc80e7f87923d14fd9f594a9"
+    },
+    "capture/extracted/visible-text.txt": {
+      "hash": "ee47c3829f69b30433a1ba38d314b58f5025ed9417fb80ce0df3402051e303ba",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ee/ee47c3829f69b30433a1ba38d314b58f5025ed9417fb80ce0df3402051e303ba"
+    },
+    "capture/source/affiche.jpg": {
+      "hash": "49bb7c1e7df962895c9732c5e5beffce4afdef0d4648e80e05c06cdedfc037b2",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/49/49bb7c1e7df962895c9732c5e5beffce4afdef0d4648e80e05c06cdedfc037b2"
+    },
+    "compositions/captions.html": {
+      "hash": "413859786f6e4759de4a7af3166fe2083956716ecf2f1dac5519c4f70f24abfb",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/41/413859786f6e4759de4a7af3166fe2083956716ecf2f1dac5519c4f70f24abfb"
+    },
+    "compositions/frames/01-logo.html": {
+      "hash": "7445779a39add578f0c95155e5f5d21c9ef0d3dc868a458d28a4da2fc2115c8a",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/74/7445779a39add578f0c95155e5f5d21c9ef0d3dc868a458d28a4da2fc2115c8a"
+    },
+    "compositions/frames/02-taye.html": {
+      "hash": "cef34d743cabfd2059be232bfa2cccedf8f983ef5c0845b259ac19438dcf0fbe",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ce/cef34d743cabfd2059be232bfa2cccedf8f983ef5c0845b259ac19438dcf0fbe"
+    },
+    "compositions/frames/03-grenouilleres.html": {
+      "hash": "a8769138cbb7890e25ca85f92bac1e3b1e33691b8a74f65c37908b157ee6e538",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/a8/a8769138cbb7890e25ca85f92bac1e3b1e33691b8a74f65c37908b157ee6e538"
+    },
+    "compositions/frames/04-bodies.html": {
+      "hash": "4a5cf77bab314c748a507a1933572548eda6806e08ca200b7d92f34c8c930db7",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/4a/4a5cf77bab314c748a507a1933572548eda6806e08ca200b7d92f34c8c930db7"
+    },
+    "compositions/frames/05-chaussons.html": {
+      "hash": "c16c700fbc7eea41eba6cbe791cfd5a95a566216a5c9e915b11118f1cfbaf2fb",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c1/c16c700fbc7eea41eba6cbe791cfd5a95a566216a5c9e915b11118f1cfbaf2fb"
+    },
+    "compositions/frames/06-bonnets.html": {
+      "hash": "1e4526510da22035952c47945d8077c119f89a04f741fa3911051016c3685ed6",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1e/1e4526510da22035952c47945d8077c119f89a04f741fa3911051016c3685ed6"
+    },
+    "compositions/frames/07-accessoires.html": {
+      "hash": "8b00ab3bf61f75205f548cbad15ed152405baa7611f3ba884786c36007bdbd97",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/8b/8b00ab3bf61f75205f548cbad15ed152405baa7611f3ba884786c36007bdbd97"
+    },
+    "compositions/frames/08-qualites.html": {
+      "hash": "fbb66ba77b82a90f80cc5c955eb5f6aa01b026d1400ddf0d7a99f5cd377f5099",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/fb/fbb66ba77b82a90f80cc5c955eb5f6aa01b026d1400ddf0d7a99f5cd377f5099"
+    },
+    "compositions/frames/09-contact.html": {
+      "hash": "95a8614abb944855844d0b1a1b037f9bc0abbf0d29894850d3fcd2ea4e781fc2",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/95/95a8614abb944855844d0b1a1b037f9bc0abbf0d29894850d3fcd2ea4e781fc2"
+    },
+    "frame.md": {
+      "hash": "ac5709e60d475d237e9f5b71a52296269e052e189f56672a0a2b9b3feddc4809",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ac/ac5709e60d475d237e9f5b71a52296269e052e189f56672a0a2b9b3feddc4809"
+    },
+    "hyperframes.json": {
+      "hash": "44d4e8dcefebce0a13f5afa82aa270b0b19a1d3f82e434f92616010cee775dc4",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/44/44d4e8dcefebce0a13f5afa82aa270b0b19a1d3f82e434f92616010cee775dc4"
+    },
+    "index.html": {
+      "hash": "d661cb03c4cdca01ccd886e517e4270d459326c0a77f644d401b926bf7fc673f",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/d6/d661cb03c4cdca01ccd886e517e4270d459326c0a77f644d401b926bf7fc673f"
+    },
+    "meta.json": {
+      "hash": "c9f48785cd81c6c676bd0977f27f7bdaea9984b1de4d8877624135d3f65e4586",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c9/c9f48785cd81c6c676bd0977f27f7bdaea9984b1de4d8877624135d3f65e4586"
+    },
+    "package.json": {
+      "hash": "f1e6d49a41be94b0d69ac3f96f3561fda8ed1a91acb2a237fc27c50b29ebb206",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/f1/f1e6d49a41be94b0d69ac3f96f3561fda8ed1a91acb2a237fc27c50b29ebb206"
+    },
+    "scripts/generer_frames.py": {
+      "hash": "c6b20477fa6142db9450ada8852a302b55daf6b3ef6ee761aea877deb8f57c5e",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c6/c6b20477fa6142db9450ada8852a302b55daf6b3ef6ee761aea877deb8f57c5e"
+    },
+    "scripts/musique_sfx.py": {
+      "hash": "01b2b6d8750d85a3de512b808a6f57fdd3bb336ad038da859172afd0fa2f0f21",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/01/01b2b6d8750d85a3de512b808a6f57fdd3bb336ad038da859172afd0fa2f0f21"
+    },
+    "scripts/voix_off.py": {
+      "hash": "2e1e89ac2b919d6fc011ec7f411769a578970580cbfc4d38d3e65ca501c5e178",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/2e/2e1e89ac2b919d6fc011ec7f411769a578970580cbfc4d38d3e65ca501c5e178"
+    },
+    "assets/grenouillere-bleue.png": {
+      "hash": "d364a25d7580d94dfdae38f5ec0f02d6a6354683775501951a0628404adcea2e",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/d3/d364a25d7580d94dfdae38f5ec0f02d6a6354683775501951a0628404adcea2e"
+    },
+    "assets/music/bed.wav": {
+      "hash": "17bdc6c7b0ff1e0f3d542a392a259e3d88a1b22f22e428734ca105364404e934",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/17/17bdc6c7b0ff1e0f3d542a392a259e3d88a1b22f22e428734ca105364404e934"
+    },
+    "assets/portrait-taye.png": {
+      "hash": "4950b25e770aac93bdaed1eaade1ca915342760b6426821995b1d0e014545040",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/49/4950b25e770aac93bdaed1eaade1ca915342760b6426821995b1d0e014545040"
+    },
+    "capture/assets/grenouillere-bleue.png": {
+      "hash": "d364a25d7580d94dfdae38f5ec0f02d6a6354683775501951a0628404adcea2e",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/d3/d364a25d7580d94dfdae38f5ec0f02d6a6354683775501951a0628404adcea2e"
+    },
+    "capture/assets/logo-affiche.png": {
+      "hash": "05e48b47a95805b757c6a908269a93868ff2a13d1eb1ed1d328c628ea1f011e1",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/05/05e48b47a95805b757c6a908269a93868ff2a13d1eb1ed1d328c628ea1f011e1"
+    },
+    "capture/assets/portrait-taye.png": {
+      "hash": "4950b25e770aac93bdaed1eaade1ca915342760b6426821995b1d0e014545040",
+      "content": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/49/4950b25e770aac93bdaed1eaade1ca915342760b6426821995b1d0e014545040"
+    }
+  },
+  "revisions": {
+    "38b93c40-16bf-4149-b665-47cf25a99b4e": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792193034997,
+      "endedAt": 1792193035030,
+      "files": {
+        "assets/ourson.png": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/03/039efe0e6f0d068a17d9ce246194e69d83faf04432866be9d6008fa9a1e466ff",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/dd/dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1"
+        },
+        "capture/assets/ourson.png": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/03/039efe0e6f0d068a17d9ce246194e69d83faf04432866be9d6008fa9a1e466ff",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/dd/dd0622556163e095d4f980c312f0a5eb330e08c6c5c5c8f46548d4739777d4d1"
+        },
+        "compositions/frames/01-logo.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/18/18aeb58b1b18e1de8c78bea16721896842c2fbb68340ab0cae5da0c3c0981bd6",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/74/7445779a39add578f0c95155e5f5d21c9ef0d3dc868a458d28a4da2fc2115c8a"
+        },
+        "compositions/frames/02-taye.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/7f/7f292e56f212c26f0d9f718b7965ebbf5430957b39391b2b827029eca6d3c487",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/ce/cef34d743cabfd2059be232bfa2cccedf8f983ef5c0845b259ac19438dcf0fbe"
+        },
+        "compositions/frames/03-grenouilleres.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/13/13d6883d7c72d9398782adc95220186dd67ba4ea35041960b3fecf53ca7553ab",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/a8/a8769138cbb7890e25ca85f92bac1e3b1e33691b8a74f65c37908b157ee6e538"
+        },
+        "compositions/frames/04-bodies.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/a7/a751883f0108419318fa91476550ccef0460540102cea4ae7a2b5451b6d893c3",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/4a/4a5cf77bab314c748a507a1933572548eda6806e08ca200b7d92f34c8c930db7"
+        },
+        "compositions/frames/05-chaussons.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/0c/0cbc7d5e5153a612deb3c4cf1a81ef76245ba1eff0b62c990922a8318abaca4a",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c1/c16c700fbc7eea41eba6cbe791cfd5a95a566216a5c9e915b11118f1cfbaf2fb"
+        },
+        "compositions/frames/06-bonnets.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/cb/cb1e7806caae1f80afd12883a29a88e71458e47c0fc481291515c4d305a75012",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/1e/1e4526510da22035952c47945d8077c119f89a04f741fa3911051016c3685ed6"
+        },
+        "compositions/frames/07-accessoires.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/34/34f8b0354ec8e24dbf9d96ea1fe5b9ca28a42decba47949b94d844ca216efad8",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/8b/8b00ab3bf61f75205f548cbad15ed152405baa7611f3ba884786c36007bdbd97"
+        },
+        "compositions/frames/08-qualites.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/42/422c7262cb8cac2ae9111898442a7d50f39d75781fe47ab37663df9e8e26969d",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/fb/fbb66ba77b82a90f80cc5c955eb5f6aa01b026d1400ddf0d7a99f5cd377f5099"
+        },
+        "compositions/frames/09-contact.html": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/21/214bb0ab5e6a334af36a73954f7c88c2ed5d225231b9bb94d2a8631ed311edd5",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/95/95a8614abb944855844d0b1a1b037f9bc0abbf0d29894850d3fcd2ea4e781fc2"
+        },
+        "scripts/generer_frames.py": {
+          "before": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/60/6007d22fb240aa18f169f79c13238ddca6ce469b93fef3f6ac8bf8c079724315",
+          "after": "/root/.cache/hyperframes/history/056d3706-4b0e-4153-be9f-b8934582acf0/blobs/c6/c6b20477fa6142db9450ada8852a302b55daf6b3ef6ee761aea877deb8f57c5e"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "92eb8e39-04dc-4531-9f9d-815219bdfd75"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "92eb8e39-04dc-4531-9f9d-815219bdfd75",
+        "scope": "project",
+        "report": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/checks/92eb8e39-04dc-4531-9f9d-815219bdfd75.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792192994486,
+        "contentHash": "8b0c303f0be1c0ca9f9b2edc78775da505f5a9a7446ea160636ccad7c000bd79",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+      "id": "f960c95c-f746-4a7f-99e6-aa3f1a24e78c-3"
+    },
+    "revisions": {
+      "38b93c40-16bf-4149-b665-47cf25a99b4e": [
+        {
+          "scope": "full",
+          "id": "f960c95c-f746-4a7f-99e6-aa3f1a24e78c-0",
+          "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/557da8bf-bcfa-4de1-99ac-c16873bdd414/frame-00-at-23.47s.png",
+          "time": 23.47,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792193042372,
+          "contentHash": "949d2a9847ebafeda13b86684bb773f0d1ad646c5a1132f0c29137414d95ae7b",
+          "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+          "inputFingerprint": "d479d5398bbb9da9e0ce7e3eaecbb763b37be012c767071c698f71ecba3416f3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "f960c95c-f746-4a7f-99e6-aa3f1a24e78c-1",
+          "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/557da8bf-bcfa-4de1-99ac-c16873bdd414/frame-01-at-37.95s.png",
+          "time": 37.95,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792193042372,
+          "contentHash": "616c868f041444d794544425afc3b910011697d3ecd9979eb0f4f41bc57aa551",
+          "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+          "inputFingerprint": "d479d5398bbb9da9e0ce7e3eaecbb763b37be012c767071c698f71ecba3416f3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "f960c95c-f746-4a7f-99e6-aa3f1a24e78c-2",
+          "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/557da8bf-bcfa-4de1-99ac-c16873bdd414/frame-02-at-5.45s.png",
+          "time": 5.45,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792193042372,
+          "contentHash": "f09f525f4ecf5f2f8256142afc0aa5213f252775b974f0cf06a2da3ee133bce3",
+          "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+          "inputFingerprint": "d479d5398bbb9da9e0ce7e3eaecbb763b37be012c767071c698f71ecba3416f3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "f960c95c-f746-4a7f-99e6-aa3f1a24e78c-3",
+          "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/557da8bf-bcfa-4de1-99ac-c16873bdd414/frame-03-at-50.364s.png",
+          "time": 50.364,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792193042372,
+          "contentHash": "15ec4e66e0a9cf8b19ec0d753f1583c401b12761822807d4d8fba871af1a1846",
+          "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e",
+          "inputFingerprint": "d479d5398bbb9da9e0ce7e3eaecbb763b37be012c767071c698f71ecba3416f3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-0",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-00-at-5.45s.png",
+        "time": 5.45,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "0a45018ba636d615ca59bed5c2a33a6ae15cfe3395cef64bc1d1ad1fdcb732f6",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-1",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-01-at-13.46s.png",
+        "time": 13.46,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "aebf33c562ac1c18e6a53e29dbae249730b3a198893bc692d0846f36d7732276",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-2",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-02-at-18.67s.png",
+        "time": 18.67,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "5850ce817ab9fb2691706ff12732f0725a16d22a156fef7d291a14b5d61a7751",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-3",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-03-at-23.47s.png",
+        "time": 23.47,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "c16ac73a69da22df4eb5cb49dc941d6de44e2f45cb6b3b1294ecf88244d739c7",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-4",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-04-at-28.27s.png",
+        "time": 28.27,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "c386f43f1cc86e32dc8a7f92d5b4e93d2fa4415889de0d8761b1e46739404ea3",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-5",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-05-at-33.07s.png",
+        "time": 33.07,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "9d0817c2c58db5868320456440ae942a6e6b78bc70356398fe02261b8d5fd108",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-6",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-06-at-37.95s.png",
+        "time": 37.95,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "ed7c77ccc54a06dd1e9828f40f21d5aebf77ba686cdc86e2d34d117e99ff44d8",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-7",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-07-at-43.02s.png",
+        "time": 43.02,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "d6c36d5e107f1ef37210f6aaf7f6957e52023d5e6dcac1e4e2e9680920813263",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-8",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-08-at-50.89s.png",
+        "time": 50.89,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "a9199df454cc40ce2ce4409685d894f442dd6ee80f36fb10097bededc484f62e",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "d67a4ac5-d23d-44a7-ae1d-d5dace56cbfe-9",
+        "image": "/home/user/creation-animer/videos/taye-trousseau-bebe/.hyperframes/artifacts/snapshots/367af1d5-e6d4-425d-b395-ab5d501b1e0a/frame-09-at-50.364s.png",
+        "time": 50.364,
+        "metadata": {
+          "width": 1080,
+          "height": 1920,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792193007596,
+        "contentHash": "ec1631e8a8a430db658339b2c2bdf1b24aee7e0a461be780778d6f763d76e34c",
+        "revision": null,
+        "inputFingerprint": "b2602280af1d857bd74fde3a7044de2faa74de1571a82257a7cd27e64aa92f00",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "8ac9668e-88f7-4db3-9167-2b8957cdbb54",
+      "completedAt": 1792193286924,
+      "output": "/home/user/creation-animer/videos/taye-trousseau-bebe/renders/brut.mp4",
+      "status": "completed",
+      "revision": "38b93c40-16bf-4149-b665-47cf25a99b4e"
+    },
+    "retainedRevisions": [
+      "38b93c40-16bf-4149-b665-47cf25a99b4e"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

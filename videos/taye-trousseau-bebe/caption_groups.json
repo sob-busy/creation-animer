@@ -1,0 +1,1186 @@
+{
+  "total_duration_s": 51.922,
+  "width": 1080,
+  "height": 1920,
+  "groups": [
+    {
+      "id": "caption-group-0",
+      "frame": 1,
+      "start": 0.1,
+      "end": 0.822,
+      "text": "Vous attendez",
+      "words": [
+        {
+          "id": "caption-word-0-0",
+          "text": "Vous",
+          "start": 0.1,
+          "end": 0.358
+        },
+        {
+          "id": "caption-word-0-1",
+          "text": "attendez",
+          "start": 0.358,
+          "end": 0.822
+        }
+      ]
+    },
+    {
+      "id": "caption-group-1",
+      "frame": 1,
+      "start": 0.822,
+      "end": 1.407,
+      "text": "un bébé,",
+      "words": [
+        {
+          "id": "caption-word-1-0",
+          "text": "un",
+          "start": 0.822,
+          "end": 0.977
+        },
+        {
+          "id": "caption-word-1-1",
+          "text": "bébé,",
+          "start": 0.977,
+          "end": 1.287
+        }
+      ]
+    },
+    {
+      "id": "caption-group-2",
+      "frame": 1,
+      "start": 1.487,
+      "end": 1.855,
+      "text": "ou vous",
+      "words": [
+        {
+          "id": "caption-word-2-0",
+          "text": "ou",
+          "start": 1.487,
+          "end": 1.625
+        },
+        {
+          "id": "caption-word-2-1",
+          "text": "vous",
+          "start": 1.625,
+          "end": 1.855
+        }
+      ]
+    },
+    {
+      "id": "caption-group-3",
+      "frame": 1,
+      "start": 1.855,
+      "end": 2.408,
+      "text": "cherchez le",
+      "words": [
+        {
+          "id": "caption-word-3-0",
+          "text": "cherchez",
+          "start": 1.855,
+          "end": 2.27
+        },
+        {
+          "id": "caption-word-3-1",
+          "text": "le",
+          "start": 2.27,
+          "end": 2.408
+        }
+      ]
+    },
+    {
+      "id": "caption-group-4",
+      "frame": 1,
+      "start": 2.408,
+      "end": 2.869,
+      "text": "plus beau",
+      "words": [
+        {
+          "id": "caption-word-4-0",
+          "text": "plus",
+          "start": 2.408,
+          "end": 2.639
+        },
+        {
+          "id": "caption-word-4-1",
+          "text": "beau",
+          "start": 2.639,
+          "end": 2.869
+        }
+      ]
+    },
+    {
+      "id": "caption-group-5",
+      "frame": 1,
+      "start": 2.869,
+      "end": 3.376,
+      "text": "pour votre",
+      "words": [
+        {
+          "id": "caption-word-5-0",
+          "text": "pour",
+          "start": 2.869,
+          "end": 3.099
+        },
+        {
+          "id": "caption-word-5-1",
+          "text": "votre",
+          "start": 3.099,
+          "end": 3.376
+        }
+      ]
+    },
+    {
+      "id": "caption-group-6",
+      "frame": 1,
+      "start": 3.376,
+      "end": 4.094,
+      "text": "petit trésor",
+      "words": [
+        {
+          "id": "caption-word-6-0",
+          "text": "petit",
+          "start": 3.376,
+          "end": 3.652
+        },
+        {
+          "id": "caption-word-6-1",
+          "text": "trésor",
+          "start": 3.652,
+          "end": 3.974
+        }
+      ]
+    },
+    {
+      "id": "caption-group-7",
+      "frame": 1,
+      "start": 4.386,
+      "end": 5.397,
+      "text": "Venez chez Taye",
+      "words": [
+        {
+          "id": "caption-word-7-0",
+          "text": "Venez",
+          "start": 4.386,
+          "end": 4.72
+        },
+        {
+          "id": "caption-word-7-1",
+          "text": "chez",
+          "start": 4.72,
+          "end": 4.999
+        },
+        {
+          "id": "caption-word-7-2",
+          "text": "Taye",
+          "start": 4.999,
+          "end": 5.277
+        }
+      ]
+    },
+    {
+      "id": "caption-group-8",
+      "frame": 2,
+      "start": 5.888,
+      "end": 6.499,
+      "text": "Taye,",
+      "words": [
+        {
+          "id": "caption-word-8-0",
+          "text": "Taye,",
+          "start": 5.888,
+          "end": 6.379
+        }
+      ]
+    },
+    {
+      "id": "caption-group-9",
+      "frame": 2,
+      "start": 6.579,
+      "end": 6.983,
+      "text": "c'est la",
+      "words": [
+        {
+          "id": "caption-word-9-0",
+          "text": "c'est",
+          "start": 6.579,
+          "end": 6.848
+        },
+        {
+          "id": "caption-word-9-1",
+          "text": "la",
+          "start": 6.848,
+          "end": 6.983
+        }
+      ]
+    },
+    {
+      "id": "caption-group-10",
+      "frame": 2,
+      "start": 6.983,
+      "end": 7.387,
+      "text": "vente de",
+      "words": [
+        {
+          "id": "caption-word-10-0",
+          "text": "vente",
+          "start": 6.983,
+          "end": 7.252
+        },
+        {
+          "id": "caption-word-10-1",
+          "text": "de",
+          "start": 7.252,
+          "end": 7.387
+        }
+      ]
+    },
+    {
+      "id": "caption-group-11",
+      "frame": 2,
+      "start": 7.387,
+      "end": 8.18,
+      "text": "trousseau bébé",
+      "words": [
+        {
+          "id": "caption-word-11-0",
+          "text": "trousseau",
+          "start": 7.387,
+          "end": 7.835
+        },
+        {
+          "id": "caption-word-11-1",
+          "text": "bébé",
+          "start": 7.835,
+          "end": 8.06
+        }
+      ]
+    },
+    {
+      "id": "caption-group-12",
+      "frame": 2,
+      "start": 8.349,
+      "end": 8.761,
+      "text": "tout pour",
+      "words": [
+        {
+          "id": "caption-word-12-0",
+          "text": "tout",
+          "start": 8.349,
+          "end": 8.555
+        },
+        {
+          "id": "caption-word-12-1",
+          "text": "pour",
+          "start": 8.555,
+          "end": 8.761
+        }
+      ]
+    },
+    {
+      "id": "caption-group-13",
+      "frame": 2,
+      "start": 8.761,
+      "end": 9.827,
+      "text": "habiller votre enfant,",
+      "words": [
+        {
+          "id": "caption-word-13-0",
+          "text": "habiller",
+          "start": 8.761,
+          "end": 9.131
+        },
+        {
+          "id": "caption-word-13-1",
+          "text": "votre",
+          "start": 9.131,
+          "end": 9.378
+        },
+        {
+          "id": "caption-word-13-2",
+          "text": "enfant,",
+          "start": 9.378,
+          "end": 9.707
+        }
+      ]
+    },
+    {
+      "id": "caption-group-14",
+      "frame": 2,
+      "start": 9.907,
+      "end": 10.289,
+      "text": "de zéro",
+      "words": [
+        {
+          "id": "caption-word-14-0",
+          "text": "de",
+          "start": 9.907,
+          "end": 10.05
+        },
+        {
+          "id": "caption-word-14-1",
+          "text": "zéro",
+          "start": 10.05,
+          "end": 10.289
+        }
+      ]
+    },
+    {
+      "id": "caption-group-15",
+      "frame": 2,
+      "start": 10.289,
+      "end": 11.411,
+      "text": "à vingt-quatre mois.",
+      "words": [
+        {
+          "id": "caption-word-15-0",
+          "text": "à",
+          "start": 10.289,
+          "end": 10.384
+        },
+        {
+          "id": "caption-word-15-1",
+          "text": "vingt-quatre",
+          "start": 10.384,
+          "end": 11.005
+        },
+        {
+          "id": "caption-word-15-2",
+          "text": "mois.",
+          "start": 11.005,
+          "end": 11.291
+        }
+      ]
+    },
+    {
+      "id": "caption-group-16",
+      "frame": 2,
+      "start": 11.611,
+      "end": 12.173,
+      "text": "Le bonheur",
+      "words": [
+        {
+          "id": "caption-word-16-0",
+          "text": "Le",
+          "start": 11.611,
+          "end": 11.764
+        },
+        {
+          "id": "caption-word-16-1",
+          "text": "bonheur",
+          "start": 11.764,
+          "end": 12.173
+        }
+      ]
+    },
+    {
+      "id": "caption-group-17",
+      "frame": 2,
+      "start": 12.173,
+      "end": 12.632,
+      "text": "de votre",
+      "words": [
+        {
+          "id": "caption-word-17-0",
+          "text": "de",
+          "start": 12.173,
+          "end": 12.326
+        },
+        {
+          "id": "caption-word-17-1",
+          "text": "votre",
+          "start": 12.326,
+          "end": 12.632
+        }
+      ]
+    },
+    {
+      "id": "caption-group-18",
+      "frame": 2,
+      "start": 12.632,
+      "end": 13.722,
+      "text": "bébé commence ici.",
+      "words": [
+        {
+          "id": "caption-word-18-0",
+          "text": "bébé",
+          "start": 12.632,
+          "end": 12.887
+        },
+        {
+          "id": "caption-word-18-1",
+          "text": "commence",
+          "start": 12.887,
+          "end": 13.347
+        },
+        {
+          "id": "caption-word-18-2",
+          "text": "ici.",
+          "start": 13.347,
+          "end": 13.602
+        }
+      ]
+    },
+    {
+      "id": "caption-group-19",
+      "frame": 3,
+      "start": 14.102,
+      "end": 15.129,
+      "text": "Des grenouillères toutes",
+      "words": [
+        {
+          "id": "caption-word-19-0",
+          "text": "Des",
+          "start": 14.102,
+          "end": 14.266
+        },
+        {
+          "id": "caption-word-19-1",
+          "text": "grenouillères",
+          "start": 14.266,
+          "end": 14.842
+        },
+        {
+          "id": "caption-word-19-2",
+          "text": "toutes",
+          "start": 14.842,
+          "end": 15.129
+        }
+      ]
+    },
+    {
+      "id": "caption-group-20",
+      "frame": 3,
+      "start": 15.129,
+      "end": 15.578,
+      "text": "douces,",
+      "words": [
+        {
+          "id": "caption-word-20-0",
+          "text": "douces,",
+          "start": 15.129,
+          "end": 15.458
+        }
+      ]
+    },
+    {
+      "id": "caption-group-21",
+      "frame": 3,
+      "start": 15.658,
+      "end": 16.074,
+      "text": "avec de",
+      "words": [
+        {
+          "id": "caption-word-21-0",
+          "text": "avec",
+          "start": 15.658,
+          "end": 15.918
+        },
+        {
+          "id": "caption-word-21-1",
+          "text": "de",
+          "start": 15.918,
+          "end": 16.074
+        }
+      ]
+    },
+    {
+      "id": "caption-group-22",
+      "frame": 3,
+      "start": 16.074,
+      "end": 17.285,
+      "text": "jolis motifs ourson.",
+      "words": [
+        {
+          "id": "caption-word-22-0",
+          "text": "jolis",
+          "start": 16.074,
+          "end": 16.386
+        },
+        {
+          "id": "caption-word-22-1",
+          "text": "motifs",
+          "start": 16.386,
+          "end": 16.749
+        },
+        {
+          "id": "caption-word-22-2",
+          "text": "ourson.",
+          "start": 16.749,
+          "end": 17.165
+        }
+      ]
+    },
+    {
+      "id": "caption-group-23",
+      "frame": 4,
+      "start": 18.902,
+      "end": 19.411,
+      "text": "Des bodies",
+      "words": [
+        {
+          "id": "caption-word-23-0",
+          "text": "Des",
+          "start": 18.902,
+          "end": 19.087
+        },
+        {
+          "id": "caption-word-23-1",
+          "text": "bodies",
+          "start": 19.087,
+          "end": 19.411
+        }
+      ]
+    },
+    {
+      "id": "caption-group-24",
+      "frame": 4,
+      "start": 19.411,
+      "end": 19.735,
+      "text": "et des",
+      "words": [
+        {
+          "id": "caption-word-24-0",
+          "text": "et",
+          "start": 19.411,
+          "end": 19.55
+        },
+        {
+          "id": "caption-word-24-1",
+          "text": "des",
+          "start": 19.55,
+          "end": 19.735
+        }
+      ]
+    },
+    {
+      "id": "caption-group-25",
+      "frame": 4,
+      "start": 19.735,
+      "end": 20.735,
+      "text": "ensembles colorés,",
+      "words": [
+        {
+          "id": "caption-word-25-0",
+          "text": "ensembles",
+          "start": 19.735,
+          "end": 20.198
+        },
+        {
+          "id": "caption-word-25-1",
+          "text": "colorés,",
+          "start": 20.198,
+          "end": 20.615
+        }
+      ]
+    },
+    {
+      "id": "caption-group-26",
+      "frame": 4,
+      "start": 20.815,
+      "end": 21.294,
+      "text": "pour chaque",
+      "words": [
+        {
+          "id": "caption-word-26-0",
+          "text": "pour",
+          "start": 20.815,
+          "end": 21.014
+        },
+        {
+          "id": "caption-word-26-1",
+          "text": "chaque",
+          "start": 21.014,
+          "end": 21.294
+        }
+      ]
+    },
+    {
+      "id": "caption-group-27",
+      "frame": 4,
+      "start": 21.294,
+      "end": 21.614,
+      "text": "jour et",
+      "words": [
+        {
+          "id": "caption-word-27-0",
+          "text": "jour",
+          "start": 21.294,
+          "end": 21.494
+        },
+        {
+          "id": "caption-word-27-1",
+          "text": "et",
+          "start": 21.494,
+          "end": 21.614
+        }
+      ]
+    },
+    {
+      "id": "caption-group-28",
+      "frame": 4,
+      "start": 21.614,
+      "end": 22.414,
+      "text": "chaque occasion.",
+      "words": [
+        {
+          "id": "caption-word-28-0",
+          "text": "chaque",
+          "start": 21.614,
+          "end": 21.894
+        },
+        {
+          "id": "caption-word-28-1",
+          "text": "occasion.",
+          "start": 21.894,
+          "end": 22.294
+        }
+      ]
+    },
+    {
+      "id": "caption-group-29",
+      "frame": 5,
+      "start": 23.702,
+      "end": 24.188,
+      "text": "Des petits",
+      "words": [
+        {
+          "id": "caption-word-29-0",
+          "text": "Des",
+          "start": 23.702,
+          "end": 23.879
+        },
+        {
+          "id": "caption-word-29-1",
+          "text": "petits",
+          "start": 23.879,
+          "end": 24.188
+        }
+      ]
+    },
+    {
+      "id": "caption-group-30",
+      "frame": 5,
+      "start": 24.188,
+      "end": 24.895,
+      "text": "chaussons lapin",
+      "words": [
+        {
+          "id": "caption-word-30-0",
+          "text": "chaussons",
+          "start": 24.188,
+          "end": 24.63
+        },
+        {
+          "id": "caption-word-30-1",
+          "text": "lapin",
+          "start": 24.63,
+          "end": 24.895
+        }
+      ]
+    },
+    {
+      "id": "caption-group-31",
+      "frame": 5,
+      "start": 24.895,
+      "end": 25.5,
+      "text": "et ourson,",
+      "words": [
+        {
+          "id": "caption-word-31-0",
+          "text": "et",
+          "start": 24.895,
+          "end": 25.027
+        },
+        {
+          "id": "caption-word-31-1",
+          "text": "ourson,",
+          "start": 25.027,
+          "end": 25.38
+        }
+      ]
+    },
+    {
+      "id": "caption-group-32",
+      "frame": 5,
+      "start": 25.58,
+      "end": 26.075,
+      "text": "pour garder",
+      "words": [
+        {
+          "id": "caption-word-32-0",
+          "text": "pour",
+          "start": 25.58,
+          "end": 25.786
+        },
+        {
+          "id": "caption-word-32-1",
+          "text": "garder",
+          "start": 25.786,
+          "end": 26.075
+        }
+      ]
+    },
+    {
+      "id": "caption-group-33",
+      "frame": 5,
+      "start": 26.075,
+      "end": 26.528,
+      "text": "ses petits",
+      "words": [
+        {
+          "id": "caption-word-33-0",
+          "text": "ses",
+          "start": 26.075,
+          "end": 26.24
+        },
+        {
+          "id": "caption-word-33-1",
+          "text": "petits",
+          "start": 26.24,
+          "end": 26.528
+        }
+      ]
+    },
+    {
+      "id": "caption-group-34",
+      "frame": 5,
+      "start": 26.528,
+      "end": 27.308,
+      "text": "pieds au chaud.",
+      "words": [
+        {
+          "id": "caption-word-34-0",
+          "text": "pieds",
+          "start": 26.528,
+          "end": 26.776
+        },
+        {
+          "id": "caption-word-34-1",
+          "text": "au",
+          "start": 26.776,
+          "end": 26.899
+        },
+        {
+          "id": "caption-word-34-2",
+          "text": "chaud.",
+          "start": 26.899,
+          "end": 27.188
+        }
+      ]
+    },
+    {
+      "id": "caption-group-35",
+      "frame": 6,
+      "start": 28.502,
+      "end": 29.775,
+      "text": "Des bonnets adorables,",
+      "words": [
+        {
+          "id": "caption-word-35-0",
+          "text": "Des",
+          "start": 28.502,
+          "end": 28.703
+        },
+        {
+          "id": "caption-word-35-1",
+          "text": "bonnets",
+          "start": 28.703,
+          "end": 29.104
+        },
+        {
+          "id": "caption-word-35-2",
+          "text": "adorables,",
+          "start": 29.104,
+          "end": 29.655
+        }
+      ]
+    },
+    {
+      "id": "caption-group-36",
+      "frame": 6,
+      "start": 29.855,
+      "end": 30.371,
+      "text": "avec leurs",
+      "words": [
+        {
+          "id": "caption-word-36-0",
+          "text": "avec",
+          "start": 29.855,
+          "end": 30.09
+        },
+        {
+          "id": "caption-word-36-1",
+          "text": "leurs",
+          "start": 30.09,
+          "end": 30.371
+        }
+      ]
+    },
+    {
+      "id": "caption-group-37",
+      "frame": 6,
+      "start": 30.371,
+      "end": 31.336,
+      "text": "petites oreilles.",
+      "words": [
+        {
+          "id": "caption-word-37-0",
+          "text": "petites",
+          "start": 30.371,
+          "end": 30.747
+        },
+        {
+          "id": "caption-word-37-1",
+          "text": "oreilles.",
+          "start": 30.747,
+          "end": 31.216
+        }
+      ]
+    },
+    {
+      "id": "caption-group-38",
+      "frame": 7,
+      "start": 33.302,
+      "end": 33.734,
+      "text": "Et aussi",
+      "words": [
+        {
+          "id": "caption-word-38-0",
+          "text": "Et",
+          "start": 33.302,
+          "end": 33.446
+        },
+        {
+          "id": "caption-word-38-1",
+          "text": "aussi",
+          "start": 33.446,
+          "end": 33.734
+        }
+      ]
+    },
+    {
+      "id": "caption-group-39",
+      "frame": 7,
+      "start": 33.734,
+      "end": 34.621,
+      "text": "des serviettes,",
+      "words": [
+        {
+          "id": "caption-word-39-0",
+          "text": "des",
+          "start": 33.734,
+          "end": 33.925
+        },
+        {
+          "id": "caption-word-39-1",
+          "text": "serviettes,",
+          "start": 33.925,
+          "end": 34.501
+        }
+      ]
+    },
+    {
+      "id": "caption-group-40",
+      "frame": 7,
+      "start": 34.701,
+      "end": 35.244,
+      "text": "des bavoirs",
+      "words": [
+        {
+          "id": "caption-word-40-0",
+          "text": "des",
+          "start": 34.701,
+          "end": 34.882
+        },
+        {
+          "id": "caption-word-40-1",
+          "text": "bavoirs",
+          "start": 34.882,
+          "end": 35.244
+        }
+      ]
+    },
+    {
+      "id": "caption-group-41",
+      "frame": 7,
+      "start": 35.244,
+      "end": 36.452,
+      "text": "et plein d'accessoires.",
+      "words": [
+        {
+          "id": "caption-word-41-0",
+          "text": "et",
+          "start": 35.244,
+          "end": 35.38
+        },
+        {
+          "id": "caption-word-41-1",
+          "text": "plein",
+          "start": 35.38,
+          "end": 35.652
+        },
+        {
+          "id": "caption-word-41-2",
+          "text": "d'accessoires.",
+          "start": 35.652,
+          "end": 36.332
+        }
+      ]
+    },
+    {
+      "id": "caption-group-42",
+      "frame": 8,
+      "start": 38.102,
+      "end": 38.93,
+      "text": "Chez Taye,",
+      "words": [
+        {
+          "id": "caption-word-42-0",
+          "text": "Chez",
+          "start": 38.102,
+          "end": 38.424
+        },
+        {
+          "id": "caption-word-42-1",
+          "text": "Taye,",
+          "start": 38.424,
+          "end": 38.81
+        }
+      ]
+    },
+    {
+      "id": "caption-group-43",
+      "frame": 8,
+      "start": 39.01,
+      "end": 40.035,
+      "text": "c'est la qualité,",
+      "words": [
+        {
+          "id": "caption-word-43-0",
+          "text": "c'est",
+          "start": 39.01,
+          "end": 39.312
+        },
+        {
+          "id": "caption-word-43-1",
+          "text": "la",
+          "start": 39.312,
+          "end": 39.462
+        },
+        {
+          "id": "caption-word-43-2",
+          "text": "qualité,",
+          "start": 39.462,
+          "end": 39.915
+        }
+      ]
+    },
+    {
+      "id": "caption-group-44",
+      "frame": 8,
+      "start": 40.115,
+      "end": 41.071,
+      "text": "le confort,",
+      "words": [
+        {
+          "id": "caption-word-44-0",
+          "text": "le",
+          "start": 40.115,
+          "end": 40.324
+        },
+        {
+          "id": "caption-word-44-1",
+          "text": "confort,",
+          "start": 40.324,
+          "end": 40.951
+        }
+      ]
+    },
+    {
+      "id": "caption-group-45",
+      "frame": 8,
+      "start": 41.151,
+      "end": 41.501,
+      "text": "et des",
+      "words": [
+        {
+          "id": "caption-word-45-0",
+          "text": "et",
+          "start": 41.151,
+          "end": 41.301
+        },
+        {
+          "id": "caption-word-45-1",
+          "text": "des",
+          "start": 41.301,
+          "end": 41.501
+        }
+      ]
+    },
+    {
+      "id": "caption-group-46",
+      "frame": 8,
+      "start": 41.501,
+      "end": 42.47,
+      "text": "prix abordables.",
+      "words": [
+        {
+          "id": "caption-word-46-0",
+          "text": "prix",
+          "start": 41.501,
+          "end": 41.751
+        },
+        {
+          "id": "caption-word-46-1",
+          "text": "abordables.",
+          "start": 41.751,
+          "end": 42.35
+        }
+      ]
+    },
+    {
+      "id": "caption-group-47",
+      "frame": 9,
+      "start": 43.402,
+      "end": 44.46,
+      "text": "Contactez Taye sur",
+      "words": [
+        {
+          "id": "caption-word-47-0",
+          "text": "Contactez",
+          "start": 43.402,
+          "end": 43.959
+        },
+        {
+          "id": "caption-word-47-1",
+          "text": "Taye",
+          "start": 43.959,
+          "end": 44.237
+        },
+        {
+          "id": "caption-word-47-2",
+          "text": "sur",
+          "start": 44.237,
+          "end": 44.46
+        }
+      ]
+    },
+    {
+      "id": "caption-group-48",
+      "frame": 9,
+      "start": 44.46,
+      "end": 45.137,
+      "text": "WhatsApp,",
+      "words": [
+        {
+          "id": "caption-word-48-0",
+          "text": "WhatsApp,",
+          "start": 44.46,
+          "end": 45.017
+        }
+      ]
+    },
+    {
+      "id": "caption-group-49",
+      "frame": 9,
+      "start": 45.217,
+      "end": 48.315,
+      "text": "au +228 93 17",
+      "words": [
+        {
+          "id": "caption-word-49-0",
+          "text": "au",
+          "start": 45.217,
+          "end": 45.377
+        },
+        {
+          "id": "caption-word-49-1",
+          "text": "+228",
+          "start": 45.377,
+          "end": 46.766
+        },
+        {
+          "id": "caption-word-49-2",
+          "text": "93",
+          "start": 46.766,
+          "end": 47.834
+        },
+        {
+          "id": "caption-word-49-3",
+          "text": "17",
+          "start": 47.834,
+          "end": 48.315
+        }
+      ]
+    },
+    {
+      "id": "caption-group-50",
+      "frame": 9,
+      "start": 48.315,
+      "end": 49.717,
+      "text": "05 34.",
+      "words": [
+        {
+          "id": "caption-word-50-0",
+          "text": "05",
+          "start": 48.315,
+          "end": 48.849
+        },
+        {
+          "id": "caption-word-50-1",
+          "text": "34.",
+          "start": 48.849,
+          "end": 49.597
+        }
+      ]
+    },
+    {
+      "id": "caption-group-51",
+      "frame": 9,
+      "start": 49.917,
+      "end": 50.647,
+      "text": "Habillez votre",
+      "words": [
+        {
+          "id": "caption-word-51-0",
+          "text": "Habillez",
+          "start": 49.917,
+          "end": 50.355
+        },
+        {
+          "id": "caption-word-51-1",
+          "text": "votre",
+          "start": 50.355,
+          "end": 50.647
+        }
+      ]
+    },
+    {
+      "id": "caption-group-52",
+      "frame": 9,
+      "start": 50.647,
+      "end": 51.545,
+      "text": "bébé avec amour",
+      "words": [
+        {
+          "id": "caption-word-52-0",
+          "text": "bébé",
+          "start": 50.647,
+          "end": 50.89
+        },
+        {
+          "id": "caption-word-52-1",
+          "text": "avec",
+          "start": 50.89,
+          "end": 51.133
+        },
+        {
+          "id": "caption-word-52-2",
+          "text": "amour",
+          "start": 51.133,
+          "end": 51.425
+        }
+      ]
+    }
+  ]
+}
