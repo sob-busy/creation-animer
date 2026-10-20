@@ -53,7 +53,7 @@ On utilise **Page Assist**, une extension gratuite et légère (mieux qu'Open We
    `OLLAMA_HOST` = `0.0.0.0`, puis redémarre Ollama. Autorise Ollama dans le pare-feu (réseau privé).
 2. Trouve l'adresse IP du PC : `ipconfig` → « Adresse IPv4 » (ex. `192.168.1.20`).
 3. Sur le téléphone (même Wi-Fi), installe une appli cliente Ollama gratuite
-   (ex. **Ollama App** / « Reins » sur F-Droid ou Play Store) et mets l'adresse `http://192.168.1.20:11434`.
+   (ex. **Ollama App**, open source : github.com/JHubi1/ollama-app, fichier .apk) et mets l'adresse `http://192.168.1.20:11434`.
 4. Choisis le modèle **prof-ia**. Le PC doit rester allumé.
 
 ## Exemples de demandes
