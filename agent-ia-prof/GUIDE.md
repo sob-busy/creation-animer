@@ -1,5 +1,7 @@
 # Créer « Prof IA » : un agent IA gratuit et local (Windows 8 Go + Android)
 
+> 💻 Version codée en Python (à ouvrir dans VS Code) : voir le dossier [`app/`](app/README.md).
+
 Tout ce qui suit est **gratuit** et fonctionne **sans abonnement**. Une fois les
 modèles téléchargés, l'agent marche **même sans Internet** (sauf la recherche web).
 
